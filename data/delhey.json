@@ -434,13 +434,23 @@
    "lang": "zh"
   },
   {
+   "id": "samdh",
+   "label": "Saṃdhinirmocanasūtra – quoted in the Viniścaya, and its versions",
+   "lang": "multi"
+  },
+  {
    "id": "rel",
    "label": "Commentaries and related texts",
    "lang": "multi"
   },
   {
+   "id": "ref",
+   "label": "Reference works: indices, catalogues, bibliographies, databases",
+   "lang": "multi"
+  },
+  {
    "id": "mod",
-   "label": "Modern translations",
+   "label": "Modern translations and reviews",
    "lang": "modern",
    "collapsed": true
   },
@@ -1125,11 +1135,76 @@
    "from": "568c20",
    "to": "576b29",
    "fasc": ""
+  },
+  {
+   "id": "sd-1",
+   "level": 3,
+   "name": "Saṃdh I–IV",
+   "zh": "解深密經 勝義諦相品",
+   "from": "713c28",
+   "to": "718a09",
+   "fasc": ""
+  },
+  {
+   "id": "sd-5",
+   "level": 3,
+   "name": "Saṃdh V Viśālamati",
+   "zh": "心意識相品",
+   "from": "718a09",
+   "to": "718c05",
+   "fasc": ""
+  },
+  {
+   "id": "sd-6",
+   "level": 3,
+   "name": "Saṃdh VI Guṇākara",
+   "zh": "一切法相品",
+   "from": "718c05",
+   "to": "719b15",
+   "fasc": ""
+  },
+  {
+   "id": "sd-7",
+   "level": 3,
+   "name": "Saṃdh VII Paramārthasamudgata",
+   "zh": "無自性相品",
+   "from": "719b15",
+   "to": "723b20",
+   "fasc": ""
+  },
+  {
+   "id": "sd-8",
+   "level": 3,
+   "name": "Saṃdh VIII Maitreya",
+   "zh": "分別瑜伽品",
+   "from": "723b20",
+   "to": "729a19",
+   "fasc": ""
+  },
+  {
+   "id": "sd-9",
+   "level": 3,
+   "name": "Saṃdh IX Avalokiteśvara",
+   "zh": "地波羅蜜多品",
+   "from": "729a19",
+   "to": "733c17",
+   "fasc": ""
+  },
+  {
+   "id": "sd-10",
+   "level": 3,
+   "name": "Saṃdh X Mañjuśrī",
+   "zh": "如來成所作事品",
+   "from": "733c17",
+   "to": "736c12",
+   "fasc": ""
   }
  ],
  "rows": [
   {
    "id": "ms-srbh",
+   "delhey_section": "1.2 no. 1",
+   "pages": "508, 510, 517–523",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1137,13 +1212,13 @@
    "spans": [
     {
      "sec": "b7",
-     "page": 508,
-     "note": "Asamāhitā Bhūmiḥ, extant in both MSS (p. 517)"
+     "page": 517,
+     "note": "Asamāhitā Bhūmiḥ, extant in both MSS"
     },
     {
      "sec": "b8",
      "page": 518,
-     "note": "Sacittikā/Acittikā: Wayman 1960 edited them from the ŚrBh MS"
+     "note": "Sacittikā/Acittikā (Wayman 1960 edited them from this MS)"
     },
     {
      "t": [
@@ -1151,30 +1226,66 @@
       "361b18"
      ],
      "page": 518,
-     "note": "Śrutamayī Bhūmiḥ: the adhyātmavidyā section is missing except for its end (p. 518). Start placed at the beginning of the aligned Study Group 2007 text (data-derived).",
+     "note": "Śrutamayī Bhūmiḥ: the adhyātmavidyā section is missing except for its end; start placed by the aligned Study Group text",
      "extent": "approx-start"
     },
     {
      "sec": "b11",
      "page": 520,
-     "note": "Cintāmayī Bhūmiḥ: 'only the last 10–20% seem to be missing' (p. 520) – the end of the span is therefore uncertain",
+     "note": "Cintāmayī Bhūmiḥ: 'only the last 10–20% seem to be missing'",
      "extent": "approx-end"
     },
     {
      "sec": "b13",
      "page": 510,
-     "note": "Śrāvakabhūmi: 'nearly the complete text'; three small parts (c. 7–8 Peking folios) missing (n. 49, p. 510)"
+     "note": "nearly the complete Śrāvakabhūmi; three small parts (c. 7–8 Peking folios) missing (n. 49)"
     },
     {
      "sec": "b14",
      "page": 523,
-     "note": "Pratyekabuddhabhūmi preserved in both MSS"
+     "note": "Pratyekabuddhabhūmi"
     }
    ],
-   "sub": "palm-leaf, Lhasa (Cat. Beijing 20–22); c. 11th c.?; facsimile 1994; photos Sāṅkṛtyāyana, Tucci"
+   "sub": "palm-leaf, Lhasa (Cat. Beijing 20–22); c. 11th c.?"
+  },
+  {
+   "id": "ms-srbh-facs",
+   "delhey_section": "1.2 no. 1a–d",
+   "pages": "508",
+   "group": "sa-ms",
+   "lang": "sa",
+   "type": "reproduction",
+   "label": "ŚrBh MS: facsimile 1994; Beijing microfilm; photos by Sāṅkṛtyāyana (nos. 350–351) and Tucci",
+   "spans": [
+    {
+     "sec": [
+      "b7",
+      "b8"
+     ],
+     "page": 508
+    },
+    {
+     "t": [
+      "354a23",
+      "388b10"
+     ],
+     "page": 508,
+     "extent": "approx-start"
+    },
+    {
+     "sec": [
+      "b13",
+      "b14"
+     ],
+     "page": 508
+    }
+   ],
+   "sub": "China Library of Nationalities & Taishō Univ. 1994; Göttingen prints Xc 14/27; Rome (Sferra 2009: 46, 51)"
   },
   {
    "id": "ms-ybh",
+   "delhey_section": "1.2 no. 2",
+   "pages": "508, 510, 515–523, 532",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1233,8 +1344,7 @@
     {
      "sec": "b16",
      "page": 532,
-     "own": "YoBh MS 154b2–156a1",
-     "note": "folios partly broken at the margins"
+     "own": "YoBh MS 154b2–156a1"
     },
     {
      "sec": "b17",
@@ -1242,11 +1352,61 @@
      "own": "YoBh MS 156a1–156b"
     }
    ],
-   "sub": "palm-leaf, Sa skya?; c. 1000 CE; photos Sāṅkṛtyāyana, Tucci",
-   "note": "Contains all chapters of the Basic Section except the Śrāvaka- and Bodhisattvabhūmi (p. 510)."
+   "sub": "palm-leaf, Sa skya?; c. 1000 CE; all of the Basic Section except ŚrBh and BoBh"
+  },
+  {
+   "id": "ms-ybh-photos",
+   "delhey_section": "1.2 no. 2a–b",
+   "pages": "508–509",
+   "group": "sa-ms",
+   "lang": "sa",
+   "type": "reproduction",
+   "label": "YoBh MS: photos by Sāṅkṛtyāyana (no. 199) and Tucci",
+   "spans": [
+    {
+     "sec": [
+      "b1",
+      "b2",
+      "b3",
+      "b6",
+      "b7",
+      "b8",
+      "b10",
+      "b11",
+      "b12"
+     ],
+     "page": 508
+    },
+    {
+     "sec": "b14",
+     "page": 508
+    },
+    {
+     "sec": [
+      "b16",
+      "b17"
+     ],
+     "page": 508
+    }
+   ],
+   "sub": "Patna negatives; Göttingen prints Xc 14/28; Rome (Sferra 2009: 41)"
+  },
+  {
+   "id": "ms-ybh-transcript",
+   "delhey_section": "1.2 no. 2, n. 37",
+   "pages": "509",
+   "group": "sa-ms",
+   "lang": "sa",
+   "type": "reproduction",
+   "label": "Sāṅkṛtyāyana's hand-written transcript of the YoBh MS",
+   "spans": [],
+   "sub": "whereabouts unknown; used by Bhattacharya 1957",
+   "note": "not localised: a transcript of the whole codex; lost"
   },
   {
    "id": "ms-bobh-c",
+   "delhey_section": "1.2",
+   "pages": "509, 526–527, 531",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1255,14 +1415,16 @@
     {
      "sec": "b15",
      "page": 509,
-     "note": "Bodhisattvabhūmi (extent of lacunae not specified by Delhey)"
+     "note": "Bodhisattvabhūmi; lacunae not specified"
     }
    ],
    "sub": "palm-leaf, Cambridge Add. 1702; c. 9th c.?",
-   "note": "Incomplete (gaps filled by Dutt from the Patna MS, p. 526); lacks the very beginning of I.1 (p. 527); the only MS containing the Anukramapaṭala (p. 531)."
+   "note": "incomplete; lacks the very beginning of I.1; the only MS with the Anukramapaṭala"
   },
   {
    "id": "ms-bobh-p",
+   "delhey_section": "1.2",
+   "pages": "509, 526–527",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1271,14 +1433,16 @@
     {
      "sec": "b15",
      "page": 509,
-     "note": "Bodhisattvabhūmi (extent of lacunae not specified by Delhey)"
+     "note": "Bodhisattvabhūmi; lacunae not specified"
     }
    ],
-   "sub": "palm-leaf, Lhasa (Cat. Beijing 19); 12th–14th c.?",
-   "note": "'fairly complete'; basis of Dutt 1966 (p. 526); the only MS with the very beginning of I.1 (p. 527)."
+   "sub": "palm-leaf, Lhasa (Cat. Beijing 19); 12th–14th c.?; Beijing microfilm; photos Sāṅkṛtyāyana no. 352, Tucci",
+   "note": "'fairly complete'; basis of Dutt 1966; the only MS with the very beginning of I.1"
   },
   {
    "id": "ms-bobh-n",
+   "delhey_section": "1.2",
+   "pages": "509, 526",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1287,14 +1451,16 @@
     {
      "sec": "b15",
      "page": 509,
-     "note": "Bodhisattvabhūmi (extent of lacunae not specified by Delhey)"
+     "note": "Bodhisattvabhūmi; lacunae not specified"
     }
    ],
    "sub": "palm-leaf, Kathmandu 3/681; NGMPP A 38/3",
-   "note": "Not used by Wogihara and Dutt (p. 526)."
+   "note": "not used by Wogihara and Dutt"
   },
   {
    "id": "ms-bobh-k",
+   "delhey_section": "1.2",
+   "pages": "509, 526",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1303,14 +1469,33 @@
     {
      "sec": "b15",
      "page": 509,
-     "note": "Bodhisattvabhūmi (extent of lacunae not specified by Delhey)"
+     "note": "Bodhisattvabhūmi; lacunae not specified"
     }
    ],
-   "sub": "paper, Kyoto Univ.; 19th c.",
-   "note": "An apograph of the National Archives MS (Takahashi 2005a, p. 526)."
+   "sub": "paper, Kyoto Univ. (Goshima & Noguchi 1983 no. 74); 19th c.",
+   "note": "an apograph of the National Archives MS (Takahashi 2005a)"
+  },
+  {
+   "id": "ms-bobh-kimura",
+   "delhey_section": "2.1.9.1 n. 136",
+   "pages": "525",
+   "group": "sa-ms",
+   "lang": "sa",
+   "type": "manuscript",
+   "label": "'Kimura MS' (Devanāgarī transcript) / 'Calcutta MS' of the BoBh",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 525,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "transcript destroyed in WW II; a Calcutta MS possibly extant (Ui 1961; Sugawara 1990)"
   },
   {
    "id": "ms-sht964",
+   "delhey_section": "1.2 no. 7; 2.1.9.4",
+   "pages": "510, 531",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1323,13 +1508,15 @@
      ],
      "page": 531,
      "own": "BoBhD 159,23–161,1 = BoBhW 232,2–233,16",
-     "note": "beginning of the Pūjāsevāpramāṇapaṭala (I.16); n. 168"
+     "note": "n. 168; Waldschmidt et al. give BoBhD 159,24–160,15"
     }
    ],
-   "sub": "paper; c. 7th–10th c."
+   "sub": "paper; c. 7th–10th c.; identified by Aramaki"
   },
   {
    "id": "ms-vin-leningrad",
+   "delhey_section": "1.2 no. 8; 2.2.1.2",
+   "pages": "510, 533",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1344,11 +1531,12 @@
      "own": "Q5539.zi.31a5–59b2"
     }
    ],
-   "sub": "paper; discovered by K. Matsuda; unpublished",
-   "note": "Further folios of the same MS reportedly in the Potala (n. 44)."
+   "sub": "paper; discovered by K. Matsuda (1988); unpublished; more folios in the Potala?"
   },
   {
    "id": "ms-vin-kathm",
+   "delhey_section": "1.2 no. 9a; 2.2.5.3",
+   "pages": "510, 535",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1360,14 +1548,15 @@
       "730b21"
      ],
      "page": 535,
-     "own": "Q5539.'i.87b7–92a3 = Saṃdh VIII.39–IX.6",
-     "note": "within the Saṃdhinirmocanasūtra citation; facsimile and edition of the Saṃdh IX part: Matsuda 1995"
+     "own": "Q5539.'i.87b7–92a3 = Saṃdh VIII.39–IX.6"
     }
    ],
    "sub": "palm-leaf single folio; NGMPP A 39/3"
   },
   {
    "id": "ms-pary-kathm",
+   "delhey_section": "1.2 no. 9b; 2.4",
+   "pages": "510, 539",
    "group": "sa-ms",
    "lang": "sa",
    "type": "manuscript",
@@ -1379,18 +1568,19 @@
       "769c9"
      ],
      "page": 539,
-     "own": "Q5542.47b7–49b7",
-     "note": "c. 5–10% of the Paryāyasaṃgrahaṇī; ed. Matsuda 1994"
+     "own": "Q5542.47b7–49b7"
     }
    ],
    "sub": "palm-leaf single folio"
   },
   {
    "id": "cit-asbh",
+   "delhey_section": "2.2.1.1",
+   "pages": "532",
    "group": "sa-ms",
    "lang": "sa",
    "type": "citation",
-   "label": "Citation in the Abhidharmasamuccayabhāṣya",
+   "label": "Citation in the Abhidharmasamuccayabhāṣya (ASBh, ed. Tatia 1976)",
    "spans": [
     {
      "t": [
@@ -1401,7 +1591,6 @@
      "own": "ASBh 11,16–13,20 = Q5539.zi.2b2–4a4"
     }
    ],
-   "sub": "Sanskrit testimonium of the opening of the ālayavijñāna treatise",
    "dn": [
     {
      "id": "SA_T06_abhsubhu",
@@ -1412,6 +1601,8 @@
   },
   {
    "id": "cit-vastu-bh",
+   "delhey_section": "2.5",
+   "pages": "539",
    "group": "sa-ms",
    "lang": "sa",
    "type": "parallel",
@@ -1434,7 +1625,7 @@
      "own": "Bh. 198,17–203,5 (its place in the Basic Section)"
     }
    ],
-   "sub": "the only part of the Vastusaṃgrahaṇī preserved in Sanskrit",
+   "sub": "the only part of the Vastusaṃgrahaṇī preserved in Sanskrit (Kritzer 1999: 157)",
    "dn": [
     {
      "id": "SA_T06_n1394u",
@@ -1444,7 +1635,21 @@
    ]
   },
   {
+   "id": "cit-vyakhya-t1602",
+   "delhey_section": "1.3 n. 51",
+   "pages": "511",
+   "group": "sa-ms",
+   "lang": "multi",
+   "type": "citation",
+   "label": "Quotation of the Xiǎnyáng lùn in the *Yogācārabhūmivyākhyā",
+   "spans": [],
+   "sub": "Schmithausen 1987b: 261 n. 99 (after K. Matsuda)",
+   "note": "not localised"
+  },
+  {
    "id": "ed-bh1957",
+   "delhey_section": "2.1.1",
+   "pages": "515",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -1460,7 +1665,7 @@
      "own": "Bh. 3–232"
     }
    ],
-   "sub": "bhūmis 1–5, YoBh MS; compared with the Tibetan",
+   "sub": "bhūmis 1–5, YoBh MS (+ transcript); compared with the Tibetan",
    "dn": [
     {
      "id": "SA_T06_n1394u",
@@ -1471,6 +1676,8 @@
   },
   {
    "id": "ed-bh1946",
+   "delhey_section": "2.1.1 n. 77",
+   "pages": "515",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -1482,32 +1689,81 @@
       "137,8"
      ],
      "page": 515,
-     "own": "Bh. 129,6–137,8",
-     "note": "n. 77: incorporated with slight variations in Bh."
+     "own": "Bh. 129,6–137,8"
     }
    ],
-   "sub": "ātmavāda passage"
+   "sub": "ātmavāda passage (first use of Sāṅkṛtyāyana's photos)"
   },
   {
-   "id": "ed-schmit1987-bh",
+   "id": "ed-schmit1987b",
+   "delhey_section": "2.0; 2.1.1; 2.1.3; 2.1.5",
+   "pages": "512, 515–520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Schmithausen 1987b: 127–132",
+   "label": "Schmithausen 1987b (Ālayavijñāna)",
    "spans": [
+    {
+     "sec": "b1",
+     "page": 515,
+     "own": "pp. 110–117",
+     "note": "discussion (higher textual criticism)",
+     "extent": "section-only"
+    },
     {
      "bh": [
       "24,1",
       "24,10"
      ],
      "page": 516,
-     "own": "Bh. 24,1–10"
+     "own": "pp. 127–132: Bh. 24,1–10"
+    },
+    {
+     "sec": "b6",
+     "page": 517,
+     "own": "p. 276 n. 146",
+     "note": "'Initial Passage' citation",
+     "extent": "section-only"
+    },
+    {
+     "sec": "b8",
+     "page": 518,
+     "own": "pp. 220–222",
+     "note": "'very reliable' edition, both MSS"
+    },
+    {
+     "sec": "b11-pg",
+     "page": 520,
+     "own": "pp. 223–241",
+     "note": "Paramārthagāthā vv. 28–41 with commentary (both MSS)",
+     "extent": "section-only"
+    },
+    {
+     "sec": "v1",
+     "page": 532,
+     "own": "pp. 671f.; 300 n. 226",
+     "note": "discussion of the ālayavijñāna treatise",
+     "extent": "section-only"
+    },
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 512,
+     "note": "'an extraordinarily high amount' of passages from all over the YoBh",
+     "extent": "whole-work"
     }
    ],
-   "sub": "Manobhūmi passage (new edition, translation)"
+   "sub": "many passages edited/translated; index of texts"
   },
   {
    "id": "ed-sakuma1990",
+   "delhey_section": "2.0 n. 62 and passim",
+   "pages": "516–540",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -1519,7 +1775,14 @@
       "27,3"
      ],
      "page": 516,
-     "own": "Bh. 27,1–3 (pp. 145f.)"
+     "own": "pp. 145f.: Bh. 27,1–3"
+    },
+    {
+     "sec": "b10-adhy",
+     "page": 518,
+     "own": "pp. 147–148",
+     "note": "short citations of the Śrutamayī Bhūmi from the MS (n. 91)",
+     "extent": "section-only"
     },
     {
      "sh": [
@@ -1613,21 +1876,33 @@
      "sec": "bb-III.3",
      "page": 531,
      "own": "pp. 149–152",
-     "note": "'three very short passages from the third yogasthāna (III.3 and III.6)' – exact place not given",
+     "note": "very short passages from III.3 …",
      "extent": "section-only"
     },
     {
-     "sec": "b16",
+     "sec": "bb-III.6",
+     "page": 531,
+     "own": "pp. 149–152",
+     "note": "… and III.6",
+     "extent": "section-only"
+    },
+    {
+     "sec": [
+      "b16",
+      "b17"
+     ],
      "page": 532,
      "own": "pp. 153–154",
-     "note": "a very small section of the Sopadhikā/Nirupadhikā Bhūmiḥ (n. 172) – exact place not given",
+     "note": "a very small section (n. 172)",
      "extent": "section-only"
     }
    ],
-   "sub": "small passages with German translation; also Tibetan/Chinese passages (see Tibetan editions)"
+   "sub": "small passages with German translation"
   },
   {
    "id": "ed-ahn2003",
+   "delhey_section": "2.1.1",
+   "pages": "517",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -1642,7 +1917,7 @@
      "own": "Bh. 160,10–170,10"
     }
    ],
-   "sub": "kleśasaṃkleśa section, YoBh MS; German transl. pp. 158–214",
+   "sub": "kleśasaṃkleśa, YoBh MS; German transl. pp. 158–214",
    "dn": [
     {
      "id": "SA_T06_-ybh-klesa",
@@ -1653,10 +1928,12 @@
   },
   {
    "id": "ed-aymore1995",
+   "delhey_section": "2.1.1",
+   "pages": "517",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Aymoré 1995 (unpublished M.A. thesis)",
+   "label": "Aymoré 1995 (unpublished M.A.)",
    "spans": [
     {
      "bh": [
@@ -1667,10 +1944,124 @@
      "own": "Bh. 170,11–182,22"
     }
    ],
-   "sub": "first half of the karmasaṃkleśa section; German transl."
+   "sub": "first half of karmasaṃkleśa; German transl."
+  },
+  {
+   "id": "ed-wezler1985",
+   "delhey_section": "2.1.1",
+   "pages": "516",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Wezler 1985",
+   "spans": [
+    {
+     "bh": [
+      "118,14",
+      "122,6"
+     ],
+     "page": 516,
+     "own": "Bh. 118,14–122,6"
+    }
+   ],
+   "sub": "Sāṃkhya sections partly emended on the MS; translated"
+  },
+  {
+   "id": "ed-kritzer1999",
+   "delhey_section": "2.1.1; 2.2.1.2; 2.5",
+   "pages": "517, 533, 539",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Kritzer 1999",
+   "spans": [
+    {
+     "bh": [
+      "200,6",
+      "201,13"
+     ],
+     "page": 517,
+     "own": "pp. 83–86: Bh. 200,6–201,13"
+    },
+    {
+     "t": [
+      "585c9",
+      "588c9"
+     ],
+     "page": 533,
+     "own": "pp. 225–281: Q5539.zi.21b1–29b1"
+    },
+    {
+     "t": [
+      "607a23",
+      "608a6"
+     ],
+     "page": 533,
+     "own": "Q5539.zi.76a5–78a3"
+    },
+    {
+     "t": [
+      "827c3",
+      "828c12"
+     ],
+     "page": 539,
+     "own": "p. 157 (Vastu passage)"
+    }
+   ],
+   "sub": "Vasubandhu and the YBh; Skt/Tib/Chin passages with emendations (no MS)"
+  },
+  {
+   "id": "ed-harada2004",
+   "delhey_section": "2.1.1",
+   "pages": "517",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Harada 2004",
+   "spans": [
+    {
+     "bh": [
+      "198,13",
+      "203,20"
+     ],
+     "page": 517,
+     "own": "Bh. 198,13–203,20"
+    },
+    {
+     "bh": [
+      "214,6",
+      "214,14"
+     ],
+     "page": 517,
+     "own": "Bh. 214,6–14"
+    }
+   ],
+   "sub": "pratītyasamutpāda; revised Skt text (no MS); Japanese transl."
+  },
+  {
+   "id": "ed-kajiyama2000",
+   "delhey_section": "2.1.1",
+   "pages": "516",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Kajiyama 2000",
+   "spans": [
+    {
+     "bh": [
+      "30,21",
+      "44,14"
+     ],
+     "page": 516,
+     "own": "Bh. 30,21–44,14"
+    }
+   ],
+   "sub": "cosmology; English transl. with corrections to Bh."
   },
   {
    "id": "ed-delhey2009",
+   "delhey_section": "2.1.1",
+   "pages": "517",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -1682,7 +2073,7 @@
      "own": "YoBh MS 63a6–82b6"
     }
    ],
-   "sub": "Samāhitā Bhūmiḥ, critical edition (YoBh MS)",
+   "sub": "Samāhitā Bhūmiḥ, critical edition; errata online",
    "dn": [
     {
      "id": "SA_T06_sambhu",
@@ -1692,41 +2083,60 @@
    ]
   },
   {
+   "id": "ed-delhey2007",
+   "delhey_section": "2.1.1 n. 83",
+   "pages": "517",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "study",
+   "label": "Delhey 2007",
+   "spans": [
+    {
+     "bh": [
+      "160,10",
+      "170,10"
+     ],
+     "page": 517,
+     "note": "definitions within the kleśa section (Bh. 160–170)",
+     "extent": "section-only"
+    }
+   ],
+   "sub": "the avidyā and vicikitsā definitions garbled in Bh."
+  },
+  {
    "id": "ed-delhey2006",
+   "delhey_section": "2.1.2; 2.2.3",
+   "pages": "517, 534",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
-   "label": "Delhey 2006: 134–136",
+   "label": "Delhey 2006",
+   "spans": [
+    {
+     "sec": "b7",
+     "page": 517,
+     "own": "pp. 134–136"
+    },
+    {
+     "sec": "v7",
+     "page": 534,
+     "own": "pp. 136–140 (Tib./Chin.)"
+    }
+   ],
+   "sub": "Asamāhitā Bhūmiḥ (both MSS) pp. 134–136; *Asamāhitabhūmiviniścaya pp. 136–140"
+  },
+  {
+   "id": "ed-sg1992a",
+   "delhey_section": "2.1.2 n. 87; 2.1.4.1 n. 92",
+   "pages": "517–518",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Śrāvakabhūmi Study Group 1992a",
    "spans": [
     {
      "sec": "b7",
      "page": 517
-    }
-   ],
-   "sub": "Asamāhitā Bhūmiḥ on both MSS; German transl. pp. 140–144"
-  },
-  {
-   "id": "ed-sg",
-   "group": "sa-ed",
-   "lang": "sa",
-   "type": "edition",
-   "label": "Śrāvakabhūmi Study Group 1998, 2007",
-   "spans": [
-    {
-     "sec": "b13-ys1",
-     "page": 521,
-     "own": "Sh. 1–166 (1998)"
-    },
-    {
-     "sec": "b13-ys2",
-     "page": 521,
-     "own": "Sh. 167–348 (2007)"
-    },
-    {
-     "sec": "b7",
-     "page": 517,
-     "own": "2007: 275–280",
-     "note": "revised from 1992a; YoBh MS not used"
     },
     {
      "t": [
@@ -1734,14 +2144,70 @@
       "356a08"
      ],
      "page": 518,
-     "own": "2007: 281–305",
-     "note": "end of the adhyātmavidyā section; start of the edited part placed by the aligned e-text",
+     "extent": "approx-start"
+    }
+   ],
+   "sub": "first editions of the Asamāhitā and of the end of the adhyātmavidyā"
+  },
+  {
+   "id": "ed-sg1993",
+   "delhey_section": "2.1.4.1 nn. 92–93; 2.1.4.3; 2.1.5",
+   "pages": "518, 520",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Śrāvakabhūmi Study Group 1993",
+   "spans": [
+    {
+     "t": [
+      "354a23",
+      "356a12"
+     ],
+     "page": 518,
+     "extent": "approx-start"
+    },
+    {
+     "sec": [
+      "b10-sabda",
+      "b10-silpa"
+     ],
+     "page": 520
+    },
+    {
+     "sec": "b11-12",
+     "page": 520
+    }
+   ],
+   "sub": "earlier versions of the Śrutamayī and Cintāmayī editions"
+  },
+  {
+   "id": "ed-sg2007-app",
+   "delhey_section": "2.1.2–2.1.5",
+   "pages": "517–520",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "edition",
+   "label": "Śrāvakabhūmi Study Group 2007 (appendices)",
+   "spans": [
+    {
+     "sec": "b7",
+     "page": 517,
+     "own": "pp. 275–280"
+    },
+    {
+     "t": [
+      "354a23",
+      "356a08"
+     ],
+     "page": 518,
+     "own": "pp. 281–305",
+     "note": "end of the adhyātmavidyā",
      "extent": "approx-start"
     },
     {
      "sec": "b10-cik",
      "page": 518,
-     "own": "2007: 304–305"
+     "own": "pp. 304–305"
     },
     {
      "sec": [
@@ -1749,21 +2215,20 @@
       "b10-silpa"
      ],
      "page": 520,
-     "own": "2007: 306–313"
+     "own": "pp. 306–313"
     },
     {
      "sec": "b11-12",
      "page": 520,
-     "own": "2007: 315–336"
+     "own": "pp. 315–336"
     },
     {
      "sec": "b11-ag",
      "page": 520,
-     "own": "2007: 337–370",
-     "note": "Ābhiprāyikārthagāthā with commentary (revised from Maeda 1991)"
+     "own": "pp. 337–370 (rev. of Maeda 1991)"
     }
    ],
-   "sub": "ŚrBh MS only; with Japanese translation",
+   "sub": "Asamāhitā, Śrutamayī, Cintāmayī; ŚrBh MS only; Japanese transl.",
    "dn": [
     {
      "id": "SA_T06_srabhu_u",
@@ -1773,7 +2238,58 @@
    ]
   },
   {
+   "id": "ed-sg-srbh",
+   "delhey_section": "2.1.7",
+   "pages": "521",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "edition",
+   "label": "Śrāvakabhūmi Study Group 1998, 2007",
+   "spans": [
+    {
+     "sec": "b13-ys1",
+     "page": 521,
+     "own": "1998 = Sh. 1–166"
+    },
+    {
+     "sec": "b13-ys2",
+     "page": 521,
+     "own": "2007 = Sh. 167–348"
+    }
+   ],
+   "sub": "yogasthānas 1–2, ŚrBh MS; Japanese transl.",
+   "dn": [
+    {
+     "id": "SA_T06_srabhu_u",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_srabhu_u/text"
+    }
+   ]
+  },
+  {
+   "id": "ed-sg-articles",
+   "delhey_section": "2.1.7 n. 113",
+   "pages": "521",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Śrāvakabhūmi Study Group 1981–1991, 1994–2006 (articles)",
+   "spans": [
+    {
+     "sec": [
+      "b13-ys1",
+      "b13-ys2"
+     ],
+     "page": 521,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "earlier editions superseded by the books"
+  },
+  {
    "id": "ed-sg-ys3",
+   "delhey_section": "2.1.7",
+   "pages": "522",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -1782,14 +2298,32 @@
     {
      "sec": "b13-ys3",
      "page": 522,
-     "note": "only the start of a series; the extent is not given by Delhey",
      "extent": "section-only"
     }
    ],
-   "sub": "systematic re-edition of yogasthāna 3 begun"
+   "sub": "re-edition of yogasthāna 3 begun"
+  },
+  {
+   "id": "ed-amichay",
+   "delhey_section": "2.1.7 n. 116",
+   "pages": "522",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Amichay (in preparation, 2007)",
+   "spans": [
+    {
+     "sec": "b13-ys3",
+     "page": 522,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "critical edition of yogasthāna 3 planned for a Ph.D. thesis"
   },
   {
    "id": "ed-wayman1960",
+   "delhey_section": "2.1.3; 2.1.8",
+   "pages": "518, 523",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -1798,47 +2332,51 @@
     {
      "sec": "b8",
      "page": 518,
-     "own": "pp. 378–376",
-     "note": "Sacittikā/Acittikā; reproduced Wayman 1984: 327–328"
+     "own": "pp. 378–376"
     },
     {
      "sec": "b14",
      "page": 523,
-     "own": "pp. 376–375",
-     "note": "Pratyekabuddhabhūmi; reproduced Wayman 1997: 191–193"
+     "own": "pp. 376–375"
     }
    ],
    "sub": "ŚrBh MS (superseded)"
   },
   {
-   "id": "ed-schmit1987-sac",
+   "id": "ed-wayman1984",
+   "delhey_section": "2.1.3; 2.1.5",
+   "pages": "518, 520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
-   "label": "Schmithausen 1987b: 220–222, 223–241",
+   "label": "Wayman 1984",
    "spans": [
     {
      "sec": "b8",
      "page": 518,
-     "own": "YoBh MS 83a5–83b5",
-     "note": "Sacittikā/Acittikā, 'very reliable'"
+     "own": "pp. 327–330"
     },
     {
      "sec": "b11-pg",
      "page": 520,
-     "own": "vv. 28–41 with commentary",
-     "note": "Paramārthagāthā vv. 28–41 only; exact location in T not given",
-     "extent": "section-only"
+     "own": "pp. 333–352"
+    },
+    {
+     "sec": "b11-ag",
+     "page": 520,
+     "own": "pp. 354–366"
     }
    ],
-   "sub": "both MSS"
+   "sub": "reprints and new editions; English translations"
   },
   {
    "id": "ed-schmit2000",
+   "delhey_section": "2.1.1; 2.1.4.1; 2.1.5",
+   "pages": "516, 518, 520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Schmithausen 2000: 246–254",
+   "label": "Schmithausen 2000",
    "spans": [
     {
      "t": [
@@ -1847,12 +2385,46 @@
      ],
      "page": 518,
      "own": "Q5536.184a6–185b6"
+    },
+    {
+     "bh": [
+      "151,19",
+      "155,5"
+     ],
+     "page": 516,
+     "own": "Bh. 151,19–155,5"
+    },
+    {
+     "sec": "b11-12",
+     "page": 520,
+     "own": "pp. 259–263",
+     "note": "beginning of the chapter, both MSS",
+     "extent": "section-only"
     }
    ],
-   "sub": "Śrutamayī passage, YoBh MS"
+   "sub": "Śrutamayī passage (pp. 246–254), nāstikavāda (pp. 254–259), beginning of the Cintāmayī (pp. 259–263)"
+  },
+  {
+   "id": "ed-wayman1958",
+   "delhey_section": "2.1.4.2",
+   "pages": "519",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "study",
+   "label": "Wayman 1958",
+   "spans": [
+    {
+     "sec": "b10-hetu",
+     "page": 519,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "first citations of the hetuvidyā from a Sanskrit MS"
   },
   {
    "id": "ed-pandey1986",
+   "delhey_section": "2.1.4.2",
+   "pages": "518, 520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -1866,54 +2438,57 @@
    "sub": "hetuvidyā on the YoBh MS; Hindi translation"
   },
   {
-   "id": "ed-shukla1991",
+   "id": "ed-yaita1992",
+   "delhey_section": "2.1.4.2",
+   "pages": "518–520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Shukla 1991 (appendices)",
+   "label": "Yaita 1992: 511–546 (Japanese transl. 547–576)",
    "spans": [
     {
      "sec": "b10-hetu",
      "page": 518
-    },
-    {
-     "sec": "b11-pg",
-     "page": 520,
-     "own": "pp. 26–29",
-     "note": "only the canonical verses of the Paramārthagāthā"
-    },
-    {
-     "sec": "b11-ag",
-     "page": 520,
-     "own": "pp. 29–31",
-     "note": "Ābhiprāyikārthagāthā, partially"
-    },
-    {
-     "sec": "b11-sg",
-     "page": 521,
-     "own": "p. 31",
-     "note": "one verse of the Śarīrārthagāthā (n. 107)",
-     "extent": "section-only"
     }
    ],
-   "sub": "hetuvidyā (App. III, pp. 14–25), ŚrBh MS"
+   "sub": "hetuvidyā, ŚrBh MS (+ Pandey's readings); 'the best'"
   },
   {
-   "id": "ed-yaita1992",
+   "id": "ed-yaita2005",
+   "delhey_section": "2.1.4.2",
+   "pages": "519–520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Yaita 1992: 511–546; rev. 2005: 95–124",
+   "label": "Yaita 2005: 95–124 (transl. 22–41)",
    "spans": [
     {
      "sec": "b10-hetu",
      "page": 518
     }
    ],
-   "sub": "hetuvidyā, ŚrBh MS (+ Pandey's readings) – the best edition"
+   "sub": "revised hetuvidyā edition"
+  },
+  {
+   "id": "ed-yaita-takano1995",
+   "delhey_section": "2.1.4.2",
+   "pages": "518, 520",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Yaita & Takano 1995",
+   "spans": [
+    {
+     "sec": "b10-hetu",
+     "page": 518
+    }
+   ],
+   "sub": "corrections and trilingual index of the hetuvidyā"
   },
   {
    "id": "ed-wayman1999",
+   "delhey_section": "2.1.4.2",
+   "pages": "518–520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -1927,36 +2502,115 @@
    "sub": "hetuvidyā, ŚrBh MS; English translation"
   },
   {
-   "id": "ed-wayman1961",
+   "id": "ed-oberhammer",
+   "delhey_section": "2.1.4.2",
+   "pages": "519–520",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Wayman 1961; 1984",
+   "label": "Oberhammer 1991–2006",
    "spans": [
+    {
+     "sec": "b10-hetu",
+     "page": 518
+    }
+   ],
+   "sub": "long hetuvidyā citations with text-critical notes by Schmithausen"
+  },
+  {
+   "id": "ed-shukla1991",
+   "delhey_section": "2.1.4.2; 2.1.5",
+   "pages": "518, 520–521",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Shukla 1991 (appendices)",
+   "spans": [
+    {
+     "sec": "b10-hetu",
+     "page": 518,
+     "own": "App. III, pp. 14–25"
+    },
     {
      "sec": "b11-pg",
      "page": 520,
-     "own": "1961: 163–185; 1984: 333–352",
-     "note": "introduction of the third section and the Paramārthagāthā with commentary"
+     "own": "pp. 26–29 (verses only)"
     },
     {
      "sec": "b11-ag",
      "page": 520,
-     "own": "1984: 354–357",
-     "note": "Ābhiprāyikārthagāthā"
+     "own": "pp. 29–31 (partial)",
+     "extent": "section-only"
+    },
+    {
+     "sec": "b11-sg",
+     "page": 521,
+     "own": "p. 31 (one verse)",
+     "extent": "section-only"
+    }
+   ],
+   "sub": "hetuvidyā; Cintāmayī verses"
+  },
+  {
+   "id": "ed-wayman1961",
+   "delhey_section": "2.1.5; 2.1.7",
+   "pages": "520–521",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Wayman 1961",
+   "spans": [
+    {
+     "sec": "b11-pg",
+     "page": 520,
+     "own": "pp. 163–185"
     },
     {
      "sec": "b13",
      "page": 521,
-     "own": "1961",
-     "note": "numerous passages of varying length from the whole ŚrBh (analysis)",
+     "note": "numerous passages from the whole ŚrBh",
      "extent": "selections"
     }
    ],
-   "sub": "selected ŚrBh passages; Cintāmayī verses"
+   "sub": "Analysis of the ŚrBh MS; passages edited and translated"
+  },
+  {
+   "id": "ed-wayman-other",
+   "delhey_section": "2.1.7 n. 110",
+   "pages": "521",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Wayman 1978: 31–42; 1997: 335–368",
+   "spans": [
+    {
+     "sec": "b13",
+     "page": 521,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "further ŚrBh passages; reprint of the āhāra chapter"
+  },
+  {
+   "id": "ed-maeda1991",
+   "delhey_section": "2.1.5 n. 106",
+   "pages": "520",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Maeda 1991",
+   "spans": [
+    {
+     "sec": "b11-ag",
+     "page": 520
+    }
+   ],
+   "sub": "Ābhiprāyikārthagāthā (revised in SG 2007)"
   },
   {
    "id": "ed-enomoto1989",
+   "delhey_section": "2.1.5",
+   "pages": "520–521",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -1964,8 +2618,7 @@
    "spans": [
     {
      "sec": "b11-sg",
-     "page": 521,
-     "note": "only complete edition of the verses; the commentary remains unedited"
+     "page": 521
     }
    ],
    "sub": "Śarīrārthagāthā verses, both MSS (commentary unedited)",
@@ -1978,7 +2631,43 @@
    ]
   },
   {
+   "id": "ed-schmit1970-87a",
+   "delhey_section": "2.1.5 n. 107",
+   "pages": "521",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Schmithausen 1970: 50–54, 114f.; 1987a: 382–387",
+   "spans": [
+    {
+     "sec": "b11-sg",
+     "page": 521,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "some Śarīrārthagāthā verses"
+  },
+  {
+   "id": "ed-sugawara1998",
+   "delhey_section": "2.1.6",
+   "pages": "521",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Sugawara 1998",
+   "spans": [
+    {
+     "sec": "b12",
+     "page": 521,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "Sanskrit titles of the main sections of the Bhāvanāmayī (edition in progress)"
+  },
+  {
    "id": "ed-shukla1973",
+   "delhey_section": "2.1.7",
+   "pages": "521–522",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -1990,7 +2679,7 @@
      "own": "Sh. 1–511"
     }
    ],
-   "sub": "the only complete ŚrBh edition; omits one folio after Sh. 432,3",
+   "sub": "the only complete ŚrBh edition; omits a folio after Sh. 432,3",
    "dn": [
     {
      "id": "SA_T06_srabhusu",
@@ -2001,6 +2690,8 @@
   },
   {
    "id": "ed-choi2001",
+   "delhey_section": "2.1.7; 1.3",
+   "pages": "511, 521–522",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2075,7 +2766,7 @@
       "439,4",
       "445,12"
      ],
-     "page": 522,
+     "page": 521,
      "own": "Sh. 439,4–445,12"
     },
     {
@@ -2083,7 +2774,7 @@
       "447,1",
       "448,1"
      ],
-     "page": 522,
+     "page": 521,
      "own": "Sh. 447,1–448,1"
     },
     {
@@ -2091,14 +2782,23 @@
       "449,7",
       "449,10"
      ],
-     "page": 522,
+     "page": 521,
      "own": "Sh. 449,7–449,10"
+    },
+    {
+     "sec": "b10-adhy",
+     "page": 518,
+     "own": "pp. 40–41",
+     "note": "short citations of the Śrutamayī MS (n. 91)",
+     "extent": "section-only"
     }
    ],
-   "sub": "ŚrBh passages (with Xiǎnyáng lùn parallels); German transl."
+   "sub": "ŚrBh passages and their Xiǎnyáng lùn parallels; German transl."
   },
   {
    "id": "ed-maithri1999",
+   "delhey_section": "2.1.7; 2.1.9.4",
+   "pages": "521–522, 531",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2134,14 +2834,15 @@
       "170,17"
      ],
      "page": 531,
-     "own": "BoBhD 166,1–170,17 = BoBhW 241,15–249,6 (pp. 305–316)",
-     "note": "second half of the Pūjāsevāpramāṇapaṭala"
+     "own": "pp. 305–316: BoBhD 166,1–170,17 = BoBhW 241,15–249,6"
     }
    ],
    "sub": "ŚrBh and BoBh passages; German transl."
   },
   {
    "id": "ed-jost1990",
+   "delhey_section": "2.1.7",
+   "pages": "522",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2155,11 +2856,37 @@
      "page": 522,
      "own": "Sh. 291,5–307,5"
     }
+   ]
+  },
+  {
+   "id": "ed-schmit1982b",
+   "delhey_section": "2.1.7 nn. 116, 119",
+   "pages": "522",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "study",
+   "label": "Schmithausen 1982b",
+   "spans": [
+    {
+     "sec": "b13-ys3",
+     "page": 522,
+     "extent": "section-only"
+    },
+    {
+     "sec": [
+      "b13-ys4a",
+      "b13-ys4b"
+     ],
+     "page": 522,
+     "extent": "section-only"
+    }
    ],
-   "sub": "Hamburg"
+   "sub": "text-critical notes on yogasthānas 3 and 4"
   },
   {
    "id": "ed-kimura1992",
+   "delhey_section": "2.1.7",
+   "pages": "522",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2172,13 +2899,15 @@
      ],
      "page": 522,
      "own": "after Sh. 432,3",
-     "note": "point location; the ŚrBh MS contains two copies of this passage (n. 117)"
+     "extent": "point"
     }
    ],
    "sub": "editio princeps of the folio omitted by Shukla"
   },
   {
    "id": "ed-deleanu2006",
+   "delhey_section": "2.1.7",
+   "pages": "522",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -2193,7 +2922,7 @@
      "own": "Sh. 437–470,6"
     }
    ],
-   "sub": "laukikamārga, trilingual edition, English transl.",
+   "sub": "laukikamārga: diplomatic and critical Skt, Tib., Chin.; English transl.",
    "dn": [
     {
      "id": "SA_T06_ybh-laukikamarga",
@@ -2204,6 +2933,8 @@
   },
   {
    "id": "ed-schmit1982a",
+   "delhey_section": "2.1.7",
+   "pages": "522",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2222,6 +2953,8 @@
   },
   {
    "id": "ed-vonrospatt1995",
+   "delhey_section": "2.1.7 n. 119; 2.2.1.2 n. 177",
+   "pages": "522, 533",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2233,14 +2966,21 @@
       "489,24"
      ],
      "page": 522,
-     "own": "Sh. 475–489",
-     "note": "in the notes to a translation of T1602.548c18–549b21"
+     "own": "Sh. 475–489"
+    },
+    {
+     "sec": "v1",
+     "page": 533,
+     "note": "passages of the St Petersburg fragment (see his index)",
+     "extent": "section-only"
     }
    ],
-   "sub": "cites and emends ŚrBh passages in notes"
+   "sub": "cites and emends ŚrBh passages; cites the Viniścaya fragment"
   },
   {
    "id": "ed-yonezawa1998",
+   "delhey_section": "2.1.8",
+   "pages": "523",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -2251,10 +2991,12 @@
      "page": 523
     }
    ],
-   "sub": "Pratyekabuddhabhūmi, ŚrBh MS (+ Wayman, Pandey); most accurate"
+   "sub": "Pratyekabuddhabhūmi, ŚrBh MS; English transl. pp. 19–25"
   },
   {
    "id": "ed-pandey1987",
+   "delhey_section": "2.1.8",
+   "pages": "523",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -2268,7 +3010,42 @@
    "sub": "Pratyekabuddhabhūmi, YoBh MS (or transcript?)"
   },
   {
+   "id": "ed-pandey2009",
+   "delhey_section": "2.1.8 n. 124",
+   "pages": "523",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "Pandey 2009 (not seen by Delhey)",
+   "spans": [
+    {
+     "sec": "b14",
+     "page": 523,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "possibly a new edition/translation of the Pratyekabuddhabhūmi"
+  },
+  {
+   "id": "ed-wayman1997",
+   "delhey_section": "2.1.8",
+   "pages": "523",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "edition",
+   "label": "Wayman 1997: 191–196",
+   "spans": [
+    {
+     "sec": "b14",
+     "page": 523
+    }
+   ],
+   "sub": "Pratyekabuddhabhūmi (= 1960) with English transl."
+  },
+  {
    "id": "ed-wogihara",
+   "delhey_section": "2.1.9.1",
+   "pages": "525–526",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -2279,7 +3056,7 @@
      "page": 525
     }
    ],
-   "sub": "Cambridge + Kyoto MSS; editio princeps; lacks the very beginning of I.1",
+   "sub": "Cambridge + Kyoto MSS; editio princeps; lacks the beginning of I.1",
    "dn": [
     {
      "id": "SA_T06_Asaṅga_Bodhisattvabhūmi",
@@ -2295,6 +3072,8 @@
   },
   {
    "id": "ed-dutt1966",
+   "delhey_section": "2.1.9.1",
+   "pages": "525–526",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -2302,11 +3081,10 @@
    "spans": [
     {
      "sec": "b15",
-     "page": 525,
-     "note": "Dutt's text lacks the Anukramapaṭala (p. 531)"
+     "page": 525
     }
    ],
-   "sub": "mainly the Patna MS; fills Wogihara's gaps; 'rather mediocre'",
+   "sub": "mainly the Patna MS; 'rather mediocre'",
    "dn": [
     {
      "id": "SA_T06_bsa034",
@@ -2317,6 +3095,8 @@
   },
   {
    "id": "ed-hadano1975",
+   "delhey_section": "2.1.9.1 n. 161",
+   "pages": "525, 530",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -2327,14 +3107,16 @@
      "page": 525
     }
    ],
-   "sub": "preliminary synoptic edition of the whole BoBh; not seen by Delhey"
+   "sub": "preliminary synoptic edition of the whole BoBh"
   },
   {
    "id": "ed-rahder1926",
+   "delhey_section": "2.1.9.1 n. 137",
+   "pages": "525",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Rahder 1926",
+   "label": "Rahder 1926a, 1926b",
    "spans": [
     {
      "sec": "bb-II.4",
@@ -2345,10 +3127,12 @@
      "page": 525
     }
    ],
-   "sub": "from Wogihara's transcript"
+   "sub": "Vihāra- and Bhūmipaṭala from Wogihara's transcript"
   },
   {
    "id": "ed-roth",
+   "delhey_section": "2.1.9.2",
+   "pages": "527",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2363,24 +3147,28 @@
      "own": "BoBhD 1,1–2,3"
     }
    ],
-   "sub": "beginning of I.1 (Patna MS only); English transl."
+   "sub": "beginning of I.1 (Patna MS); English transl."
   },
   {
-   "id": "ed-wangchuk2007",
+   "id": "ed-wangchuk2007-bobh",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "527",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
-   "label": "Wangchuk 2007",
+   "label": "Wangchuk 2007 (BoBh)",
    "spans": [
     {
      "sec": "bb-I.2",
      "page": 527
     }
    ],
-   "sub": "Cittotpādapaṭala, critical edition"
+   "sub": "Cittotpādapaṭala: Skt and Tib. critical editions"
   },
   {
    "id": "ed-takahashi2005",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "526–527",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2388,13 +3176,15 @@
    "spans": [
     {
      "sec": "bb-I.4",
-     "page": 527
+     "page": 526
     }
    ],
-   "sub": "Tattvārthapaṭala, all four MSS"
+   "sub": "Tattvārthapaṭala on all four MSS; Japanese transl."
   },
   {
    "id": "ed-yaita2010",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "527",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2405,10 +3195,12 @@
      "page": 527
     }
    ],
-   "sub": "Prabhāvapaṭala, new critical edition"
+   "sub": "Prabhāvapaṭala: new critical edition and translation"
   },
   {
    "id": "ed-nakamura2004",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "527",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2423,6 +3215,8 @@
   },
   {
    "id": "ed-leumann1931",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "527–528",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2430,13 +3224,15 @@
    "spans": [
     {
      "sec": "bb-I.8",
-     "page": 528
+     "page": 527
     }
    ],
    "sub": "Balagotrapaṭala (= BoBhW 95,1–110,13, re-presented)"
   },
   {
    "id": "ed-yaita2008",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "528",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2447,10 +3243,12 @@
      "page": 528
     }
    ],
-   "sub": "Dānapaṭala, critical edition"
+   "sub": "Dānapaṭala: critical edition and Japanese transl."
   },
   {
    "id": "ed-hadano1993",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "530",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2461,10 +3259,12 @@
      "page": 530
     }
    ],
-   "sub": "Śīlapaṭala, synoptic (Skt, Tib, 3 Chinese, *Sāgaramegha)"
+   "sub": "Śīlapaṭala, synoptic (Skt, Tib., 3 Chinese, *Sāgaramegha)"
   },
   {
    "id": "ed-markert2005",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "531",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2475,10 +3275,12 @@
      "page": 531
     }
    ],
-   "sub": "Kṣāntipaṭala"
+   "sub": "Kṣāntipaṭala: edition and translation"
   },
   {
    "id": "ed-furusaka2007",
+   "delhey_section": "2.1.9.2–4",
+   "pages": "531",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2493,6 +3295,8 @@
   },
   {
    "id": "ed-isoda1995",
+   "delhey_section": "2.1.9.4",
+   "pages": "531",
    "group": "sa-ed",
    "lang": "sa",
    "type": "partial-edition",
@@ -2510,7 +3314,27 @@
    "sub": "synoptic edition of yogasthānas II–IV"
   },
   {
+   "id": "ed-lvp1928",
+   "delhey_section": "2.1.9.1 n. 137",
+   "pages": "525",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "partial-edition",
+   "label": "de La Vallée Poussin 1928",
+   "spans": [
+    {
+     "sec": "bb-I.4",
+     "page": 525,
+     "own": "BoBhW 45,22–48,13; 48,23–50,7",
+     "extent": "section-only"
+    }
+   ],
+   "sub": "quotes Tattvārtha passages from Wogihara's transcript"
+  },
+  {
    "id": "ed-dutt1931",
+   "delhey_section": "2.1.9.3",
+   "pages": "528–529",
    "group": "sa-ed",
    "lang": "sa",
    "type": "parallel",
@@ -2525,7 +3349,7 @@
      "own": "BoBhW 152–155 = BoBhD 105–106; Dutt 1931: 269–277"
     }
    ],
-   "sub": "its first part agrees almost literally with the Śīlapaṭala",
+   "sub": "first part agrees almost literally with the Śīlapaṭala",
    "dn": [
     {
      "id": "SA_K01_bsu011_u",
@@ -2536,6 +3360,8 @@
   },
   {
    "id": "ed-schmit1991",
+   "delhey_section": "2.1.10",
+   "pages": "532",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
@@ -2552,34 +3378,145 @@
    "sub": "Sopadhikā and Nirupadhikā Bhūmiḥ (YoBh MS)"
   },
   {
-   "id": "ed-matsuda",
+   "id": "ed-schmit1969b-ms",
+   "delhey_section": "2.1.10 n. 172",
+   "pages": "532",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "study",
+   "label": "Schmithausen 1969b (MS citations)",
+   "spans": [
+    {
+     "sec": [
+      "b16",
+      "b17"
+     ],
+     "page": 532,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "passages of the Sopadhikā/Nirupadhikā cited from the MS"
+  },
+  {
+   "id": "ed-matsuda1994",
+   "delhey_section": "2.4",
+   "pages": "539",
    "group": "sa-ed",
    "lang": "sa",
    "type": "edition",
-   "label": "Matsuda 1994; 1995",
+   "label": "Matsuda 1994",
    "spans": [
     {
      "t": [
       "768c20",
       "769c9"
      ],
-     "page": 539,
-     "own": "1994"
-    },
+     "page": 539
+    }
+   ],
+   "sub": "Paryāya folio: diplomatic and critical edition"
+  },
+  {
+   "id": "ed-matsuda1995",
+   "delhey_section": "2.2.5.3",
+   "pages": "535",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "edition",
+   "label": "Matsuda 1995",
+   "spans": [
     {
      "t": [
       "728c16",
       "730b21"
      ],
      "page": 535,
-     "own": "1995",
-     "note": "only the part belonging to Saṃdh IX is edited (exact sub-range not given)"
+     "note": "only the part belonging to Saṃdh IX is edited (sub-range not given)"
     }
    ],
-   "sub": "Kathmandu folios: Paryāya (1994); Saṃdh IX part of the Viniścaya folio (1995)"
+   "sub": "Viniścaya folio: facsimile; Saṃdh IX part edited, Japanese transl."
+  },
+  {
+   "id": "ed-matsuda1988",
+   "delhey_section": "1.2 n. 44; 2.2.1.2",
+   "pages": "510, 533",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "study",
+   "label": "Matsuda 1988",
+   "spans": [
+    {
+     "t": [
+      "589b19",
+      "600c10"
+     ],
+     "page": 533,
+     "extent": "selections"
+    }
+   ],
+   "sub": "report on the St Petersburg Viniścaya fragment; passages cited"
+  },
+  {
+   "id": "ed-kritzer2005",
+   "delhey_section": "2.0 n. 63; 2.2.1.2; 2.5",
+   "pages": "512, 533, 540",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "study",
+   "label": "Kritzer 2005",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 512,
+     "note": "numerous passages from all over the YoBh",
+     "extent": "whole-work"
+    },
+    {
+     "sec": "v1",
+     "page": 533,
+     "own": "pp. 5, 187, 189",
+     "note": "cites the St Petersburg fragment",
+     "extent": "section-only"
+    },
+    {
+     "sec": "vs-vinaya",
+     "page": 540,
+     "own": "pp. XVIf.",
+     "note": "Vinaya verses / end of the prose",
+     "extent": "section-only"
+    }
+   ],
+   "sub": "passages from all over the YoBh (Tib., Chin., Skt where extant)"
+  },
+  {
+   "id": "ed-sakuma1996",
+   "delhey_section": "2.2.1.1 n. 175",
+   "pages": "532",
+   "group": "sa-ed",
+   "lang": "sa",
+   "type": "study",
+   "label": "Sakuma 1996: 7–8",
+   "spans": [
+    {
+     "t": [
+      "579a14",
+      "579c22"
+     ],
+     "page": 532
+    }
+   ],
+   "sub": "corrections to the Sanskrit of the ASBh citation"
   },
   {
    "id": "bo-d4035",
+   "delhey_section": "2.1.1",
+   "pages": "503, 515",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2611,11 +3548,12 @@
      "lang": "bo",
      "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4035/text"
     }
-   ],
-   "note": "pp. 503 n. 16, 515: the Tibetan transmits ŚrBh and BoBh as separate texts."
+   ]
   },
   {
    "id": "bo-d4036",
+   "delhey_section": "2.1.7",
+   "pages": "521",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2637,6 +3575,8 @@
   },
   {
    "id": "bo-d4037",
+   "delhey_section": "2.1.9.1",
+   "pages": "524, 531",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2647,7 +3587,7 @@
      "page": 524
     }
    ],
-   "sub": "Bodhisattvabhūmi (incl. Anukramapaṭala after a colophon)",
+   "sub": "Bodhisattvabhūmi (Anukramapaṭala after a colophon)",
    "dn": [
     {
      "id": "BO_T06_D4037",
@@ -2658,6 +3598,8 @@
   },
   {
    "id": "bo-d4038",
+   "delhey_section": "2.2.0",
+   "pages": "532",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2684,6 +3626,8 @@
   },
   {
    "id": "bo-d4039",
+   "delhey_section": "2.5",
+   "pages": "539",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2709,6 +3653,8 @@
   },
   {
    "id": "bo-d4040",
+   "delhey_section": "2.5",
+   "pages": "540",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2720,11 +3666,10 @@
       "877c1"
      ],
      "page": 540,
-     "own": "T1579.868b–877c1",
-     "note": "T1579.877c2–17 only represented by a short remark (Q5541.26b7–27a2); T1579.877c18–878a24 missing"
+     "note": "T1579.877c2–17 only a short remark; 877c18–878a24 missing"
     }
    ],
-   "sub": "Vinaya part as a separate text; opening verses (Q5541.1a1–5a8) have no Chinese counterpart",
+   "sub": "opening verses (Q5541.1a1–5a8) without Chinese counterpart",
    "dn": [
     {
      "id": "BO_T06_D4040",
@@ -2735,6 +3680,8 @@
   },
   {
    "id": "bo-d4041",
+   "delhey_section": "2.4",
+   "pages": "539",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2756,6 +3703,8 @@
   },
   {
    "id": "bo-d4042",
+   "delhey_section": "2.3",
+   "pages": "539",
    "group": "bo",
    "lang": "bo",
    "type": "translation",
@@ -2776,11 +3725,134 @@
    ]
   },
   {
+   "id": "bo-witnesses",
+   "delhey_section": "1.1 n. 30",
+   "pages": "507",
+   "group": "bo",
+   "lang": "bo",
+   "type": "witnesses",
+   "label": "Tibetan witnesses: Peking Q5536–5543, Narthang, Ganden G3535–3542 | Derge, Cone",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 507,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "two groups of bstan 'gyur witnesses (Deleanu 2006: 78ff.; Kramer 2005: 67; Wangchuk 2007: 381)"
+  },
+  {
+   "id": "bo-zt",
+   "delhey_section": "2.0",
+   "pages": "512–513",
+   "group": "bo",
+   "lang": "bo",
+   "type": "edition",
+   "label": "Zhōnghuá bstan 'gyur (ZT)",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 512,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "collated Tibetan text; 'by no means a critical one'"
+  },
+  {
+   "id": "bo-beijing-bobh",
+   "delhey_section": "2.1.9.1 n. 129",
+   "pages": "524",
+   "group": "bo",
+   "lang": "bo",
+   "type": "edition",
+   "label": "Beijing separate edition of the Tibetan BoBh",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 524
+    }
+   ],
+   "sub": "'no historical and philological value' (Wangchuk 2007: 380 n. 12)"
+  },
+  {
+   "id": "bo-dunhuang",
+   "delhey_section": "1.1 n. 30",
+   "pages": "507",
+   "group": "bo",
+   "lang": "bo",
+   "type": "manuscript",
+   "label": "Tibetan Dūnhuáng fragments: Fujita 1979; Hakamaya 1985: 220–224; Ishikawa 1992, 1993, 1994",
+   "spans": [],
+   "sub": "locations not given by Delhey",
+   "note": "not localised"
+  },
+  {
+   "id": "bo-dunhuang-srbh",
+   "delhey_section": "1.1 n. 30",
+   "pages": "507",
+   "group": "bo",
+   "lang": "bo",
+   "type": "manuscript",
+   "label": "Dūnhuáng fragments of the Tibetan Śrāvakabhūmi (Deleanu 2006: 77f.)",
+   "spans": [
+    {
+     "sec": "b13",
+     "page": 507,
+     "extent": "section-only"
+    }
+   ]
+  },
+  {
+   "id": "bo-mongolian",
+   "delhey_section": "1.1 n. 31; 2.2.6",
+   "pages": "507, 538",
+   "group": "bo",
+   "lang": "multi",
+   "type": "translation",
+   "label": "Mongolian translation (from the Tibetan)",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 507,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    },
+    {
+     "sec": "v16",
+     "page": 538,
+     "note": "used in Schmithausen 1969b"
+    }
+   ],
+   "sub": "collated by Schmithausen 1969b for the nirvāṇa chapter"
+  },
+  {
    "id": "te-hakamaya1978",
+   "delhey_section": "2.2.1.1",
+   "pages": "532",
    "group": "te",
    "lang": "bo",
    "type": "edition",
-   "label": "Hakamaya 1978; 1979",
+   "label": "Hakamaya 1978",
    "spans": [
     {
      "t": [
@@ -2788,21 +3860,35 @@
       "579c22"
      ],
      "page": 532,
-     "own": "1978: Q5539.zi.2b2–4a4"
-    },
+     "own": "Q5539.zi.2b2–4a4"
+    }
+   ],
+   "sub": "ASBh citation edited with Tib. and Chin.; Japanese transl."
+  },
+  {
+   "id": "te-hakamaya1979",
+   "delhey_section": "2.2.1.1",
+   "pages": "532",
+   "group": "te",
+   "lang": "bo",
+   "type": "edition",
+   "label": "Hakamaya 1979",
+   "spans": [
     {
      "t": [
       "579c23",
       "582a12"
      ],
      "page": 532,
-     "own": "1979: Q5539.zi.4a5–10b6"
+     "own": "Q5539.zi.4a5–10b6"
     }
    ],
-   "sub": "ālayavijñāna treatise: ASBh citation with Tib./Chin. (1978); synoptic Tib./Chin. (1979)"
+   "sub": "synoptic critical Tib./Chin. of the rest of the ālayavijñāna treatise; Japanese transl."
   },
   {
    "id": "te-ui1930",
+   "delhey_section": "2.2.1.1",
+   "pages": "532",
    "group": "te",
    "lang": "zh",
    "type": "edition",
@@ -2821,6 +3907,8 @@
   },
   {
    "id": "te-sakuma1990",
+   "delhey_section": "2.2.1–2.5",
+   "pages": "532–540",
    "group": "te",
    "lang": "bo",
    "type": "edition",
@@ -2832,8 +3920,8 @@
       "581b29"
      ],
      "page": 532,
-     "own": "Q5539.zi.9a3f. (pp. 155–161)",
-     "note": "'581b22f.' – end not given"
+     "own": "pp. 155–161: Q5539.zi.9a3f.",
+     "note": "end not given"
     },
     {
      "t": [
@@ -2849,7 +3937,17 @@
       "589b2"
      ],
      "page": 533,
-     "own": "Q5539.zi.30a5–30b7 (pp. 161–165)"
+     "own": "pp. 161–165: Q5539.zi.30a5–30b7"
+    },
+    {
+     "t": [
+      "621a26",
+      "630a5"
+     ],
+     "page": 533,
+     "own": "pp. 165–171",
+     "note": "two small portions of the kleśa sections",
+     "extent": "section-only"
     },
     {
      "t": [
@@ -2857,7 +3955,7 @@
       "635c11"
      ],
      "page": 533,
-     "own": "Q5539.zi.152a4–6 (pp. 171–173)"
+     "own": "pp. 171–173: Q5539.zi.152a4–6"
     },
     {
      "t": [
@@ -2865,7 +3963,7 @@
       "669a21"
      ],
      "page": 534,
-     "own": "Q5539.zi.236b1–237a1 (pp. 173–182)"
+     "own": "pp. 173–182: Q5539.zi.236b1–237a1"
     },
     {
      "t": [
@@ -2893,11 +3991,21 @@
     },
     {
      "t": [
+      "695c26",
+      "703a25"
+     ],
+     "page": 535,
+     "own": "pp. 183–190",
+     "note": "a small section of the vastu part (n. 180)",
+     "extent": "section-only"
+    },
+    {
+     "t": [
       "707a5",
       "707b23"
      ],
      "page": 535,
-     "own": "Q5539.'i.30a6–31b5 (pp. 190–201)"
+     "own": "pp. 190–201: Q5539.'i.30a6–31b5"
     },
     {
      "t": [
@@ -2905,7 +4013,7 @@
       "733c24"
      ],
      "page": 535,
-     "own": "Q5539.'i.100b8–101a4 (pp. 201–203)"
+     "own": "pp. 201–203: Q5539.'i.100b8–101a4"
     },
     {
      "t": [
@@ -2913,7 +4021,7 @@
       "746c18"
      ],
      "page": 538,
-     "own": "Q5539.'i.134b8–135a1 (pp. 203–204)"
+     "own": "pp. 203–204: Q5539.'i.134b8–135a1"
     },
     {
      "t": [
@@ -2921,7 +4029,7 @@
       "802a12"
      ],
      "page": 540,
-     "own": "Q5540.221a2–5 (pp. 204–208)"
+     "own": "pp. 204–208: Q5540.221a2–5"
     },
     {
      "t": [
@@ -2930,19 +4038,14 @@
      ],
      "page": 540,
      "own": "Q5540.312b2–5"
-    },
-    {
-     "sec": "v15",
-     "page": 535,
-     "own": "pp. 183–190",
-     "note": "'a small section' of the vastu part of the *Tattvārthapaṭalaviniścaya (n. 180); exact place not given",
-     "extent": "section-only"
     }
    ],
    "sub": "tiny passages, edited and translated into German"
   },
   {
    "id": "te-ahn2003",
+   "delhey_section": "2.2.1.2; 2.2.2",
+   "pages": "533",
    "group": "te",
    "lang": "bo",
    "type": "edition",
@@ -2954,7 +4057,7 @@
       "604b9"
      ],
      "page": 533,
-     "own": "Q5539.zi.65a3–68b7; pp. 88–95, transl. 215–230"
+     "own": "pp. 88–95: Q5539.zi.65a3–68b7"
     },
     {
      "t": [
@@ -2962,39 +4065,55 @@
       "630a5"
      ],
      "page": 533,
-     "own": "Q5539.zi.112b2–137b1; pp. 96–155, transl. 231–372"
+     "own": "pp. 96–155: Q5539.zi.112b2–137b1"
     }
    ],
    "sub": "kleśa sections of the Viniścaya; German transl."
   },
   {
-   "id": "te-kritzer1999",
+   "id": "te-jan1984",
+   "delhey_section": "2.2.2",
+   "pages": "533–534",
    "group": "te",
-   "lang": "bo",
+   "lang": "zh",
    "type": "study",
-   "label": "Kritzer 1999: 225–281",
+   "label": "Jan 1984",
    "spans": [
     {
      "t": [
-      "585c9",
-      "588c9"
+      "638a19",
+      "644a6"
      ],
      "page": 533,
-     "own": "Q5539.zi.21b1–29b1"
-    },
-    {
-     "t": [
-      "607a23",
-      "608a6"
-     ],
-     "page": 533,
-     "own": "Q5539.zi.76a5–78a3"
+     "extent": "selections"
     }
    ],
-   "sub": "cittaviprayuktāḥ saṃskārāḥ; many passages cited with text-critical remarks"
+   "sub": "summary and partial translation of the royal-code section (Chinese)"
+  },
+  {
+   "id": "te-zimmermann2006",
+   "delhey_section": "2.2.2",
+   "pages": "533",
+   "group": "te",
+   "lang": "zh",
+   "type": "study",
+   "label": "Zimmermann 2006: 230 n. 52",
+   "spans": [
+    {
+     "t": [
+      "638a19",
+      "644a6"
+     ],
+     "page": 533,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "T1579 vs T1615: minor variants"
   },
   {
    "id": "te-maeda2007",
+   "delhey_section": "2.2.2",
+   "pages": "534",
    "group": "te",
    "lang": "bo",
    "type": "edition",
@@ -3006,15 +4125,35 @@
       "644a6"
      ],
      "page": 534,
-     "own": "Q5539.zi.158a4–173a5",
-     "note": "partial; extent within the section not given",
      "extent": "section-only"
     }
    ],
-   "sub": "partial critical edition of the Tibetan of the royal-code section; Japanese transl."
+   "sub": "partial critical Tib. edition of the royal-code section; Japanese transl.; T1615 and T524"
+  },
+  {
+   "id": "te-maeda2005",
+   "delhey_section": "2.2.2 n. 179",
+   "pages": "534",
+   "group": "te",
+   "lang": "zh",
+   "type": "study",
+   "label": "Maeda 2005 (not seen by Delhey)",
+   "spans": [
+    {
+     "t": [
+      "638a19",
+      "644a6"
+     ],
+     "page": 534,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "on the same section"
   },
   {
    "id": "te-delhey2006",
+   "delhey_section": "2.2.3",
+   "pages": "534",
    "group": "te",
    "lang": "bo",
    "type": "edition",
@@ -3029,10 +4168,12 @@
   },
   {
    "id": "te-wangchuk2007",
+   "delhey_section": "2.2.5.0; 2.2.5.4",
+   "pages": "534, 538",
    "group": "te",
    "lang": "bo",
    "type": "edition",
-   "label": "Wangchuk 2007",
+   "label": "Wangchuk 2007 (Viniścaya)",
    "spans": [
     {
      "q": {
@@ -3041,8 +4182,8 @@
       "to": "zi300b8"
      },
      "page": 534,
-     "own": "Q5539.zi.300a7–300b8 (pp. 263–266)",
-     "note": "Delhey gives only Peking folios; placed by linear interpolation between his Q–T anchors"
+     "own": "pp. 263–266: Q5539.zi.300a7–300b8",
+     "note": "interpolated between Delhey's Q–T anchors"
     },
     {
      "q": {
@@ -3051,14 +4192,16 @@
       "to": "'i129b2"
      },
      "page": 538,
-     "own": "Q5539.'i.127b3–129b2 (pp. 140–142)",
-     "note": "Delhey gives only Peking folios; placed by linear interpolation between his Q–T anchors"
+     "own": "pp. 140–142: Q5539.'i.127b3–129b2",
+     "note": "interpolated between Delhey's Q–T anchors"
     }
    ],
    "sub": "two passages of the *Bodhisattvabhūmiviniścaya"
   },
   {
    "id": "te-kramer2005",
+   "delhey_section": "2.2.5.1",
+   "pages": "535",
    "group": "te",
    "lang": "bo",
    "type": "edition",
@@ -3073,10 +4216,12 @@
      "own": "Q5539.zi.302b1–'i.19b6"
     }
    ],
-   "sub": "*Tattvārthapaṭalaviniścaya part 1 (five vastus): Tibetan on all five witnesses; German transl."
+   "sub": "five vastus: Tibetan on all five witnesses; German transl."
   },
   {
    "id": "te-willis1976",
+   "delhey_section": "2.2.5.1",
+   "pages": "535",
    "group": "te",
    "lang": "bo",
    "type": "edition",
@@ -3088,18 +4233,20 @@
       "707a5"
      ],
      "page": 535,
-     "note": "Delhey gives the start (end of Kramer's part) but not the end of part 2; the end shown is the next passage Delhey locates",
+     "note": "end of part 2 not given",
      "extent": "approx-end"
     }
    ],
-   "sub": "selected passages of part 2 of the *Tattvārthapaṭalaviniścaya (Peking transcript)"
+   "sub": "selected passages of part 2 of the *Tattvārthapaṭalaviniścaya"
   },
   {
    "id": "te-takahashi2005",
+   "delhey_section": "2.2.5.1",
+   "pages": "535",
    "group": "te",
    "lang": "bo",
    "type": "edition",
-   "label": "Takahashi 2005a: 119–149",
+   "label": "Takahashi 2005a: 119–149 (transl. 181–212)",
    "spans": [
     {
      "t": [
@@ -3107,14 +4254,35 @@
       "707a5"
      ],
      "page": 535,
-     "note": "selected passages; end of the subchapter approximate",
      "extent": "selections"
     }
    ],
-   "sub": "selected passages from both parts of the *Tattvārthapaṭalaviniścaya"
+   "sub": "selected passages of both parts"
   },
   {
-   "id": "te-schmit1969",
+   "id": "te-tatz-tsongkhapa",
+   "delhey_section": "2.2.5.2",
+   "pages": "535",
+   "group": "te",
+   "lang": "bo",
+   "type": "study",
+   "label": "Tatz 1986: 132–136 (Tsong kha pa's citation)",
+   "spans": [
+    {
+     "t": [
+      "710c29",
+      "712a17"
+     ],
+     "page": 535,
+     "own": "Q5539.'i.40a1–43a5"
+    }
+   ],
+   "sub": "relatively long section cited by Tsong kha pa; translation"
+  },
+  {
+   "id": "te-schmit1969b",
+   "delhey_section": "2.2.6",
+   "pages": "538",
    "group": "te",
    "lang": "bo",
    "type": "edition",
@@ -3125,36 +4293,274 @@
      "page": 538
     }
    ],
-   "sub": "Nirvāṇa chapter: Tibetan (4 witnesses + Mongolian); German transl."
+   "sub": "nirvāṇa chapter: Tibetan (4 witnesses + Mongolian); German transl.; uses T1828"
   },
   {
-   "id": "te-mukai",
+   "id": "te-silk2009",
+   "delhey_section": "2.2.5.4 n. 198",
+   "pages": "538",
    "group": "te",
    "lang": "bo",
    "type": "study",
-   "label": "Mukai 1985; 1996",
+   "label": "Silk 2009; Potter 2003: 526–532",
+   "spans": [
+    {
+     "t": [
+      "738c28",
+      "747b25"
+     ],
+     "page": 538
+    }
+   ],
+   "sub": "Kāśyapaparivarta-related section; correspondence tables"
+  },
+  {
+   "id": "te-schmit1969a",
+   "delhey_section": "2.2.0 n. 173; 0.4",
+   "pages": "502, 532",
+   "group": "te",
+   "lang": "multi",
+   "type": "study",
+   "label": "Schmithausen 1969a: 812–823; 1969b: 17–37",
+   "spans": [
+    {
+     "sec": "vin",
+     "page": 532,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "structure and literary history of the Viniścaya"
+  },
+  {
+   "id": "te-mukai1985",
+   "delhey_section": "2.5",
+   "pages": "539–540",
+   "group": "te",
+   "lang": "bo",
+   "type": "study",
+   "label": "Mukai 1985",
    "spans": [
     {
      "sec": "vs-sutra",
      "page": 539,
-     "own": "1985: 27–41",
-     "note": "concordance of Peking, Derge, Taishō and the Saṃyuktāgama sūtras"
+     "own": "pp. 27–41"
     },
     {
+     "sec": "vs-matrka",
+     "page": 540,
+     "own": "pp. 4–8"
+    }
+   ],
+   "sub": "concordance of Peking, Derge, Taishō and the Saṃyuktāgama (pp. 27–41); the mātṛkā problem (pp. 4–8)"
+  },
+  {
+   "id": "te-mukai1996",
+   "delhey_section": "2.3; 2.4",
+   "pages": "539",
+   "group": "te",
+   "lang": "bo",
+   "type": "study",
+   "label": "Mukai 1996",
+   "spans": [
+    {
      "sec": "vyakh",
-     "page": 539,
-     "own": "1996: 575–573"
+     "page": 539
     },
     {
      "sec": "pary",
-     "page": 539,
-     "own": "1996: 572–569"
+     "page": 539
     }
    ],
-   "sub": "concordances/synopses (no edition)"
+   "sub": "synopses of the *Vyākhyā- (pp. 575–573) and Paryāyasaṃgrahaṇī (pp. 572–569)"
+  },
+  {
+   "id": "te-horiuchi2008",
+   "delhey_section": "2.3",
+   "pages": "539",
+   "group": "te",
+   "lang": "bo",
+   "type": "study",
+   "label": "Horiuchi 2008: 1130 n. 3",
+   "spans": [
+    {
+     "sec": "vyakh",
+     "page": 539,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "desideratum: comparison with the Vyākhyāyukti"
+  },
+  {
+   "id": "te-kwon2003",
+   "delhey_section": "2.1.6 n. 109",
+   "pages": "521",
+   "group": "te",
+   "lang": "bo",
+   "type": "edition",
+   "label": "Kwon 2003 (Ph.D.)",
+   "spans": [
+    {
+     "sec": "b12",
+     "page": 521
+    }
+   ],
+   "sub": "critical/collated Tib. and Chin. of the Bhāvanāmayī; Japanese transl."
+  },
+  {
+   "id": "te-sugawara2013",
+   "delhey_section": "2.1.6",
+   "pages": "521",
+   "group": "te",
+   "lang": "sa",
+   "type": "study",
+   "label": "Sugawara 2013; von Rospatt 2013 (same volume)",
+   "spans": [
+    {
+     "sec": "b12",
+     "page": 521
+    }
+   ],
+   "sub": "on the Bhāvanāmayī Bhūmi"
+  },
+  {
+   "id": "te-deleanu-zh",
+   "delhey_section": "1.1 n. 29",
+   "pages": "507",
+   "group": "te",
+   "lang": "zh",
+   "type": "study",
+   "label": "Deleanu 2006: 106–146",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 507,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "production and textual witnesses of the Chinese translation; editions other than Taishō"
+  },
+  {
+   "id": "te-taisho",
+   "delhey_section": "2.0",
+   "pages": "512",
+   "group": "te",
+   "lang": "zh",
+   "type": "edition",
+   "label": "Taishō edition of T1579",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 512,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "variant readings, not of the highest text-critical standard (Yuyama 1994)"
+  },
+  {
+   "id": "te-sueki1980",
+   "delhey_section": "2.1.9.1 n. 133",
+   "pages": "525",
+   "group": "te",
+   "lang": "zh",
+   "type": "study",
+   "label": "Sueki 1980",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 525,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "peculiarities of Guṇavarman's BoBh translation"
+  },
+  {
+   "id": "te-chen2004",
+   "delhey_section": "2.1.9.1 n. 130",
+   "pages": "524",
+   "group": "te",
+   "lang": "zh",
+   "type": "study",
+   "label": "Chen 2004",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 524,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "date of Dharmakṣema's translations (422–431)"
+  },
+  {
+   "id": "te-demieville1957",
+   "delhey_section": "2.1.9.1; 2.1.9.4",
+   "pages": "524–525, 531",
+   "group": "te",
+   "lang": "zh",
+   "type": "study",
+   "label": "Demiéville 1957",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 524,
+     "extent": "section-only"
+    },
+    {
+     "sec": "bb-I.13",
+     "page": 531
+    }
+   ],
+   "sub": "on the three Chinese BoBh translations; French transl. of the Dhyānapaṭala"
+  },
+  {
+   "id": "te-lunglien",
+   "delhey_section": "2.1.9.3 n. 150",
+   "pages": "528",
+   "group": "te",
+   "lang": "zh",
+   "type": "study",
+   "label": "Lung-Lien 1972; Hôbôgirin fasc. 2: 142–146",
+   "spans": [
+    {
+     "sec": "bb-I.10",
+     "page": 528
+    }
+   ],
+   "sub": "the Chinese Śīlapaṭala texts"
+  },
+  {
+   "id": "te-kritzer-vinaya",
+   "delhey_section": "2.5",
+   "pages": "540",
+   "group": "te",
+   "lang": "bo",
+   "type": "study",
+   "label": "Kritzer 2005: XVIf.; Deleanu 2006: 46f.",
+   "spans": [
+    {
+     "sec": "vs-vinaya",
+     "page": 540
+    }
+   ],
+   "sub": "Tibetan vs Chinese Vinaya part"
   },
   {
    "id": "zh-t1579",
+   "delhey_section": "1.1",
+   "pages": "507",
    "group": "zh",
    "lang": "zh",
    "type": "translation",
@@ -3179,6 +4585,8 @@
   },
   {
    "id": "zh-t1581",
+   "delhey_section": "2.1.9.1",
+   "pages": "524",
    "group": "zh",
    "lang": "zh",
    "type": "translation",
@@ -3189,7 +4597,7 @@
      "page": 524
     }
    ],
-   "sub": "Dharmakṣema (418 or 422–431 CE); whole BoBh, without Anukramapaṭala",
+   "sub": "Dharmakṣema; whole BoBh, without the Anukramapaṭala",
    "dn": [
     {
      "id": "ZH_T30_1581",
@@ -3200,37 +4608,36 @@
   },
   {
    "id": "zh-t1582",
+   "delhey_section": "2.1.9.1",
+   "pages": "524",
    "group": "zh",
    "lang": "zh",
    "type": "translation",
-   "label": "T1582/T1583 Púsà shànjiè jīng 菩薩善戒經",
+   "label": "T1582 Púsà shànjiè jīng 菩薩善戒經",
    "spans": [
     {
      "sec": "b15",
      "page": 524,
-     "note": "T1583 is the part of the same translation from BoBhD 105,4 = BoBhW 152,18 onwards that was extracted from T1582 (n. 131)"
+     "note": "the part from BoBhD 105,4 onwards is transmitted separately as T1583"
     }
    ],
-   "sub": "Guṇavarman (431 CE); whole BoBh in sūtra format, without Anukramapaṭala",
+   "sub": "Guṇavarman, 431; sūtra format; without the Anukramapaṭala",
    "dn": [
     {
      "id": "ZH_T30_1582",
      "lang": "zh",
      "url": "https://dharmamitra.org/nexus/db/zh/ZH_T30_1582/text"
-    },
-    {
-     "id": "ZH_T30_1583",
-     "lang": "zh",
-     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T30_1583/text"
     }
    ]
   },
   {
    "id": "zh-t1583",
+   "delhey_section": "2.1.9.1 n. 131; 2.1.9.3",
+   "pages": "524, 528",
    "group": "zh",
    "lang": "zh",
    "type": "translation",
-   "label": "T1583 Púsà shànjiè jīng 菩薩善戒經 (Śīla extract)",
+   "label": "T1583 Púsà shànjiè jīng 菩薩善戒經 (Śīla part)",
    "spans": [
     {
      "bobhd": [
@@ -3239,11 +4646,11 @@
      ],
      "page": 524,
      "own": "from BoBhD 105,4 = BoBhW 152,18",
-     "note": "Delhey gives only the starting point (n. 131); the end shown is arbitrary",
+     "note": "Delhey gives only the starting point",
      "extent": "approx-end"
     }
    ],
-   "sub": "Guṇavarman; extracted from T1582",
+   "sub": "extracted from T1582",
    "dn": [
     {
      "id": "ZH_T30_1583",
@@ -3253,7 +4660,26 @@
    ]
   },
   {
+   "id": "zh-python1973",
+   "delhey_section": "2.1.9.1 n. 133",
+   "pages": "525",
+   "group": "zh",
+   "lang": "zh",
+   "type": "study",
+   "label": "Python 1973: 141–153",
+   "spans": [
+    {
+     "sec": "bb-I.1",
+     "page": 525,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "French transl. of the sūtra-style introduction of T1582"
+  },
+  {
    "id": "zh-t1499",
+   "delhey_section": "2.1.9.3",
+   "pages": "528",
    "group": "zh",
    "lang": "zh",
    "type": "extract",
@@ -3267,7 +4693,6 @@
      "page": 528
     }
    ],
-   "sub": "extract from Xuánzàng's Śīlapaṭala",
    "dn": [
     {
      "id": "ZH_T24_1499",
@@ -3278,6 +4703,8 @@
   },
   {
    "id": "zh-t1501",
+   "delhey_section": "2.1.9.3",
+   "pages": "528",
    "group": "zh",
    "lang": "zh",
    "type": "extract",
@@ -3298,7 +4725,6 @@
      "page": 528
     }
    ],
-   "sub": "extract from Xuánzàng's Śīlapaṭala",
    "dn": [
     {
      "id": "ZH_T24_1501",
@@ -3309,6 +4735,8 @@
   },
   {
    "id": "zh-t1500",
+   "delhey_section": "2.1.9.3",
+   "pages": "528",
    "group": "zh",
    "lang": "zh",
    "type": "extract",
@@ -3318,11 +4746,10 @@
      "sec": "bb-I.10",
      "page": 528,
      "own": "T1581.913b–917a",
-     "note": "Delhey gives the location in T1581 only; shown at section level here (see the aligned layer for the data-derived span)",
      "extent": "section-only"
     }
    ],
-   "sub": "= T1581.913b–917a (Śīlapaṭala)",
+   "sub": "= T1581.913b–917a",
    "dn": [
     {
      "id": "ZH_T24_1500",
@@ -3333,6 +4760,8 @@
   },
   {
    "id": "zh-t1503",
+   "delhey_section": "2.1.9.3",
+   "pages": "528",
    "group": "zh",
    "lang": "zh",
    "type": "extract",
@@ -3347,7 +4776,7 @@
      "own": "T1503.1116c–1119b"
     }
    ],
-   "sub": "ascribed to Guṇavarman (contested); first half",
+   "sub": "ascribed to Guṇavarman (contested)",
    "dn": [
     {
      "id": "ZH_T24_1503",
@@ -3358,6 +4787,8 @@
   },
   {
    "id": "zh-t1584",
+   "delhey_section": "2.2.1.1",
+   "pages": "532",
    "group": "zh",
    "lang": "zh",
    "type": "translation",
@@ -3372,7 +4803,7 @@
      "own": "Q5539.zi.1a1–60b7"
     }
    ],
-   "sub": "Paramārtha, 6th c.; first half of Viniścaya ch. 1",
+   "sub": "Paramārtha, 6th c.",
    "dn": [
     {
      "id": "ZH_T30_1584",
@@ -3383,6 +4814,8 @@
   },
   {
    "id": "zh-t1615",
+   "delhey_section": "2.2.2",
+   "pages": "533",
    "group": "zh",
    "lang": "zh",
    "type": "extract",
@@ -3393,19 +4826,17 @@
       "638a19",
       "642a5"
      ],
-     "page": 533,
-     "own": "Q5539.zi.158a4–168a1"
+     "page": 533
     },
     {
      "t": [
       "642b20",
       "644a6"
      ],
-     "page": 533,
-     "own": "Q5539.zi.169a5–173a5"
+     "page": 533
     }
    ],
-   "sub": "attributed to Xuánzàng (649?); royal code",
+   "sub": "attributed to Xuánzàng (649?)",
    "dn": [
     {
      "id": "ZH_T31_1615",
@@ -3413,10 +4844,12 @@
      "url": "https://dharmamitra.org/nexus/db/zh/ZH_T31_1615/text"
     }
    ],
-   "note": "Omits T1579.642a6–b19 (p. 533)."
+   "note": "omits T1579.642a6–b19"
   },
   {
    "id": "zh-t524",
+   "delhey_section": "2.2.2",
+   "pages": "534",
    "group": "zh",
    "lang": "zh",
    "type": "extract",
@@ -3427,11 +4860,10 @@
       "638a19",
       "642a5"
      ],
-     "page": 534,
-     "own": "Q5539.zi.158a4–168a1"
+     "page": 534
     }
    ],
-   "sub": "attributed to Amoghavajra; with Tantric additions",
+   "sub": "attributed to Amoghavajra; Tantric additions",
    "dn": [
     {
      "id": "ZH_T14_0524",
@@ -3441,7 +4873,57 @@
    ]
   },
   {
+   "id": "zh-saptadasa",
+   "delhey_section": "1.1 n. 29",
+   "pages": "507",
+   "group": "zh",
+   "lang": "zh",
+   "type": "translation",
+   "label": "Paramārtha's *Saptadaśabhūmiśāstra (lost)",
+   "spans": [],
+   "sub": "Deleanu 2006: 196–201",
+   "note": "not localised: lost translation"
+  },
+  {
+   "id": "zh-kundoku",
+   "delhey_section": "1.1 n. 31; 2.0",
+   "pages": "507, 513, 515",
+   "group": "zh",
+   "lang": "ja",
+   "type": "translation",
+   "label": "Japanese kundoku of T1579 (Katō Seishin 1930–1935)",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 507,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "with tables of contents"
+  },
+  {
+   "id": "zh-uighur",
+   "delhey_section": "1.1 n. 31",
+   "pages": "507",
+   "group": "zh",
+   "lang": "multi",
+   "type": "translation",
+   "label": "Uighur translation (von Gabain 1961, 1963)",
+   "spans": [],
+   "sub": "probably secondary, from the Chinese; whereabouts unknown",
+   "note": "not localised"
+  },
+  {
    "id": "rel-d4043",
+   "delhey_section": "1.4; 2.3",
+   "pages": "511, 539",
    "group": "rel",
    "lang": "bo",
    "type": "commentary",
@@ -3454,10 +4936,10 @@
      ],
      "page": 511,
      "own": "up to Bh. 137 (n. 58)",
-     "note": "stops abruptly in the commentary on the Savitarkādibhūmi (Bh. 137; Hakamaya)"
+     "note": "stops in the commentary on the Savitarkādibhūmi"
     }
    ],
-   "sub": "Indian commentary (torso), breaks off in the Savitarkādibhūmi",
+   "sub": "Indian commentary (torso)",
    "dn": [
     {
      "id": "BO_T06_D4043",
@@ -3465,10 +4947,12 @@
      "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4043/text"
     }
    ],
-   "note": "Delhey (pp. 511, 539) cites it as 'Q5543, D4042', which are the numbers of the *Vyākhyāsaṃgrahaṇī; the commentary is D4043/Q5544 in the Tōhoku and Peking catalogues."
+   "note": "Delhey cites it as 'Q5543, D4042' (the numbers of the *Vyākhyāsaṃgrahaṇī)."
   },
   {
    "id": "rel-t1580",
+   "delhey_section": "1.4",
+   "pages": "511",
    "group": "rel",
    "lang": "zh",
    "type": "commentary",
@@ -3480,11 +4964,10 @@
       "279a08"
      ],
      "page": 511,
-     "note": "corresponds to the introductory section of the *Yogācārabhūmivyākhyā (n. 59); a general introduction rather than a running commentary – shown at the beginning",
      "extent": "point"
     }
    ],
-   "sub": "short Chinese commentary, generally regarded as Indian",
+   "sub": "corresponds to the introductory section of the *Vyākhyā",
    "dn": [
     {
      "id": "ZH_T30_1580",
@@ -3494,7 +4977,40 @@
    ]
   },
   {
+   "id": "rel-mukai1979",
+   "delhey_section": "1.4 n. 59",
+   "pages": "511",
+   "group": "rel",
+   "lang": "zh",
+   "type": "study",
+   "label": "Mukai 1979: 42; Silk 1997: 240 n. 44",
+   "spans": [
+    {
+     "t": [
+      "279a08",
+      "279a08"
+     ],
+     "page": 511,
+     "extent": "point"
+    }
+   ],
+   "sub": "T1580 and the *Vyākhyā compared"
+  },
+  {
+   "id": "rel-lost-comm",
+   "delhey_section": "1.4",
+   "pages": "512",
+   "group": "rel",
+   "lang": "multi",
+   "type": "commentary",
+   "label": "Lost Indian commentaries (Yūki 1962: 61–77; Deleanu 2006: 249f., 263f.)",
+   "spans": [],
+   "note": "not localised"
+  },
+  {
    "id": "rel-t1602",
+   "delhey_section": "1.3; 2.1.4.2; 2.1.7",
+   "pages": "511, 518, 522",
    "group": "rel",
    "lang": "zh",
    "type": "related",
@@ -3506,18 +5022,22 @@
       "489,24"
      ],
      "page": 522,
-     "own": "T1602.548c18–549b21 ≈ Sh. 475–489",
-     "note": "the only T1602 correspondence Delhey locates (von Rospatt 1995)"
+     "own": "T1602.548c18–549b21 ≈ Sh. 475–489"
     },
     {
      "sec": "b10-hetu",
      "page": 518,
-     "own": "hetuvidyā citation",
-     "note": "the Xiǎnyáng lùn cites the hetuvidyā (n. 96); its own location not given",
+     "note": "cites the hetuvidyā",
+     "extent": "section-only"
+    },
+    {
+     "sec": "b13",
+     "page": 521,
+     "note": "parallels of ŚrBh sections (Choi 2001, 2002)",
      "extent": "section-only"
     }
    ],
-   "sub": "Indian work, largely quotations from the YoBh; concordance: Hayashima & Mōri 1990: 54–68",
+   "sub": "largely quotations from the YoBh",
    "dn": [
     {
      "id": "ZH_T31_1602",
@@ -3527,93 +5047,33 @@
    ]
   },
   {
-   "id": "rel-samdh",
+   "id": "rel-hayashima-mori",
+   "delhey_section": "1.3 n. 52",
+   "pages": "511",
    "group": "rel",
-   "lang": "multi",
-   "type": "related",
-   "label": "Saṃdhinirmocanasūtra (independent transmission)",
+   "lang": "zh",
+   "type": "index",
+   "label": "Hayashima & Mōri 1990: 54–68; Hayashima 1997; Choi 2001",
    "spans": [
     {
-     "t": [
-      "713c28",
-      "736c12"
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
      ],
-     "page": 535,
-     "own": "Q5539.'i.47b7–108b8"
+     "page": 511,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
     }
    ],
-   "sub": "Tib. D106/Q774; Chin. T675–679 (T676 Xuánzàng); Skt fragments SHT III 923, 981",
-   "dn": [
-    {
-     "id": "BO_K10_D0106",
-     "lang": "bo",
-     "url": "https://dharmamitra.org/nexus/db/bo/BO_K10_D0106/text"
-    },
-    {
-     "id": "ZH_T16_0676",
-     "lang": "zh",
-     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0676/text"
-    },
-    {
-     "id": "ZH_T16_0675",
-     "lang": "zh",
-     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0675/text"
-    },
-    {
-     "id": "ZH_T16_0677",
-     "lang": "zh",
-     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0677/text"
-    },
-    {
-     "id": "ZH_T16_0678",
-     "lang": "zh",
-     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0678/text"
-    },
-    {
-     "id": "ZH_T16_0679",
-     "lang": "zh",
-     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0679/text"
-    }
-   ],
-   "note": "Only the introduction and the concluding sentence of the sūtra are missing from the citation (n. 181)."
-  },
-  {
-   "id": "rel-samdh-comm",
-   "group": "rel",
-   "lang": "bo",
-   "type": "commentary",
-   "label": "Saṃdh commentaries (D3981 Asaṅga?; D4033 Jñānagarbha on ch. VIII; D4016 Woncheuk)",
-   "spans": [
-    {
-     "t": [
-      "713c28",
-      "736c12"
-     ],
-     "page": 537,
-     "note": "commentaries on the independent sūtra; shown on the span of its citation",
-     "extent": "section-only"
-    }
-   ],
-   "dn": [
-    {
-     "id": "BO_T05_D3981",
-     "lang": "bo",
-     "url": "https://dharmamitra.org/nexus/db/bo/BO_T05_D3981/text"
-    },
-    {
-     "id": "BO_T06_D4033",
-     "lang": "bo",
-     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4033/text"
-    },
-    {
-     "id": "BO_T05_D4016",
-     "lang": "bo",
-     "url": "https://dharmamitra.org/nexus/db/bo/BO_T05_D4016/text"
-    }
-   ]
+   "sub": "concordance and bibliography of the YoBh–Xiǎnyáng lùn parallels"
   },
   {
    "id": "rel-kp",
+   "delhey_section": "2.2.5.4",
+   "pages": "538",
    "group": "rel",
    "lang": "multi",
    "type": "related",
@@ -3628,8 +5088,12 @@
      "own": "Q5539.'i.115a1–136b7"
     }
    ],
-   "sub": "very closely related section",
    "dn": [
+    {
+     "id": "BO_T05_D4009",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T05_D4009/text"
+    },
     {
      "id": "ZH_T26_1523",
      "lang": "zh",
@@ -3638,11 +5102,38 @@
    ]
   },
   {
-   "id": "rel-bobh-comm",
+   "id": "rel-t1828",
+   "delhey_section": "2.2.6",
+   "pages": "538",
+   "group": "rel",
+   "lang": "zh",
+   "type": "commentary",
+   "label": "T1828 Yújiālùn jì 瑜伽論記 (East Asian commentary)",
+   "spans": [
+    {
+     "sec": "v16",
+     "page": 538,
+     "note": "Delhey mentions it only for this chapter",
+     "extent": "section-only"
+    }
+   ],
+   "sub": "used by Schmithausen 1969b for the nirvāṇa chapter",
+   "dn": [
+    {
+     "id": "ZH_T42_1828",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T42_1828/text"
+    }
+   ]
+  },
+  {
+   "id": "rel-d4044",
+   "delhey_section": "2.1.9.1",
+   "pages": "525, 529",
    "group": "rel",
    "lang": "bo",
    "type": "commentary",
-   "label": "BoBh commentaries: D4044 Guṇaprabha; D4047 *Sāgaramegha",
+   "label": "D4044 / Q5545 Guṇaprabha, BoBh commentary",
    "spans": [
     {
      "t": [
@@ -3650,21 +5141,34 @@
       "510c08"
      ],
      "page": 529,
-     "own": "D4044: I.1–I.9 (n. 153)"
-    },
-    {
-     "sec": "b15",
-     "page": 525,
-     "own": "D4047 (complete)"
+     "own": "I.1–I.9"
     }
    ],
-   "sub": "D4044 covers Gotra- to Dānapaṭala; D4047 the whole BoBh",
+   "sub": "Gotra- to Dānapaṭala",
    "dn": [
     {
      "id": "BO_T06_D4044",
      "lang": "bo",
      "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4044/text"
-    },
+    }
+   ]
+  },
+  {
+   "id": "rel-d4047",
+   "delhey_section": "2.1.9.1",
+   "pages": "525, 529–531",
+   "group": "rel",
+   "lang": "bo",
+   "type": "commentary",
+   "label": "D4047 / Q5548 *Sāgaramegha, BoBh commentary",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 525
+    }
+   ],
+   "sub": "complete; cites the Anukramapaṭala without comment",
+   "dn": [
     {
      "id": "BO_T06_D4047",
      "lang": "bo",
@@ -3673,24 +5177,43 @@
    ]
   },
   {
-   "id": "rel-sila-comm",
+   "id": "rel-d4045",
+   "delhey_section": "2.1.9.3",
+   "pages": "529",
    "group": "rel",
    "lang": "bo",
    "type": "commentary",
-   "label": "Śīlapaṭala commentaries: D4045 Guṇaprabha; D4046 Jinaputra",
+   "label": "D4045 / Q5546 Guṇaprabha, Śīlapaṭala commentary",
    "spans": [
     {
      "sec": "bb-I.10",
      "page": 529
     }
    ],
-   "sub": "D4046 nearly identical with the section in *Sāgaramegha",
    "dn": [
     {
      "id": "BO_T06_D4045",
      "lang": "bo",
      "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4045/text"
-    },
+    }
+   ]
+  },
+  {
+   "id": "rel-d4046",
+   "delhey_section": "2.1.9.3",
+   "pages": "529",
+   "group": "rel",
+   "lang": "bo",
+   "type": "commentary",
+   "label": "D4046 / Q5547 Jinaputra, Śīlapaṭala commentary",
+   "spans": [
+    {
+     "sec": "bb-I.10",
+     "page": 529
+    }
+   ],
+   "sub": "= the section in *Sāgaramegha",
+   "dn": [
     {
      "id": "BO_T06_D4046",
      "lang": "bo",
@@ -3700,10 +5223,12 @@
   },
   {
    "id": "rel-candragomin",
+   "delhey_section": "2.1.9.3",
+   "pages": "529",
    "group": "rel",
    "lang": "bo",
    "type": "related",
-   "label": "Bodhisattvasaṃvaraviṃśikā (D4081) + comm. D4082 Śāntarakṣita, D4083 Bodhibhadra",
+   "label": "Candragomin, Bodhisattvasaṃvaraviṃśikā (D4081)",
    "spans": [
     {
      "sec": "bb-I.10",
@@ -3711,22 +5236,12 @@
      "extent": "section-only"
     }
    ],
-   "sub": "based on the Śīlapaṭala; Skt testimonia (Kanō 2009)",
+   "sub": "eds. Tatz 1978, Fujita 2002; transl. Tatz 1978, 1983, 1985; Skt verses (Kanō 2009a/b)",
    "dn": [
     {
      "id": "BO_T06_D4081",
      "lang": "bo",
      "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4081/text"
-    },
-    {
-     "id": "BO_T06_D4082",
-     "lang": "bo",
-     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4082/text"
-    },
-    {
-     "id": "BO_T06_D4083",
-     "lang": "bo",
-     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4083/text"
     },
     {
      "id": "SA_T01_Candragomin_Bodhisattvasaṃvaraviṃśikā-Skt-verses-available-in-testimonia-thus-far_Li_2015",
@@ -3736,11 +5251,13 @@
    ]
   },
   {
-   "id": "rel-zambasta",
+   "id": "rel-santaraksita",
+   "delhey_section": "2.1.9.3",
+   "pages": "529",
    "group": "rel",
-   "lang": "kho",
-   "type": "related",
-   "label": "Book of Zambasta (Khotanese), ch. on the Śīlapaṭala",
+   "lang": "bo",
+   "type": "commentary",
+   "label": "Śāntarakṣita on the Saṃvaraviṃśikā (D4082)",
    "spans": [
     {
      "sec": "bb-I.10",
@@ -3748,46 +5265,675 @@
      "extent": "section-only"
     }
    ],
-   "sub": "paraphrase of the greater part of the chapter; Leumann 1933–36; Emmerick 1968"
+   "sub": "Skt folio (Kanō 2009); eds. Tatz 1978, Fujita 2002",
+   "dn": [
+    {
+     "id": "BO_T06_D4082",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4082/text"
+    }
+   ]
   },
   {
-   "id": "tr-kajiyama2000",
-   "group": "mod",
+   "id": "rel-bodhibhadra",
+   "delhey_section": "2.1.9.3",
+   "pages": "529",
+   "group": "rel",
+   "lang": "bo",
+   "type": "commentary",
+   "label": "Bodhibhadra on the Saṃvaraviṃśikā (D4083)",
+   "spans": [
+    {
+     "sec": "bb-I.10",
+     "page": 529,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "ed. Fujita 2002",
+   "dn": [
+    {
+     "id": "BO_T06_D4083",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4083/text"
+    }
+   ]
+  },
+  {
+   "id": "rel-zambasta",
+   "delhey_section": "2.1.9.3",
+   "pages": "529",
+   "group": "rel",
+   "lang": "kho",
+   "type": "related",
+   "label": "Book of Zambasta (Khotanese) – Śīlapaṭala paraphrase",
+   "spans": [
+    {
+     "sec": "bb-I.10",
+     "page": 529,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "Leumann 1933–1936: 144–164; Emmerick 1968: 164–185; 1990; 1992"
+  },
+  {
+   "id": "rel-vyakhyayukti",
+   "delhey_section": "2.3",
+   "pages": "539",
+   "group": "rel",
+   "lang": "bo",
+   "type": "related",
+   "label": "Vasubandhu, Vyākhyāyukti (D4061; ed. Lee 2001)",
+   "spans": [
+    {
+     "sec": "vyakh",
+     "page": 539,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "later counterpart of the *Vyākhyāsaṃgrahaṇī",
+   "dn": [
+    {
+     "id": "BO_T06_D4061",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4061/text"
+    }
+   ]
+  },
+  {
+   "id": "ref-yuki1962",
+   "delhey_section": "0.2; 2.0",
+   "pages": "498, 507",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Yūki 1962",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 498,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "catalogue of Yogācāra literature (extant and lost); partial Chinese translations (p. 61)"
+  },
+  {
+   "id": "ref-hakamaya-notes",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Hakamaya, notes (Tokyo sDe dge sems tsam ed.)",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "bibliographical notes up to c. 1980"
+  },
+  {
+   "id": "ref-sugawara1990",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Sugawara 1990: 318–329",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "survey of sources and editions"
+  },
+  {
+   "id": "ref-silk2001",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499, 513",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Silk 2001: 150–168",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "list of Sanskrit editions; reference works"
+  },
+  {
+   "id": "ref-nakamura1980",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Nakamura 1980: 256–258",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "bibliographical survey (use with caution)"
+  },
+  {
+   "id": "ref-powers1991",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Powers 1991",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "Yogācāra bibliography (many errors)"
+  },
+  {
+   "id": "ref-pfandt1986",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Pfandt 1986",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "translations into Western languages"
+  },
+  {
+   "id": "ref-potter",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499, 515",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Potter, EIP bibliography; Potter 1999: 398–433",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "bibliography and summary"
+  },
+  {
+   "id": "ref-hakamaya1982",
+   "delhey_section": "0.2; 2.0",
+   "pages": "499",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Hakamaya 1982; 2001",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 499,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "article on Yogācāra texts with addendum"
+  },
+  {
+   "id": "ref-yokoyama",
+   "delhey_section": "0.2; 2.0",
+   "pages": "513",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Yokoyama & Hirosawa 1996, 1997",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 513,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "trilingual index of the YoBh (criticised by Silk 2001); online version"
+  },
+  {
+   "id": "ref-huang2001",
+   "delhey_section": "0.2; 2.0",
+   "pages": "514",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Huang et al. 2001",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 514,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "Chinese–Tibetan index ('of no practical value')"
+  },
+  {
+   "id": "ref-cbeta-sat",
+   "delhey_section": "0.2; 2.0",
+   "pages": "514",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "CBETA; SAT Daizōkyō Text Database",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 514,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "electronic Chinese canon"
+  },
+  {
+   "id": "ref-ybh-db",
+   "delhey_section": "0.2; 2.0",
+   "pages": "514",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Yogācārabhūmi Database (DDBC; Bhikkhu et al. 2002)",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 514,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "parallel Chinese, Sanskrit, Tibetan texts"
+  },
+  {
+   "id": "ref-acip",
+   "delhey_section": "0.2; 2.0",
+   "pages": "514–515",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "ACIP Release VI",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 514,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "electronic Tibetan text (Derge)"
+  },
+  {
+   "id": "ref-shi1986",
+   "delhey_section": "0.2; 2.0",
+   "pages": "515",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Shi 1986: 137–199",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 515,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "synoptic presentation of the contents (Sino-Japanese analysis)"
+  },
+  {
+   "id": "ref-swtf",
+   "delhey_section": "0.2; 2.0",
+   "pages": "514",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "SWTF",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 514,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "Sanskrit-Wörterbuch der Turfan-Funde"
+  },
+  {
+   "id": "ref-catalogues",
+   "delhey_section": "0.2; 2.0",
+   "pages": "507",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Lhan kar ma (Herrmann-Pfandt 2008); 'Phang thang ma",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 507,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "early Tibetan catalogues listing the YoBh"
+  },
+  {
+   "id": "ref-choi2002",
+   "delhey_section": "2.0",
+   "pages": "513–514",
+   "group": "ref",
+   "lang": "multi",
+   "type": "index",
+   "label": "Choi 2002 (cf. Choi 2001: 213–360)",
+   "spans": [
+    {
+     "sec": "b13",
+     "page": 513,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "index of ŚrBh sections and Xiǎnyáng lùn parallels"
+  },
+  {
+   "id": "ref-inaba1952",
+   "delhey_section": "2.0 n. 68",
+   "pages": "513",
+   "group": "ref",
+   "lang": "multi",
+   "type": "index",
+   "label": "Inaba 1952 (not seen by Delhey)",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 513,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
+    }
+   ],
+   "sub": "older YoBh index with Skt equivalents from the BoBh"
+  },
+  {
+   "id": "ref-ui1961-index",
+   "delhey_section": "2.0; 2.1.9.1",
+   "pages": "514, 526",
+   "group": "ref",
+   "lang": "multi",
+   "type": "index",
+   "label": "Ui 1961: 313–591",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 514
+    }
+   ],
+   "sub": "Sanskrit–Chinese index of the BoBh"
+  },
+  {
+   "id": "ref-edgerton",
+   "delhey_section": "2.0",
+   "pages": "514",
+   "group": "ref",
+   "lang": "multi",
+   "type": "dictionary",
+   "label": "Edgerton 1953 (BHSD); Wogihara 1904, 1908; de Jong 1987: 166–171",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 514
+    }
+   ],
+   "sub": "lexicography of the BoBh"
+  },
+  {
+   "id": "ref-ms-catalogues",
+   "delhey_section": "1.2",
+   "pages": "508–510",
+   "group": "ref",
+   "lang": "multi",
+   "type": "catalogue",
+   "label": "MS catalogues and reports: Sāṅkṛtyāyana 1937, 1938; Bandurski 1994; Sferra 2000, 2009; Hu-von Hinüber 2006; Bendall 1883; Goshima & Noguchi 1983; Waldschmidt et al. (SHT); Matsuda 1990, Matsuda & Steinkellner 1991, Matsuda 2002",
+   "spans": [
+    {
+     "sec": [
+      "b1",
+      "b2",
+      "b3",
+      "b6",
+      "b7",
+      "b8",
+      "b10",
+      "b11",
+      "b12",
+      "b13",
+      "b14",
+      "b15",
+      "b16",
+      "b17"
+     ],
+     "page": 508
+    },
+    {
+     "t": [
+      "589b19",
+      "600c10"
+     ],
+     "page": 510
+    },
+    {
+     "t": [
+      "728c16",
+      "730b21"
+     ],
+     "page": 510
+    },
+    {
+     "t": [
+      "768c20",
+      "769c9"
+     ],
+     "page": 510
+    }
+   ],
+   "sub": "where the manuscripts and photographs are"
+  },
+  {
+   "id": "ref-suzuki1995",
+   "delhey_section": "1.2 n. 34",
+   "pages": "508",
+   "group": "ref",
+   "lang": "multi",
+   "type": "reference",
+   "label": "Suzuki 1995; ŚrBh Study Group 1994: 7–22",
+   "spans": [
+    {
+     "sec": [
+      "b7",
+      "b8"
+     ],
+     "page": 508
+    },
+    {
+     "t": [
+      "354a23",
+      "388b10"
+     ],
+     "page": 508,
+     "extent": "approx-start"
+    },
+    {
+     "sec": [
+      "b13",
+      "b14"
+     ],
+     "page": 508
+    }
+   ],
+   "sub": "script table and collation table (Skt–Tib.–Chin.) of the ŚrBh MS"
+  },
+  {
+   "id": "ref-bdk",
+   "delhey_section": "2.0",
+   "pages": "513",
+   "group": "ref",
    "lang": "en",
-   "type": "modern-translation",
-   "label": "Kajiyama 2000",
+   "type": "reference",
+   "label": "BDK English translation of T1579 (announced)",
    "spans": [
     {
-     "bh": [
-      "30,21",
-      "44,14"
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
      ],
-     "page": 516,
-     "own": "Bh. 30,21–44,14",
-     "note": "cosmological portion; with corrections"
+     "page": 513,
+     "note": "concerns the whole Yogācārabhūmi",
+     "extent": "whole-work"
     }
-   ]
-  },
-  {
-   "id": "tr-hakamaya1999",
-   "group": "mod",
-   "lang": "ja",
-   "type": "modern-translation",
-   "label": "Hakamaya 1999",
-   "spans": [
-    {
-     "bh": [
-      "48,7",
-      "49,3"
-     ],
-     "page": 516,
-     "own": "Bh. 48,7–49,3",
-     "note": "the 64 sattvanikāyas"
-    }
-   ]
+   ],
+   "sub": "not yet published (2010)"
   },
   {
    "id": "tr-shimizu1985",
+   "delhey_section": "2.1.1 n. 79",
+   "pages": "516",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
@@ -3799,13 +5945,34 @@
       "b2"
      ],
      "page": 516,
-     "note": "(parts of?) the Manobhūmi; not seen by Delhey (n. 79)",
+     "note": "bhūmi 1 and (parts of?) the Manobhūmi; not seen by Delhey",
      "extent": "section-only"
     }
    ]
   },
   {
+   "id": "tr-hakamaya1999",
+   "delhey_section": "2.1.1",
+   "pages": "516",
+   "group": "mod",
+   "lang": "ja",
+   "type": "modern-translation",
+   "label": "Hakamaya 1999",
+   "spans": [
+    {
+     "bh": [
+      "48,7",
+      "49,3"
+     ],
+     "page": 516,
+     "own": "Bh. 48,7–49,3"
+    }
+   ]
+  },
+  {
    "id": "tr-chan2007",
+   "delhey_section": "2.1.1",
+   "pages": "516",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
@@ -3822,25 +5989,9 @@
    ]
   },
   {
-   "id": "tr-wezler1985",
-   "group": "mod",
-   "lang": "de",
-   "type": "modern-translation",
-   "label": "Wezler 1985",
-   "spans": [
-    {
-     "bh": [
-      "118,14",
-      "122,6"
-     ],
-     "page": 516,
-     "own": "Bh. 118,14–122,6",
-     "note": "Sāṃkhya sections, partly emended on the MS"
-    }
-   ]
-  },
-  {
    "id": "tr-furusaka2001",
+   "delhey_section": "2.1.1",
+   "pages": "516",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
@@ -3857,11 +6008,13 @@
    ]
   },
   {
-   "id": "tr-mikogami",
+   "id": "tr-mikogami1969",
+   "delhey_section": "2.1.1",
+   "pages": "516",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
-   "label": "Mikogami 1967; 1969",
+   "label": "Mikogami 1969",
    "spans": [
     {
      "bh": [
@@ -3869,24 +6022,37 @@
       "122,6"
      ],
      "page": 516,
-     "own": "1969: Bh. 120,22–122,6"
-    },
+     "own": "Bh. 120,22–122,6"
+    }
+   ]
+  },
+  {
+   "id": "tr-mikogami1967",
+   "delhey_section": "2.1.1",
+   "pages": "516",
+   "group": "mod",
+   "lang": "ja",
+   "type": "modern-translation",
+   "label": "Mikogami 1967",
+   "spans": [
     {
      "bh": [
       "137,1",
       "142,22"
      ],
      "page": 516,
-     "own": "1967: Bh. 137–142 (śāśvatavāda)"
+     "own": "Bh. 137–142"
     }
    ]
   },
   {
    "id": "tr-hayashima1991",
+   "delhey_section": "2.1.1",
+   "pages": "516",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
-   "label": "Hayashima 1991a",
+   "label": "Hayashima 1991a, 1991b",
    "spans": [
     {
      "bh": [
@@ -3894,16 +6060,38 @@
       "134,2"
      ],
      "page": 516,
-     "own": "Bh. 132,13–134,2"
+     "own": "1991a: Bh. 132,13–134,2"
+    }
+   ]
+  },
+  {
+   "id": "tr-shukla1969",
+   "delhey_section": "2.1.1 n. 81",
+   "pages": "516",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Shukla 1969 (paraphrase)",
+   "spans": [
+    {
+     "bh": [
+      "129,6",
+      "137,8"
+     ],
+     "page": 516,
+     "note": "ātmavāda section, rather a paraphrase",
+     "extent": "section-only"
     }
    ]
   },
   {
    "id": "tr-chemparathy",
+   "delhey_section": "2.1.1",
+   "pages": "516",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
-   "label": "Chemparathy 1968–1969",
+   "label": "Chemparathy 1968–1969: 94–96",
    "spans": [
     {
      "bh": [
@@ -3916,103 +6104,61 @@
    ]
   },
   {
-   "id": "tr-schmit2000",
-   "group": "mod",
-   "lang": "en",
-   "type": "modern-translation",
-   "label": "Schmithausen 2000: 254–259",
-   "spans": [
-    {
-     "bh": [
-      "151,19",
-      "155,5"
-     ],
-     "page": 516,
-     "own": "Bh. 151,19–155,5",
-     "note": "nāstikavāda, higher textual criticism"
-    }
-   ]
-  },
-  {
    "id": "tr-ahn2003",
+   "delhey_section": "2.1.1; 2.2.1–2",
+   "pages": "517, 533",
    "group": "mod",
    "lang": "de",
    "type": "modern-translation",
-   "label": "Ahn 2003: 158–214",
+   "label": "Ahn 2003 (German transl.)",
    "spans": [
     {
      "bh": [
       "160,10",
       "170,10"
      ],
-     "page": 517,
-     "own": "Bh. 160,10–170,10"
-    }
-   ]
-  },
-  {
-   "id": "tr-kritzer1999",
-   "group": "mod",
-   "lang": "en",
-   "type": "modern-translation",
-   "label": "Kritzer 1999: 83–86",
-   "spans": [
-    {
-     "bh": [
-      "200,6",
-      "201,13"
-     ],
-     "page": 517,
-     "own": "Bh. 200,6–201,13"
-    }
-   ]
-  },
-  {
-   "id": "tr-harada2004",
-   "group": "mod",
-   "lang": "ja",
-   "type": "modern-translation",
-   "label": "Harada 2004",
-   "spans": [
-    {
-     "bh": [
-      "198,13",
-      "203,20"
-     ],
-     "page": 517,
-     "own": "Bh. 198,13–203,20"
+     "page": 517
     },
     {
-     "bh": [
-      "214,6",
-      "214,14"
+     "t": [
+      "602a9",
+      "604b9"
      ],
-     "page": 517,
-     "own": "Bh. 214,6–14"
+     "page": 533
+    },
+    {
+     "t": [
+      "621a26",
+      "630a5"
+     ],
+     "page": 533
     }
    ]
   },
   {
    "id": "tr-delhey2009",
+   "delhey_section": "2.1.1",
+   "pages": "517",
    "group": "mod",
    "lang": "de",
    "type": "modern-translation",
-   "label": "Delhey 2009",
+   "label": "Delhey 2009 (German transl.)",
    "spans": [
     {
      "sec": "b6",
      "page": 517,
-     "note": "beginning and several short passages",
      "extent": "selections"
     }
    ]
   },
   {
    "id": "tr-delhey2006",
+   "delhey_section": "2.1.2; 2.2.3",
+   "pages": "518, 534",
    "group": "mod",
    "lang": "de",
    "type": "modern-translation",
-   "label": "Delhey 2006: 140–144, 144–150",
+   "label": "Delhey 2006: 140–150",
    "spans": [
     {
      "sec": "b7",
@@ -4026,10 +6172,12 @@
   },
   {
    "id": "tr-sg",
+   "delhey_section": "2.1.2–2.1.7",
+   "pages": "518–521",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
-   "label": "Śrāvakabhūmi Study Group 1998, 2007",
+   "label": "Śrāvakabhūmi Study Group 1998, 2007 (Japanese)",
    "spans": [
     {
      "sec": "b7",
@@ -4051,9 +6199,7 @@
      "page": 520
     },
     {
-     "sec": [
-      "b11-12"
-     ],
+     "sec": "b11-12",
      "page": 520
     },
     {
@@ -4071,40 +6217,35 @@
   },
   {
    "id": "tr-wayman1984",
+   "delhey_section": "2.1.3; 2.1.5",
+   "pages": "518, 520",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
-   "label": "Wayman 1984; 1961",
+   "label": "Wayman 1984 (English)",
    "spans": [
     {
      "sec": "b8",
-     "page": 518,
-     "own": "1984: 329–330"
+     "page": 518
     },
     {
      "sec": "b11-pg",
-     "page": 520,
-     "own": "1961; 1984"
+     "page": 520
     },
     {
      "sec": "b11-ag",
-     "page": 520,
-     "own": "1984: 357–366 (verses; commentary summarized)"
-    },
-    {
-     "sec": "b13",
-     "page": 521,
-     "own": "1961",
-     "extent": "selections"
+     "page": 520
     }
    ]
   },
   {
-   "id": "tr-hetu",
+   "id": "tr-pandey1986",
+   "delhey_section": "2.1.4.2",
+   "pages": "520",
    "group": "mod",
-   "lang": "multi",
+   "lang": "hi",
    "type": "modern-translation",
-   "label": "Hetuvidyā: Pandey 1986 (Hindi); Yaita 1992/2005 (Japanese); Wayman 1999 (English)",
+   "label": "Pandey 1986 (Hindi)",
    "spans": [
     {
      "sec": "b10-hetu",
@@ -4113,26 +6254,73 @@
    ]
   },
   {
-   "id": "tr-oberhammer",
+   "id": "tr-yaita",
+   "delhey_section": "2.1.4.2",
+   "pages": "520",
    "group": "mod",
-   "lang": "de",
+   "lang": "ja",
    "type": "modern-translation",
-   "label": "Oberhammer 1991–2006",
+   "label": "Yaita 1992: 547–576; 2005: 22–41",
    "spans": [
     {
      "sec": "b10-hetu",
-     "page": 519,
-     "note": "numerous, sometimes very long citations with text-critical notes by Schmithausen",
-     "extent": "selections"
+     "page": 520
     }
    ]
   },
   {
-   "id": "tr-pratyeka",
+   "id": "tr-wayman1999",
+   "delhey_section": "2.1.4.2",
+   "pages": "520",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
-   "label": "Pratyekabuddhabhūmi: Kloppenborg 1974; Wayman 1997; Yonezawa 1998",
+   "label": "Wayman 1999 (English)",
+   "spans": [
+    {
+     "sec": "b10-hetu",
+     "page": 520
+    }
+   ]
+  },
+  {
+   "id": "tr-kloppenborg",
+   "delhey_section": "2.1.8",
+   "pages": "523",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Kloppenborg 1974: 126–129",
+   "spans": [
+    {
+     "sec": "b14",
+     "page": 523
+    }
+   ]
+  },
+  {
+   "id": "tr-wayman1997",
+   "delhey_section": "2.1.8",
+   "pages": "523",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Wayman 1997: 193–196",
+   "spans": [
+    {
+     "sec": "b14",
+     "page": 523
+    }
+   ]
+  },
+  {
+   "id": "tr-yonezawa",
+   "delhey_section": "2.1.8",
+   "pages": "523",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Yonezawa 1998: 19–25",
    "spans": [
     {
      "sec": "b14",
@@ -4142,6 +6330,8 @@
   },
   {
    "id": "tr-mori1986",
+   "delhey_section": "2.1.7",
+   "pages": "522",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
@@ -4150,44 +6340,96 @@
     {
      "sec": "b13-ys3",
      "page": 522,
-     "note": "beginning of yogasthāna 3 only",
+     "note": "beginning of yogasthāna 3",
      "extent": "section-only"
     }
    ]
   },
   {
    "id": "tr-deleanu2006",
+   "delhey_section": "2.1.7",
+   "pages": "522",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
-   "label": "Deleanu 2006",
+   "label": "Deleanu 2006 (English)",
    "spans": [
     {
      "sh": [
       "437,1",
       "470,6"
      ],
-     "page": 522,
-     "own": "Sh. 437–470,6"
+     "page": 522
     }
    ]
   },
   {
-   "id": "tr-choi-sakuma-maithri",
+   "id": "tr-choi2001",
+   "delhey_section": "2.1.7",
+   "pages": "521–522",
    "group": "mod",
    "lang": "de",
    "type": "modern-translation",
-   "label": "Choi 2001; Sakuma 1990; Maithrimurthi 1999 (with their editions)",
+   "label": "Choi 2001 (German, from the Xiǎnyáng lùn)",
    "spans": [
     {
      "sec": "b13",
      "page": 521,
-     "extent": "selections"
+     "note": "see Choi 2001 for the spans",
+     "extent": "section-only"
+    }
+   ]
+  },
+  {
+   "id": "tr-sakuma1990",
+   "delhey_section": "passim",
+   "pages": "516–540",
+   "group": "mod",
+   "lang": "de",
+   "type": "modern-translation",
+   "label": "Sakuma 1990 (German)",
+   "spans": [
+    {
+     "sec": [
+      "basic",
+      "vin",
+      "vyakh",
+      "pary",
+      "vastu"
+     ],
+     "page": 516,
+     "note": "German translations of all passages he edits",
+     "extent": "whole-work"
+    }
+   ]
+  },
+  {
+   "id": "tr-maithri1999",
+   "delhey_section": "2.1.7; 2.1.9.4",
+   "pages": "522, 531",
+   "group": "mod",
+   "lang": "de",
+   "type": "modern-translation",
+   "label": "Maithrimurthi 1999 (German)",
+   "spans": [
+    {
+     "sec": "b13",
+     "page": 522,
+     "extent": "section-only"
+    },
+    {
+     "bobhd": [
+      "166,1",
+      "170,17"
+     ],
+     "page": 531
     }
    ]
   },
   {
    "id": "tr-ui1961",
+   "delhey_section": "2.1.9.1",
+   "pages": "526",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
@@ -4196,17 +6438,18 @@
     {
      "sec": "b15",
      "page": 526,
-     "note": "selected passages from all over the BoBh; Sanskrit–Chinese index",
      "extent": "selections"
     }
    ]
   },
   {
    "id": "tr-bendall",
+   "delhey_section": "2.1.9.1",
+   "pages": "527",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
-   "label": "Bendall & de La Vallée Poussin 1905–1911",
+   "label": "Bendall & de La Vallée Poussin 1905, 1906, 1911",
    "spans": [
     {
      "t": [
@@ -4219,45 +6462,97 @@
    ]
   },
   {
-   "id": "tr-roth",
+   "id": "tr-thurman",
+   "delhey_section": "2.1.9.1 n. 142",
+   "pages": "526",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
-   "label": "Roth 1975–1976",
+   "label": "Thurman et al. (BoBh translation in preparation)",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 526,
+     "extent": "section-only"
+    }
+   ]
+  },
+  {
+   "id": "tr-mullens",
+   "delhey_section": "2.1.9.1 n. 142",
+   "pages": "526",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Mullens 1994 (Ph.D.)",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 526,
+     "extent": "selections"
+    }
+   ]
+  },
+  {
+   "id": "tr-roth",
+   "delhey_section": "2.1.9.2",
+   "pages": "527",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Roth 1975–1976 (English)",
    "spans": [
     {
      "bobhd": [
       "1,1",
       "2,3"
      ],
-     "page": 527,
-     "own": "BoBhD 1,1–2,3"
+     "page": 527
     }
    ]
   },
   {
-   "id": "tr-soma",
+   "id": "tr-wangchuk2002",
+   "delhey_section": "2.1.9.2 n. 145",
+   "pages": "527",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Wangchuk 2002: 27–70; 2007",
+   "spans": [
+    {
+     "sec": "bb-I.2",
+     "page": 527
+    }
+   ]
+  },
+  {
+   "id": "tr-soma1986b",
+   "delhey_section": "2.1.9.2",
+   "pages": "527",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
-   "label": "Sōma 1986a, 1986b, 1987",
+   "label": "Sōma 1986b; 1987",
    "spans": [
     {
      "t": [
       "478b12",
-      "491b14"
+      "486b09"
      ],
      "page": 527,
-     "own": "I.1–4"
+     "own": "I.1–3"
     }
    ]
   },
   {
-   "id": "tr-tattva",
+   "id": "tr-soma1986a",
+   "delhey_section": "2.1.9.2",
+   "pages": "527",
    "group": "mod",
-   "lang": "multi",
+   "lang": "ja",
    "type": "modern-translation",
-   "label": "Tattvārthapaṭala: Frauwallner 1969 (de, partial); Willis 1979 (en); Takahashi 2005a (ja)",
+   "label": "Sōma 1986a",
    "spans": [
     {
      "sec": "bb-I.4",
@@ -4266,31 +6561,85 @@
    ]
   },
   {
-   "id": "tr-lvp1928",
+   "id": "tr-takahashi2005",
+   "delhey_section": "2.1.9.2",
+   "pages": "527",
    "group": "mod",
-   "lang": "fr",
+   "lang": "ja",
    "type": "modern-translation",
-   "label": "de La Vallée Poussin 1928",
+   "label": "Takahashi 2005a: 151–179",
    "spans": [
     {
      "sec": "bb-I.4",
-     "page": 525,
-     "own": "BoBhW 45,22–48,13; 48,23–50,7",
-     "note": "quotations from the Tattvārthapaṭala"
+     "page": 527
     }
    ]
   },
   {
-   "id": "tr-yaita",
+   "id": "tr-frauwallner",
+   "delhey_section": "2.1.9.2; 2.2.5.3",
+   "pages": "527, 537",
+   "group": "mod",
+   "lang": "de",
+   "type": "modern-translation",
+   "label": "Frauwallner 1969",
+   "spans": [
+    {
+     "sec": "bb-I.4",
+     "page": 527,
+     "own": "pp. 264–279",
+     "extent": "section-only"
+    },
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 537,
+     "own": "pp. 279–295: Saṃdh VI, parts of VII",
+     "extent": "section-only"
+    }
+   ]
+  },
+  {
+   "id": "tr-willis1979",
+   "delhey_section": "2.1.9.2",
+   "pages": "527",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Willis 1979: 67–175 (repr. Koller 1991)",
+   "spans": [
+    {
+     "sec": "bb-I.4",
+     "page": 527
+    }
+   ]
+  },
+  {
+   "id": "tr-yaita2010",
+   "delhey_section": "2.1.9.2",
+   "pages": "527",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
-   "label": "Yaita 2008; 2010",
+   "label": "Yaita 2010 (Japanese)",
    "spans": [
     {
      "sec": "bb-I.5",
      "page": 527
-    },
+    }
+   ]
+  },
+  {
+   "id": "tr-yaita2008",
+   "delhey_section": "2.1.9.2",
+   "pages": "528",
+   "group": "mod",
+   "lang": "ja",
+   "type": "modern-translation",
+   "label": "Yaita 2008 (Japanese)",
+   "spans": [
     {
      "sec": "bb-I.9",
      "page": 528
@@ -4298,11 +6647,13 @@
    ]
   },
   {
-   "id": "tr-sila",
+   "id": "tr-tatz1986",
+   "delhey_section": "2.1.9.3",
+   "pages": "530",
    "group": "mod",
-   "lang": "multi",
+   "lang": "en",
    "type": "modern-translation",
-   "label": "Śīlapaṭala: Tatz 1986 (en); Fujita 1989–1991 (ja); Leumann 1933–36 (de, abbreviated); Sparham 2009 (en, parts)",
+   "label": "Tatz 1986: 47–89",
    "spans": [
     {
      "sec": "bb-I.10",
@@ -4311,20 +6662,73 @@
    ]
   },
   {
-   "id": "tr-demieville1957",
+   "id": "tr-fujita",
+   "delhey_section": "2.1.9.3",
+   "pages": "530",
    "group": "mod",
-   "lang": "fr",
+   "lang": "ja",
    "type": "modern-translation",
-   "label": "Demiéville 1957",
+   "label": "Fujita 1989, 1990, 1991; Fujita 2001 (Ph.D.)",
    "spans": [
     {
-     "sec": "bb-I.13",
+     "sec": "bb-I.10",
+     "page": 530
+    }
+   ]
+  },
+  {
+   "id": "tr-leumann1933",
+   "delhey_section": "2.1.9.3",
+   "pages": "530",
+   "group": "mod",
+   "lang": "de",
+   "type": "modern-translation",
+   "label": "Leumann 1933–1936: 368–384",
+   "spans": [
+    {
+     "sec": "bb-I.10",
+     "page": 530,
+     "note": "analysis and abbreviated translation",
+     "extent": "section-only"
+    }
+   ]
+  },
+  {
+   "id": "tr-sparham2009",
+   "delhey_section": "2.1.9.3 n. 167",
+   "pages": "530",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Sparham 2009",
+   "spans": [
+    {
+     "sec": "bb-I.10",
+     "page": 530,
+     "note": "small parts; seriously flawed",
+     "extent": "section-only"
+    }
+   ]
+  },
+  {
+   "id": "tr-markert",
+   "delhey_section": "2.1.9.4",
+   "pages": "531",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Markert-Braham 2005 (transl.)",
+   "spans": [
+    {
+     "sec": "bb-I.11",
      "page": 531
     }
    ]
   },
   {
    "id": "tr-lamotte1976",
+   "delhey_section": "2.1.9.4",
+   "pages": "531",
    "group": "mod",
    "lang": "fr",
    "type": "modern-translation",
@@ -4336,30 +6740,14 @@
       "186,10"
      ],
      "page": 531,
-     "own": "BoBhD 185,5–186,10 = BoBhW 272,12–274,7",
-     "note": "dhāraṇī section"
-    }
-   ]
-  },
-  {
-   "id": "tr-maithri-bobh",
-   "group": "mod",
-   "lang": "de",
-   "type": "modern-translation",
-   "label": "Maithrimurthi 1999: 305–316",
-   "spans": [
-    {
-     "bobhd": [
-      "166,1",
-      "170,17"
-     ],
-     "page": 531,
-     "own": "BoBhD 166,1–170,17"
+     "own": "BoBhD 185,5–186,10 = BoBhW 272,12–274,7"
     }
    ]
   },
   {
    "id": "tr-harada2010",
+   "delhey_section": "2.1.9.4",
+   "pages": "531",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
@@ -4368,40 +6756,33 @@
     {
      "sec": "bb-II.4",
      "page": 531,
-     "note": "translation of the Vihārapaṭala begun",
+     "note": "begun",
      "extent": "section-only"
     }
    ]
   },
   {
-   "id": "tr-furusaka",
+   "id": "tr-furusaka1985",
+   "delhey_section": "2.1.9.4",
+   "pages": "531",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
-   "label": "Furusaka 1985; 1996",
+   "label": "Furusaka 1985: 93–99",
    "spans": [
     {
      "sec": [
       "bb-III.1",
       "bb-III.2"
      ],
-     "page": 531,
-     "own": "1985: 93–99"
-    },
-    {
-     "t": [
-      "576b20",
-      "576b29"
-     ],
-     "page": 531,
-     "own": "1996: Anukramapaṭala",
-     "note": "placed at the end of the BoBh; its exact place in T1579 is not given",
-     "extent": "approx-start"
+     "page": 531
     }
    ]
   },
   {
    "id": "tr-nasu2010",
+   "delhey_section": "2.1.9.4",
+   "pages": "531",
    "group": "mod",
    "lang": "ja",
    "type": "modern-translation",
@@ -4410,96 +6791,93 @@
     {
      "sec": "bb-III.6",
      "page": 531,
-     "note": "ten powers of a Buddha (begun)",
+     "note": "ten powers (begun)",
      "extent": "section-only"
     }
    ]
   },
   {
-   "id": "tr-waldron-griffiths",
+   "id": "tr-furusaka1996",
+   "delhey_section": "2.1.9.4",
+   "pages": "531",
+   "group": "mod",
+   "lang": "ja",
+   "type": "modern-translation",
+   "label": "Furusaka 1996: 118–123",
+   "spans": [
+    {
+     "t": [
+      "576b20",
+      "576b29"
+     ],
+     "page": 531,
+     "note": "Anukramapaṭala; its place in T1579 not given",
+     "extent": "approx-start"
+    }
+   ]
+  },
+  {
+   "id": "tr-griffiths1986",
+   "delhey_section": "2.2.1.1",
+   "pages": "532",
    "group": "mod",
    "lang": "en",
    "type": "modern-translation",
-   "label": "Griffiths 1986; Waldron 2003",
+   "label": "Griffiths 1986: 129–138",
    "spans": [
     {
      "t": [
       "579a14",
       "579c22"
      ],
-     "page": 532,
-     "own": "Griffiths 1986: 129–138"
-    },
+     "page": 532
+    }
+   ]
+  },
+  {
+   "id": "tr-waldron2003",
+   "delhey_section": "2.2.1.1",
+   "pages": "532",
+   "group": "mod",
+   "lang": "en",
+   "type": "modern-translation",
+   "label": "Waldron 2003: 178–189",
+   "spans": [
     {
      "t": [
       "579c23",
       "582a12"
      ],
-     "page": 532,
-     "own": "Waldron 2003: 178–189"
+     "page": 532
     }
    ]
   },
   {
-   "id": "tr-jan1984",
-   "group": "mod",
-   "lang": "en",
-   "type": "modern-translation",
-   "label": "Jan 1984",
-   "spans": [
-    {
-     "t": [
-      "638a19",
-      "644a6"
-     ],
-     "page": 533,
-     "note": "summary and partial translation",
-     "extent": "selections"
-    }
-   ]
-  },
-  {
-   "id": "tr-tatz-tsongkhapa",
-   "group": "mod",
-   "lang": "en",
-   "type": "modern-translation",
-   "label": "Tatz 1986: 132–136",
-   "spans": [
-    {
-     "t": [
-      "710c29",
-      "712a17"
-     ],
-     "page": 535,
-     "own": "Q5539.'i.40a1–43a5",
-     "note": "via a Tsong kha pa work citing the passage"
-    }
-   ]
-  },
-  {
-   "id": "tr-samdh",
-   "group": "mod",
-   "lang": "multi",
-   "type": "modern-translation",
-   "label": "Saṃdh translations: Lamotte 1935; Powers 1995; Keenan 2000; Cleary 1995; Cornu 2005; Frauwallner 1969; Hakamaya 1994; Nozawa 1957",
-   "spans": [
-    {
-     "t": [
-      "713c28",
-      "736c12"
-     ],
-     "page": 537,
-     "note": "translations of the independent sūtra",
-     "extent": "section-only"
-    }
-   ]
-  },
-  {
-   "id": "tr-schmit1969",
+   "id": "tr-kramer2005",
+   "delhey_section": "2.2.5.1",
+   "pages": "535",
    "group": "mod",
    "lang": "de",
    "type": "modern-translation",
-   "label": "Schmithausen 1969b",
+   "label": "Kramer 2005 (German)",
+   "spans": [
+    {
+     "t": [
+      "695c26",
+      "703a25"
+     ],
+     "page": 535
+    }
+   ]
+  },
+  {
+   "id": "tr-schmit1969b",
+   "delhey_section": "2.2.6",
+   "pages": "538",
+   "group": "mod",
+   "lang": "de",
+   "type": "modern-translation",
+   "label": "Schmithausen 1969b (German)",
    "spans": [
     {
      "sec": "v16",
@@ -4508,18 +6886,597 @@
    ]
   },
   {
-   "id": "tr-kramer2005",
+   "id": "rv-demieville1958",
+   "delhey_section": "passim",
+   "pages": "515–538",
    "group": "mod",
-   "lang": "de",
-   "type": "modern-translation",
-   "label": "Kramer 2005",
+   "lang": "multi",
+   "type": "review",
+   "label": "Demiéville 1958 (review of Bh.)",
+   "spans": [
+    {
+     "sec": [
+      "b1",
+      "b2",
+      "b3"
+     ],
+     "page": 515
+    }
+   ],
+   "sub": "the Chinese should have been used"
+  },
+  {
+   "id": "rv-conze1963",
+   "delhey_section": "passim",
+   "pages": "515–538",
+   "group": "mod",
+   "lang": "multi",
+   "type": "review",
+   "label": "Conze 1963 (review of Bh., Wayman 1961)",
+   "spans": [
+    {
+     "sec": "b3",
+     "page": 516
+    }
+   ],
+   "sub": "overview of the contents of ch. 3"
+  },
+  {
+   "id": "rv-dejong1976a",
+   "delhey_section": "passim",
+   "pages": "515–538",
+   "group": "mod",
+   "lang": "multi",
+   "type": "review",
+   "label": "de Jong 1976a; Schmithausen 1982a: 457",
+   "spans": [
+    {
+     "sec": "b13",
+     "page": 521
+    }
+   ],
+   "sub": "on Shukla's and Wayman's ŚrBh"
+  },
+  {
+   "id": "rv-dejong1976b",
+   "delhey_section": "passim",
+   "pages": "515–538",
+   "group": "mod",
+   "lang": "multi",
+   "type": "review",
+   "label": "de Jong 1976b",
+   "spans": [
+    {
+     "sec": "b14",
+     "page": 523
+    }
+   ],
+   "sub": "on Kloppenborg's Pratyekabuddhabhūmi"
+  },
+  {
+   "id": "rv-dejong1985-87",
+   "delhey_section": "passim",
+   "pages": "515–538",
+   "group": "mod",
+   "lang": "multi",
+   "type": "review",
+   "label": "de Jong 1985; 1987: 164–171; 1989",
+   "spans": [
+    {
+     "sec": "b15",
+     "page": 526
+    }
+   ],
+   "sub": "on Willis, the BoBh MSS and editions, Tatz"
+  },
+  {
+   "id": "sd-cit",
+   "delhey_section": "2.2.5.3",
+   "pages": "503, 535",
+   "group": "samdh",
+   "lang": "zh",
+   "type": "citation",
+   "label": "Saṃdhinirmocanasūtra quoted in the *Bodhisattvabhūmiviniścaya",
    "spans": [
     {
      "t": [
-      "695c26",
-      "703a25"
+      "713c28",
+      "718a09"
      ],
-     "page": 535
+     "page": 535,
+     "own": "Saṃdh I–IV (T676 ch. 2)"
+    },
+    {
+     "t": [
+      "718a09",
+      "718c05"
+     ],
+     "page": 535,
+     "own": "Saṃdh V"
+    },
+    {
+     "t": [
+      "718c05",
+      "719b15"
+     ],
+     "page": 535,
+     "own": "Saṃdh VI"
+    },
+    {
+     "t": [
+      "719b15",
+      "723b20"
+     ],
+     "page": 535,
+     "own": "Saṃdh VII"
+    },
+    {
+     "t": [
+      "723b20",
+      "729a19"
+     ],
+     "page": 535,
+     "own": "Saṃdh VIII"
+    },
+    {
+     "t": [
+      "729a19",
+      "733c17"
+     ],
+     "page": 535,
+     "own": "Saṃdh IX"
+    },
+    {
+     "t": [
+      "733c17",
+      "736c12"
+     ],
+     "page": 535,
+     "own": "Saṃdh X; whole citation = Q5539.'i.47b7–108b8"
+    }
+   ],
+   "sub": "nearly the whole sūtra (without the introduction and the concluding sentence, n. 181), each chapter introduced by one sentence",
+   "dn": [
+    {
+     "id": "ZH_T30_1579",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T30_1579/text"
+    },
+    {
+     "id": "BO_T06_D4038-2",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4038-2/text"
+    }
+   ],
+   "note": "Chapter boundaries located by matching the opening lines of the chapters of T676 in T1579 (data-derived)."
+  },
+  {
+   "id": "sd-t676",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "zh",
+   "type": "translation",
+   "label": "T676 Jiě shēnmì jīng 解深密經 (Xuánzàng)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 536,
+     "own": "T676.688b–711b"
+    }
+   ],
+   "sub": "complete independent translation",
+   "dn": [
+    {
+     "id": "ZH_T16_0676",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0676/text"
+    }
+   ]
+  },
+  {
+   "id": "sd-t675",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "zh",
+   "type": "translation",
+   "label": "T675 Shēnmì jiětuō jīng 深密解脫經 (*Bodhiruci)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 536
+    }
+   ],
+   "sub": "complete (Matsuda 2013: 942 n. 8)",
+   "dn": [
+    {
+     "id": "ZH_T16_0675",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0675/text"
+    }
+   ]
+  },
+  {
+   "id": "sd-t677",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "zh",
+   "type": "translation",
+   "label": "T677 Fóshuō jiějié jīng 佛說解節經 (Paramārtha)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "718a09"
+     ],
+     "page": 536,
+     "own": "Saṃdh I–IV; T677.711–714"
+    }
+   ],
+   "sub": "chapters I–IV only (Matsuda 2013: 943 n. 12)",
+   "dn": [
+    {
+     "id": "ZH_T16_0677",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0677/text"
+    }
+   ]
+  },
+  {
+   "id": "sd-t678",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "zh",
+   "type": "translation",
+   "label": "T678 Xiāngxù jiětuō dì bōluómì liǎoyì jīng 相續解脫地波羅蜜了義經 (Guṇabhadra)",
+   "spans": [
+    {
+     "t": [
+      "729a19",
+      "733c17"
+     ],
+     "page": 536,
+     "own": "Saṃdh IX; T678.714–718"
+    }
+   ],
+   "sub": "chapter IX as an independent sūtra (Matsuda 2013: 943 n. 11)",
+   "dn": [
+    {
+     "id": "ZH_T16_0678",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0678/text"
+    }
+   ]
+  },
+  {
+   "id": "sd-t679",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "zh",
+   "type": "translation",
+   "label": "T679 Xiāngxù jiětuō rúlái suǒzuò suíshùn chù liǎoyì jīng 相續解脫如來所作隨順處了義經 (Guṇabhadra)",
+   "spans": [
+    {
+     "t": [
+      "733c17",
+      "736c12"
+     ],
+     "page": 536,
+     "own": "Saṃdh X; T679.718–720"
+    }
+   ],
+   "sub": "chapter X as an independent sūtra (Matsuda 2013: 943 n. 11)",
+   "dn": [
+    {
+     "id": "ZH_T16_0679",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T16_0679/text"
+    }
+   ]
+  },
+  {
+   "id": "sd-d106",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "bo",
+   "type": "translation",
+   "label": "D106 / Q774 'Phags pa dgongs pa nges par 'grel pa (bKa' 'gyur)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 536,
+     "own": "Q774"
+    }
+   ],
+   "sub": "two recensions (Powers 1993b; Kato 2006)",
+   "dn": [
+    {
+     "id": "BO_K10_D0106",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_K10_D0106/text"
+    }
+   ]
+  },
+  {
+   "id": "sd-dunhuang",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "bo",
+   "type": "translation",
+   "label": "Earlier Tibetan translation from Dūnhuáng (Hakamaya 1984, 1986, 1987a, 1987b, 2008)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 536,
+     "note": "extent of the fragments not given by Delhey",
+     "extent": "section-only"
+    }
+   ],
+   "sub": "large fragments, edited synoptically with D106"
+  },
+  {
+   "id": "sd-skt-kathm",
+   "delhey_section": "1.2 no. 9a; 2.2.5.3",
+   "pages": "510, 535",
+   "group": "samdh",
+   "lang": "sa",
+   "type": "manuscript",
+   "label": "Sanskrit: Kathmandu folio (Matsuda 1995; 2013)",
+   "spans": [
+    {
+     "t": [
+      "728c16",
+      "730b21"
+     ],
+     "page": 535,
+     "own": "Saṃdh VIII.39–IX.6"
+    }
+   ],
+   "sub": "end of ch. VIII and beginning of ch. IX"
+  },
+  {
+   "id": "sd-skt-sht923",
+   "delhey_section": "2.2.5.3 n. 184",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "sa",
+   "type": "manuscript",
+   "label": "Sanskrit: SHT III 923 (and SHT III 981)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "718a09"
+     ],
+     "page": 536,
+     "note": "within Saṃdh I–IV",
+     "extent": "section-only"
+    }
+   ],
+   "sub": "923: end of ch. II and beginning of ch. III (Matsuda 2013: 941); 981 not specified"
+  },
+  {
+   "id": "sd-skt-testimonia",
+   "delhey_section": "2.2.5.3 n. 184",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "sa",
+   "type": "citation",
+   "label": "Sanskrit testimonia: Triṃśikābhāṣya (Lévi 1925; Buescher 2007); Bhāvanākrama III (Tucci 1971); Jñānaśrīmitra (Schmithausen 2005)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "718a09"
+     ],
+     "page": 536,
+     "own": "Saṃdh III verse (Bhāvanākrama III)",
+     "extent": "section-only"
+    },
+    {
+     "t": [
+      "718a09",
+      "718c05"
+     ],
+     "page": 536,
+     "own": "Saṃdh V (Triṃśikābhāṣya)",
+     "extent": "section-only"
+    },
+    {
+     "t": [
+      "719b15",
+      "723b20"
+     ],
+     "page": 536,
+     "own": "Saṃdh VII.15 (Bhāvanākrama III)",
+     "extent": "section-only"
+    },
+    {
+     "t": [
+      "723b20",
+      "729a19"
+     ],
+     "page": 536,
+     "own": "Saṃdh VIII.7 (Jñānaśrīmitra)",
+     "extent": "section-only"
+    }
+   ]
+  },
+  {
+   "id": "sd-editions",
+   "delhey_section": "2.2.5.3",
+   "pages": "536",
+   "group": "samdh",
+   "lang": "bo",
+   "type": "edition",
+   "label": "Editions: Lamotte 1935 (Tib., Narthang); Nozawa 1957 (ch. VIII); Yoshimura 1959 (VIII, Tib./Chin.); Powers 1995 (Derge)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 536,
+     "extent": "section-only"
+    },
+    {
+     "t": [
+      "723b20",
+      "729a19"
+     ],
+     "page": 536,
+     "own": "Nozawa; Yoshimura: ch. VIII"
+    }
+   ],
+   "sub": "new critical edition in progress in Japan (Kato 2006)"
+  },
+  {
+   "id": "sd-studies",
+   "delhey_section": "2.2.5.3",
+   "pages": "536–537",
+   "group": "samdh",
+   "lang": "bo",
+   "type": "study",
+   "label": "Powers 1993b; Kato 2006; Schmithausen 1984; Yamada 1959; Sueki 2008; Matsuda 2013",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 536,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "recensions, text-critical problems, bibliography"
+  },
+  {
+   "id": "sd-transl",
+   "delhey_section": "2.2.5.3",
+   "pages": "537",
+   "group": "samdh",
+   "lang": "multi",
+   "type": "modern-translation",
+   "label": "Translations: Lamotte 1935 (fr); Powers 1995, Keenan 2000, Cleary 1995 (en); Cornu 2005 (fr); Frauwallner 1969 (de, VI–VII); Hakamaya 1994 (ja, VI–VII); Nozawa 1957 (ja, VIII)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 537,
+     "extent": "section-only"
+    },
+    {
+     "t": [
+      "718c05",
+      "723b20"
+     ],
+     "page": 537,
+     "own": "Frauwallner; Hakamaya: VI–VII"
+    },
+    {
+     "t": [
+      "723b20",
+      "729a19"
+     ],
+     "page": 537,
+     "own": "Nozawa: VIII"
+    }
+   ]
+  },
+  {
+   "id": "sd-reviews",
+   "delhey_section": "2.2.5.3 nn. 192, 196",
+   "pages": "537–538",
+   "group": "samdh",
+   "lang": "multi",
+   "type": "review",
+   "label": "Tillemans 1997; Wedemeyer 2003",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 537,
+     "extent": "section-only"
+    }
+   ],
+   "sub": "reviews of Powers' Saṃdh books"
+  },
+  {
+   "id": "sd-comm",
+   "delhey_section": "2.2.5.3",
+   "pages": "537–538",
+   "group": "samdh",
+   "lang": "bo",
+   "type": "commentary",
+   "label": "Commentaries: D3981 (Asaṅga?; Lamotte 1935, Powers 1992a); D4016 Woncheuk (Tib. by Chos grub); D4358 (Tibetan)",
+   "spans": [
+    {
+     "t": [
+      "713c28",
+      "736c12"
+     ],
+     "page": 537,
+     "extent": "section-only"
+    }
+   ],
+   "dn": [
+    {
+     "id": "BO_T05_D3981",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T05_D3981/text"
+    },
+    {
+     "id": "BO_T05_D4016",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T05_D4016/text"
+    }
+   ]
+  },
+  {
+   "id": "sd-d4033",
+   "delhey_section": "2.2.5.3",
+   "pages": "537–538",
+   "group": "samdh",
+   "lang": "bo",
+   "type": "commentary",
+   "label": "D4033 / Q5535 Jñānagarbha on ch. VIII (Nozawa 1957; Powers 1992a, 1998; Steinkellner 1989)",
+   "spans": [
+    {
+     "t": [
+      "723b20",
+      "729a19"
+     ],
+     "page": 537,
+     "own": "Saṃdh VIII (Maitreyaparivarta)"
+    }
+   ],
+   "dn": [
+    {
+     "id": "BO_T06_D4033",
+     "lang": "bo",
+     "url": "https://dharmamitra.org/nexus/db/bo/BO_T06_D4033/text"
     }
    ]
   }
@@ -4953,6 +7910,22 @@
     }
    ],
    "sub": "placed via the Sanskrit BoBh"
+  },
+  {
+   "id": "dn-ZH_T31_1602",
+   "etext": "ZH_T31_1602",
+   "group": "dn",
+   "lang": "zh",
+   "type": "etext",
+   "label": "ZH_T31_1602 – Xiǎnyáng shèngjiào lùn",
+   "dn": [
+    {
+     "id": "ZH_T31_1602",
+     "lang": "zh",
+     "url": "https://dharmamitra.org/nexus/db/zh/ZH_T31_1602/text"
+    }
+   ],
+   "sub": "placed via its alignments with the Sanskrit YBh e-texts (only stretches with a Sanskrit e-text can show)"
   }
  ],
  "q_anchors": {

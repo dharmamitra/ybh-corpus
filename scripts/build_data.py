@@ -83,7 +83,8 @@ def seg_t(segnr):
 
 
 # ------------------------------------------------------------- alignments
-YBH_ZH = {"ZH_T30_1579", "ZH_T30_1581", "ZH_T30_1582", "ZH_T24_1500", "ZH_T24_1501"}
+YBH_ZH = {"ZH_T30_1579", "ZH_T30_1581", "ZH_T30_1582", "ZH_T30_1583", "ZH_T30_1584", "ZH_T24_1500", "ZH_T24_1501",
+          "ZH_T31_1602", "ZH_T31_1615", "ZH_T16_0675", "ZH_T16_0676", "ZH_T16_0677", "ZH_T16_0678", "ZH_T16_0679"}
 YBH_SA = {
     "SA_T06_n1394u", "SA_T06_sambhu", "SA_T06_-ybh-klesa", "SA_T06_srabhusu",
     "SA_T06_srabhu_u", "SA_T06_ybh-laukikamarga", "SA_T06_bsa034",
@@ -108,37 +109,41 @@ def iter_matches(dirs, name):
             continue
         with gzip.open(p, "rt", encoding="utf-8") as fh:
             for line in fh:
-                if "ZH_T30_15" not in line and "ZH_T24_150" not in line:
+                if not any(k in line for k in ("ZH_T30_15", "ZH_T24_150", "ZH_T31_16", "ZH_T16_067")):
                     continue
                 yield d, json.loads(line)
 
 
 def load_alignments(dirs):
-    """Return {source_file: [(root_segnrs, zh_segnrs, release)]} for YBh texts."""
+    """Return {source_file: {"records": [(root_segnrs, zh_segnrs)], "releases": {target: release}}}.
+
+    For every pair (source file, Chinese target text) the records of the newest
+    release (last --matches directory) that contains the pair are used."""
     out = defaultdict(list)
-    newest = {}                              # file -> index of newest release seen
+    newest = {}                              # (file, target) -> index of newest release
     for i, d in enumerate(dirs):
         for name in ("sa-zh_matches.ndjson.gz", "bo-zh_matches.ndjson.gz"):
-            p = os.path.join(d, name)
-            if not os.path.exists(p):
+            if not os.path.exists(os.path.join(d, name)):
                 continue
-            seen = set()
             for _, r in iter_matches([d], name):
-                src = r["filename"] if "filename" in r else text_of(r["root_segnr"][0])
                 src = text_of(r["root_segnr"][0])
+                if not (src in YBH_SA or YBH_BO.match(src)):
+                    continue
                 zh = [p_ for p_ in r["par_segnr"] if text_of(p_) in YBH_ZH]
                 if not zh:
                     continue
-                if not (src in YBH_SA or YBH_BO.match(src)):
-                    continue
-                seen.add(src)
-                out[(src, i)].append((r["root_segnr"], zh))
-            for s in seen:
-                newest[s] = max(newest.get(s, -1), i)
+                tgt = text_of(zh[0])
+                newest[(src, tgt)] = max(newest.get((src, tgt), -1), i)
+                out[(src, tgt, i)].append((r["root_segnr"], zh))
     res = {}
-    for (src, i), recs in out.items():
-        if newest[src] == i:
-            res[src] = {"release": os.path.basename(os.path.normpath(dirs[i])), "records": recs}
+    for (src, tgt, i), recs in out.items():
+        if newest[(src, tgt)] != i:
+            continue
+        e = res.setdefault(src, {"records": [], "releases": {}})
+        e["records"].extend(recs)
+        e["releases"][tgt] = os.path.basename(os.path.normpath(dirs[i]))
+    for e in res.values():
+        e["release"] = e["releases"].get("ZH_T30_1579") or sorted(e["releases"].values())[-1]
     return res
 
 
@@ -230,14 +235,19 @@ def concordance(pairs):
 
 
 
-def page_label_fn(fid, segs, args):
+OLD_SEG_RELEASES = {"mitra-parallel-v3", "mitra-parallel-v3-fix106-only", "mitra-parallel-v3-pre-fix106"}
+
+
+def page_label_fn(fid, segs, args, release=None):
     """Return f(segment index) -> (label, page) giving the edition page."""
     if segs is None:
         return None
     if fid == "SA_T06_n1394u":
         # the alignments refer to the old DSBC segmentation; map them to the new
         # e-text whose `folio` is the page of Bhattacharya 1957
-        old = load_json(args.sanskrit_old_n1394u) if args.sanskrit_old_n1394u else None
+        old = None
+        if args.sanskrit_old_n1394u and release in OLD_SEG_RELEASES:
+            old = load_json(args.sanskrit_old_n1394u)
         mp = old_to_new(old, segs) if old is not None else {i: i for i in range(len(segs))}
         return lambda i: ("Bh.", segs[min(mp.get(i, i), len(segs) - 1)]["folio"])
     rx = {"SA_T06_srabhusu": (r"\(Śbh_Sh:? (\d+)\)", "Sh."),
@@ -342,7 +352,7 @@ def build_derived(args):
         recs = al[fid]["records"]
         if fid.startswith("SA_"):
             segs = sa_segments(args.sanskrit, fid)
-            label = page_label_fn(fid, segs, args)
+            label = page_label_fn(fid, segs, args, al[fid]["release"])
             pts = []                       # (x, segment index)
             m = defaultdict(list)
             for root, zh in recs:
@@ -388,41 +398,50 @@ def build_derived(args):
             e["via"] = "SA_T06_bsa034"
             derived["etexts"][fid] = e
 
-    # Chinese partial BoBh translations, chained via the Sanskrit BoBh (bsa034)
-    if "SA_T06_bsa034" in al:
-        bs2t = defaultdict(list)
-        sa2other = defaultdict(lambda: defaultdict(list))
-        for root, zh in al["SA_T06_bsa034"]["records"]:
+    # Other Chinese texts (T1581, T1582, T1500, T1501, T1602, ...) placed on the
+    # T1579 axis through a Sanskrit e-text aligned to both
+    chained = defaultdict(lambda: {"pts": [], "own": [], "via": set(), "release": set()})
+    for fid in sorted(al):
+        if not fid.startswith("SA_"):
+            continue
+        s2t = defaultdict(list)
+        s2o = defaultdict(lambda: defaultdict(list))
+        for root, zh in al[fid]["records"]:
             for z in zh:
                 t = text_of(z)
                 for r_ in root:
                     if t == "ZH_T30_1579":
-                        bs2t[r_].append(seg_t(z))
+                        s2t[r_].append(seg_t(z))
                     else:
-                        sa2other[t][r_].append(z.split(":")[1].split("_")[0])
-        for t, mp in sa2other.items():
-            pts, own = [], []
+                        s2o[t][r_].append(z.split(":")[1].split("_")[0])
+        for t, mp in s2o.items():
+            c = chained[t]
             for r_, locs in mp.items():
-                if r_ in bs2t:
-                    for x in bs2t[r_]:
-                        pts.append(x)
-                        own.append((x, locs[0]))
-            own.sort()
-            xs = [o[0] for o in own]
-            entry = {"release": al["SA_T06_bsa034"]["release"], "via": "SA_T06_bsa034",
-                     "n_alignments": len(pts), "spans": []}
-            for a, b, n in runs(pts, gap=3, min_n=4):
-                sp = {"from": x2t(a), "to": x2t(b + 1 / LINES), "x0": a, "x1": round(b + 1 / LINES, 4), "n": n}
-                lo = bisect.bisect_left(xs, a)
-                hi = bisect.bisect_right(xs, b) - 1
-                if 0 <= lo <= hi:
-                    locs = sorted(o[1] for o in own[lo:hi + 1])
-                    sp["own"] = "%s %s–%s" % (t.replace("ZH_", "").replace("_", "."), locs[0], locs[-1])
-                entry["spans"].append(sp)
-            derived["etexts"][t] = entry
+                for x in s2t.get(r_, []):
+                    c["pts"].append(x)
+                    c["own"].append((x, locs[0]))
+            if mp:
+                c["via"].add(fid)
+                c["release"].add(al[fid]["releases"].get(t, ""))
+    for t, c in chained.items():
+        if not c["pts"]:
+            continue
+        own = sorted(c["own"])
+        xs = [o[0] for o in own]
+        entry = {"release": ", ".join(sorted(c["release"])), "via": ", ".join(sorted(c["via"])),
+                 "n_alignments": len(c["pts"]), "spans": []}
+        for a, b, n in runs(c["pts"], gap=3, min_n=4):
+            sp = {"from": x2t(a), "to": x2t(b + 1 / LINES), "x0": a, "x1": round(b + 1 / LINES, 4), "n": n}
+            lo, hi = bisect.bisect_left(xs, a), bisect.bisect_right(xs, b) - 1
+            if 0 <= lo <= hi:
+                locs = sorted(o[1] for o in own[lo:hi + 1])
+                sp["own"] = "%s %s–%s" % (t.replace("ZH_", "").replace("_", "."), locs[0], locs[-1])
+            entry["spans"].append(sp)
+        derived["etexts"][t] = entry
 
     for lab, pairs in conc_pairs.items():
-        derived["concordances"][lab] = concordance(pairs)
+        if lab in ("Bh.", "Sh.", "BoBhD", "BoBhW"):
+            derived["concordances"][lab] = concordance(pairs)
     return derived
 
 

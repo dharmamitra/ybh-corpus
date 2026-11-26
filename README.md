@@ -12,9 +12,11 @@ An interactive, dependency-free map of the whole *Yogācārabhūmi* (YBh) corpus
   * Sanskrit editions, complete and partial (Bhattacharya 1957, Delhey 2009, Ahn 2003, Shukla 1973, the Śrāvakabhūmi Study Group, Deleanu 2006, Wogihara, Dutt, the hetuvidyā and Pratyekabuddhabhūmi editions, the paṭala editions of the BoBh, …);
   * the Tibetan translation D4035–4042 / Q5536–5543 and its correspondence to the Chinese parts;
   * editions and studies of the Tibetan / Chinese text where no Sanskrit survives (Hakamaya, Kramer, Ahn, Schmithausen 1969b, Sakuma 1990, …);
-  * Chinese translations and extracts (T1581, T1582/1583, T1584, T1499–T1503, T1615, T524);
+  * Chinese translations and extracts (T1581, T1582/1583, T1584, T1499–T1503, T1615, T524), the lost *Saptadaśabhūmiśāstra, the kundoku and Uighur versions;
+  * the Saṃdhinirmocanasūtra, quoted almost entirely in the *Bodhisattvabhūmiviniścaya (T1579 fasc. 75–78, 713c28–736c12), with its chapters located inside the citation, its independent versions (T676 Xuánzàng, T675 *Bodhiruci, T677 Paramārtha ch. I–IV, T678 ch. IX, T679 ch. X, D106/Q774, the Dūnhuáng Tibetan translation), the Sanskrit fragments and testimonia (Kathmandu folio, SHT III 923, citations), editions, translations and commentaries (chapter correspondences of T677–679 and SHT III 923 after Matsuda 2013, HOS 75: 938–944);
   * commentaries and related texts (*Yogācārabhūmivyākhyā D4043, T1580, T1602 *Xiǎnyáng shèngjiào lùn*, the Saṃdhinirmocanasūtra, BoBh and Śīlapaṭala commentaries, …);
-  * modern translations (collapsed by default);
+  * reference works: indices, catalogues, bibliographies, databases, dictionaries;
+  * modern translations and reviews with text-critical remarks (collapsed by default);
   * DharmaNexus e-texts aligned to T1579 (data-derived, see below).
 * **Interaction.** Drag to pan; Ctrl/⌘ + wheel, double-click or the +/− buttons to zoom; click a section band to zoom to it; hover a bar for the witness, its span in T1579 (with fascicle) and in its own pagination, the Delhey page and how it was placed; click a bar to open the e-text in DharmaNexus (shift-click pins the details instead). The current view is kept in the URL (`#view=478b12-576b29`) so views can be shared. A table view of all spans is at the bottom of the page.
 
@@ -36,11 +38,15 @@ Delhey mostly locates passages in the pagination of the edition he discusses. Th
 | `q-interpolated` | Only Peking folios are given (two passages in Wangchuk 2007); interpolated linearly between Delhey's own Q = T equations. |
 | `aligned` | Data-derived layer (hatched): contiguous runs of sentence alignments between a DharmaNexus e-text and T1579. |
 
+Every checklist entry is drawn. Entries for which Delhey names only a bhūmi, chapter or section are drawn over that section with a dashed outline (`section-only`); entries concerning the whole work (reference works, kundoku, the Tibetan witnesses …) as a thin line over the whole axis (`whole-work`); entries with no location at all (6: the lost transcript of the YoBh MS, Paramārtha's lost *Saptadaśabhūmiśāstra, the Uighur translation, the Tibetan Dūnhuáng fragments, lost Indian commentaries, a Xiǎnyáng lùn quotation in the *Vyākhyā) appear as a pill in the "not localised" strip between the labels and the plot, with tooltip and Delhey page.
+
 A dashed outline (`extent` in the data) marks spans whose start or end is uncertain, or which Delhey only locates at section level although they cover just a part of it.
 
 ## Files
 
 * `index.html` – the map (vanilla JavaScript + SVG, no dependencies).
+* `data/delhey_checklist.json` – the completeness checklist: one entry per edition, partial edition, translation, study with text-critical content, reference work and manuscript that Delhey mentions (265 entries), with his section and pages, the group it is drawn in and how it is localised (`located`, `section-only`, `whole-work`, `selections`, `not localised`, …).
+* `scripts/curate_delhey.py` – the editable source of the checklist and of `data/delhey.json`.
 * `data/delhey.json` – curated layer: sections, rows and spans in Delhey's own coordinates, with page citations.
 * `data/derived.json` – data-derived layer: aligned spans of the DharmaNexus e-texts and the Bh./Sh./BoBhD/BoBhW page concordances.
 * `data/corpus.json` – merged result (also as `data/corpus.js` for use from `file://`).
@@ -54,8 +60,10 @@ python3 scripts/build_data.py \
     --matches PATH/mitra-parallel-v3 --matches PATH/newer-release ...
 
 # re-merge only, after editing data/delhey.json
-python3 scripts/build_data.py --merge-only
+python3 scripts/curate_delhey.py && python3 scripts/build_data.py --merge-only
 ```
+
+The committed data use the releases `mitra-parallel-v3`, `-sa2611`, `-akbh2611`, `-ybh2611`, `-ybh2611b` (later ones override earlier ones per pair of texts). Chinese texts other than T1579 (T1581, T1582, T1500, T1501, T1602) are placed on the axis through Sanskrit e-texts aligned to both.
 
 `--sanskrit-old-n1394u` is the earlier (DSBC) segmentation of `SA_T06_n1394u` to which the current alignments refer; the script maps it onto the new e-text, whose `folio` is the page of Bhattacharya 1957. Later `--matches` directories override earlier ones file by file.
 

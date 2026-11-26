@@ -199,10 +199,12 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
   const EXTENT = {
     "approx-start": "start uncertain", "approx-end": "end uncertain", "section-only": "only part of this section (exact place not given)",
     "selections": "selected passages within this range", "point": "point location",
+    "whole-work": "concerns the whole work / several parts; drawn over all of them",
   };
   const LANGNAME = { en: "English", de: "German", fr: "French", ja: "Japanese", hi: "Hindi", multi: "several languages", kho: "Khotanese" };
 
   const xMax = D.axis.x_max;
+  const ROW_BY_ID = Object.fromEntries(D.rows.map(r => [r.id, r]));
   const state = { v0: 0, v1: xMax, langs: new Set(LANGS.map(l => l.id)), layers: new Set(["delhey", "aligned"]),
                   q: "", collapsed: new Set(D.groups.filter(g => g.collapsed).map(g => g.id)) };
   function t2x(t, end) {
@@ -221,7 +223,7 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
   const headEl = document.getElementById("head"), bodyEl = document.getElementById("body");
   const tip = document.getElementById("tip"), tipC = tip.querySelector(".c");
   const ROW_H = 20, GRP_H = 26;
-  let W = 1000, LBL = 330;
+  let W = 1000, LBL = 330, NL = 76, PX0 = LBL + NL;
 
   // ---------------------------------------------------------------- helpers
   const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
@@ -232,9 +234,9 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
     return page + "abc"[reg] + line;
   }
   function fasc(x) { let f = 1; for (const [n, , fx] of D.axis.fascicles) { if (fx <= x + 1e-6) f = n; } return f; }
-  const plotW = () => W - LBL - 12;
-  const sx = x => LBL + (x - state.v0) / (state.v1 - state.v0) * plotW();
-  const inv = px => state.v0 + (px - LBL) / plotW() * (state.v1 - state.v0);
+  const plotW = () => W - PX0 - 12;
+  const sx = x => PX0 + (x - state.v0) / (state.v1 - state.v0) * plotW();
+  const inv = px => state.v0 + (px - PX0) / plotW() * (state.v1 - state.v0);
   function clampView() {
     let span = Math.max(0.6, Math.min(xMax, state.v1 - state.v0));
     let v0 = Math.max(0, Math.min(state.v0, xMax - span));
@@ -273,6 +275,8 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
       `<span>${sw(`fill="var(--text-3)"`)}Delhey 2013 (located)</span>` +
       `<span>${sw(`fill="var(--text-3)" fill-opacity="0.35" stroke="var(--text-3)" stroke-dasharray="3 2"`)}uncertain extent / section-level</span>` +
       `<span>${sw(`fill="url(#lg-hatch)"`, `<defs><pattern id="lg-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="var(--text-3)" fill-opacity="0.25"/><line x1="0" y1="0" x2="0" y2="5" stroke="var(--text-3)" stroke-width="2.2"/></pattern></defs>`)}aligned in DharmaNexus (data-derived)</span>` +
+      `<span>${sw(`fill="var(--text-3)" fill-opacity="0.18" stroke="var(--text-3)" stroke-dasharray="2 2"`)}not localised (left strip)</span>` +
+      `<span><svg width="34" height="14" aria-hidden="true"><rect x="1" y="5" width="32" height="4" rx="2" fill="var(--text-3)" fill-opacity="0.45"/></svg>whole work / several parts, no closer location</span>` +
       `<span>↗ = e-text in DharmaNexus</span>`;
   })();
 
@@ -304,7 +308,7 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
       el("line", { x1: 0, y1: 0, x2: 0, y2: 5, stroke: l.color, "stroke-width": 2.4 }, p);
     });
     const cp = el("clipPath", { id: "plotclip" }, defs);
-    el("rect", { x: LBL, y: 0, width: plotW(), height: 100000 }, cp);
+    el("rect", { x: PX0, y: 0, width: plotW(), height: 100000 }, cp);
     return defs;
   }
 
@@ -327,20 +331,22 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
     if (st < 1) {
       const r0 = Math.floor(state.v0), r1 = Math.ceil(state.v1);
       for (let r = r0; r <= r1; r++) {
-        const px = sx(r); if (px < LBL - 1 || px > W) continue;
+        const px = sx(r); if (px < PX0 - 1 || px > W) continue;
         el("line", { x1: px, x2: px, y1: 18, y2: 26, stroke: "var(--text-3)" }, ax);
         el("text", { x: px + 3, y: 14 }, ax).textContent = x2t(r).replace(/1$/, "");
       }
     } else {
       const p0 = Math.ceil((state.v0 / 3 + 279) / st) * st, p1 = state.v1 / 3 + 279;
       for (let p = p0; p <= p1; p += st) {
-        const px = sx((p - 279) * 3); if (px < LBL - 1) continue;
+        const px = sx((p - 279) * 3); if (px < PX0 - 1) continue;
         el("line", { x1: px, x2: px, y1: 18, y2: 26, stroke: "var(--text-3)" }, ax);
         el("text", { x: px + 3, y: 14 }, ax).textContent = p + "a";
       }
     }
     el("rect", { x: 0, y: 0, width: LBL - 2, height: 30, fill: "var(--bg)" }, svg);
     el("text", { x: 8, y: 14, class: "lab" }, svg).textContent = LBL < 260 ? "T1579 p./register" : "Taishō vol. 30, T1579 — p./register";
+    const nlh = el("text", { x: LBL + NL / 2, y: 100, class: "lab sub", "text-anchor": "middle" }, svg);
+    nlh.textContent = NL > 60 ? "not localised" : "n.l."; nlh.setAttribute("style", "font-size:10px");
     el("text", { x: 8, y: 26, class: "lab sub" }, svg).textContent = `view ${x2t(state.v0)} – ${x2t(state.v1)} (fasc. ${fasc(state.v0)}–${fasc(state.v1)})`;
     // bands
     const lvls = [{ l: 1, y: 30, name: "Parts" }, { l: 2, y: 54, name: "Bhūmis / chapters" }, { l: 3, y: 78, name: "Sections" }];
@@ -349,25 +355,25 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
       let k = 0;
       for (const s of D.sections.filter(z => z.level === L.l)) {
         const a = sx(s.x0), b = sx(s.x1);
-        if (b < LBL || a > W) { k++; continue; }
+        if (b < PX0 || a > W) { k++; continue; }
         const bg = el("g", { class: "band" }, g);
         const r = el("rect", { x: a, y: L.y, width: Math.max(0.5, b - a - 1), height: 22, rx: 3,
                                fill: L.l === 1 ? "var(--band-1)" : (k % 2 ? "var(--band-alt)" : "var(--band-2)") }, bg);
         r.addEventListener("click", () => zoomTo(s.x0, s.x1));
         r.addEventListener("mousemove", ev => showTip(ev, sectionTip(s)));
         r.addEventListener("mouseleave", hideTip);
-        const vis = Math.min(b, W) - Math.max(a, LBL);
+        const vis = Math.min(b, W) - Math.max(a, PX0);
         const full = s.name + "  " + s.zh;
         const short = s.name.split(" ")[0];
         const txt = vis > full.length * 6.2 ? full : vis > s.name.length * 6.2 ? s.name : vis > s.zh.length * 11 + 6 ? s.zh :
                     (vis > short.length * 6.5 + 8 && /^[0-9IV]/.test(short)) ? short : "";
-        if (txt) el("text", { x: Math.max(a, LBL) + 5, y: L.y + 15 }, bg).textContent = txt;
+        if (txt) el("text", { x: Math.max(a, PX0) + 5, y: L.y + 15 }, bg).textContent = txt;
         k++;
       }
     }
     // fascicle ticks
     for (const [n, , fx] of D.axis.fascicles) {
-      const px = sx(fx); if (px < LBL || px > W) continue;
+      const px = sx(fx); if (px < PX0 || px > W) continue;
       el("line", { x1: px, x2: px, y1: 26, y2: 30, stroke: "var(--crimson)" }, g);
     }
     enableDrag(svg);
@@ -382,18 +388,21 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
   function spanTip(r, s) {
     const dn = (r.dn || []).map(d => `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.id)}</a>`).join(", ");
     const lang = r.group === "mod" ? (LANGNAME[r.lang] || r.lang) : ({ sa: "Sanskrit", bo: "Tibetan", zh: "Chinese" }[r.lang] || LANGNAME[r.lang] || r.lang);
+    const where = s
+      ? `<dt>T1579</dt><dd>${esc(s.from)} – ${esc(s.to)} <span style="color:var(--text-3)">(fasc. ${fasc(s.x0)}${fasc(s.x1) !== fasc(s.x0) ? "–" + fasc(s.x1) : ""})</span></dd>${s.own ? `<dt>Own ref.</dt><dd>${esc(s.own)}</dd>` : ""}`
+      : `<dt>T1579</dt><dd><b>not localised</b> – Delhey gives no location and no section</dd>`;
+    const src = r.group === "dn" ? "" : `<dt>Source</dt><dd>Delhey 2013: ${esc((s && s.page) || r.pages || "")}${r.delhey_section ? " (§" + esc(r.delhey_section) + ")" : ""}${r.delhey_section && /Matsuda/.test(r.sub || r.label) ? "; Matsuda 2013" : ""}</dd>`;
     return `<h4>${esc(r.label)}</h4>${r.sub ? `<div class="sub">${esc(r.sub)}</div>` : ""}
       <dl>
-        <dt>T1579</dt><dd>${esc(s.from)} – ${esc(s.to)} <span style="color:var(--text-3)">(fasc. ${fasc(s.x0)}${fasc(s.x1) !== fasc(s.x0) ? "–" + fasc(s.x1) : ""})</span></dd>
-        ${s.own ? `<dt>Own ref.</dt><dd>${esc(s.own)}</dd>` : ""}
+        ${where}
         <dt>Type</dt><dd>${esc(r.type.replace("-", " "))} · ${esc(lang)}</dd>
-        ${s.page ? `<dt>Source</dt><dd>Delhey 2013: ${esc(s.page)}</dd>` : ""}
-        ${s.n ? `<dt>Alignments</dt><dd>${s.n} aligned segment pairs${r.release ? " · " + esc(r.release) : ""}</dd>` : ""}
-        ${s.note ? `<dt>Note</dt><dd>${esc(s.note)}</dd>` : ""}
+        ${src}
+        ${s && s.n ? `<dt>Alignments</dt><dd>${s.n} aligned segment pairs${r.release ? " · " + esc(r.release) : ""}${r.via ? " · via " + esc(r.via) : ""}</dd>` : ""}
+        ${s && s.note ? `<dt>Note</dt><dd>${esc(s.note)}</dd>` : ""}
         ${r.note ? `<dt>Row note</dt><dd>${esc(r.note)}</dd>` : ""}
-        ${dn ? `<dt>DharmaNexus</dt><dd>${dn}</dd>` : ""}
+        ${dn ? `<dt>DharmaNexus</dt><dd>${dn}<br><span style="color:var(--text-3)">click opens ${esc(r.dn[0].id)}</span></dd>` : ""}
       </dl>
-      <div class="basis">Placement: ${esc(BASIS[s.basis] || s.basis)}${s.extent ? " · " + esc(EXTENT[s.extent] || s.extent) : ""}</div>`;
+      ${s ? `<div class="basis">Placement: ${esc(BASIS[s.basis] || s.basis)}${s.extent ? " · " + esc(EXTENT[s.extent] || s.extent) : ""}</div>` : ""}`;
   }
 
   let pinned = false;
@@ -421,10 +430,11 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
     const st = tickStep();
     if (st >= 1) {
       const p0 = Math.ceil((state.v0 / 3 + 279) / st) * st, p1 = state.v1 / 3 + 279;
-      for (let p = p0; p <= p1; p += st) { const px = sx((p - 279) * 3); if (px >= LBL) el("line", { x1: px, x2: px, y1: 0, y2: H, stroke: "var(--grid)" }, grid); }
+      for (let p = p0; p <= p1; p += st) { const px = sx((p - 279) * 3); if (px >= PX0) el("line", { x1: px, x2: px, y1: 0, y2: H, stroke: "var(--grid)" }, grid); }
     }
+    el("rect", { x: LBL, y: 0, width: NL, height: H + 8, fill: "var(--panel)" }, grid);
     // section boundaries (level 2) as faint lines
-    for (const s of D.sections.filter(z => z.level <= 2)) { const px = sx(s.x0); if (px >= LBL && px <= W) el("line", { x1: px, x2: px, y1: 0, y2: H, stroke: "var(--line)", "stroke-dasharray": s.level === 1 ? "" : "2 3" }, grid); }
+    for (const s of D.sections.filter(z => z.level <= 2)) { const px = sx(s.x0); if (px >= PX0 && px <= W) el("line", { x1: px, x2: px, y1: 0, y2: H, stroke: "var(--line)", "stroke-dasharray": s.level === 1 ? "" : "2 3" }, grid); }
     let y = 8;
     const plot = el("g", { "clip-path": "url(#plotclip)" }, svg);
     for (const g of groups) {
@@ -448,33 +458,50 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
         lab.textContent = L;
         const title = el("title", {}, lab); title.textContent = r.label + (r.sub ? " — " + r.sub : "");
         if (r.dn && r.dn.length) {
-          const a = el("a", { href: r.dn[0].url, target: "_blank", rel: "noopener" }, svg);
+          const a = el("a", { href: r.dn[0].url, target: "_blank", rel: "noopener", "data-dn": r.dn[0].id, "data-link-row": r.id }, svg);
           const tt = el("text", { x: LBL - 16, y: y + 14, class: "lab", fill: "var(--crimson)" }, a);
           tt.textContent = "↗"; tt.setAttribute("style", "fill:var(--crimson)");
           el("title", {}, tt).textContent = "Open " + r.dn[0].id + " in DharmaNexus";
         }
-        for (const s of r.spans) {
+        if (!r.spans.length) {
+          // not localised: pill in the strip between labels and plot
+          const pill = el("rect", { class: "span nl", x: LBL + 4, y: y + 4, width: NL - 8, height: ROW_H - 8, rx: 6,
+                                    fill: col, "fill-opacity": 0.18, stroke: col, "stroke-dasharray": "2 2", "data-row": r.id, "data-span": -1 }, svg);
+          const tx = el("text", { x: LBL + NL / 2, y: y + 14, class: "lab sub", "text-anchor": "middle", "pointer-events": "none" }, svg);
+          tx.textContent = NL > 60 ? "not localised" : "n.l.";
+          tx.setAttribute("style", "font-size:10px");
+          pill.addEventListener("mousemove", ev => showTip(ev, spanTip(r, null)));
+          pill.addEventListener("mouseleave", hideTip);
+        }
+        r.spans.forEach((s, si) => {
           let a = sx(s.x0), b = sx(s.x1);
-          if (b < LBL || a > W) continue;
+          if (b < PX0 || a > W) return;
           if (b - a < 3) { const m = (a + b) / 2; a = m - 1.5; b = m + 1.5; }
           const aligned = s.basis === "aligned";
           const approx = !!s.extent && s.extent !== "point";
-          const attrs = { class: "span", x: a, y: y + 4, width: b - a, height: ROW_H - 8, rx: Math.min(3, (b - a) / 2) };
-          if (aligned) { attrs.fill = `url(#h-${langKey(r)})`; attrs.stroke = col; attrs["stroke-width"] = 0.6; }
+          const attrs = { class: "span", x: a, y: y + 4, width: b - a, height: ROW_H - 8, rx: Math.min(3, (b - a) / 2), "data-row": r.id, "data-span": si };
+          if (s.extent === "whole-work") { attrs.y = y + ROW_H / 2 - 2; attrs.height = 4; attrs.rx = 2; attrs.fill = col; attrs["fill-opacity"] = 0.45; }
+          else if (aligned) { attrs.fill = `url(#h-${langKey(r)})`; attrs.stroke = col; attrs["stroke-width"] = 0.6; }
           else if (approx) { attrs.fill = col; attrs["fill-opacity"] = 0.35; attrs.stroke = col; attrs["stroke-dasharray"] = "3 2"; }
           else { attrs.fill = col; }
           const rect = el("rect", attrs, plot);
           rect.addEventListener("mousemove", ev => showTip(ev, spanTip(r, s)));
           rect.addEventListener("mouseleave", hideTip);
-          rect.addEventListener("click", ev => {
-            if (moved) return;
-            if (r.dn && r.dn.length && !ev.shiftKey) { window.open(r.dn[0].url, "_blank", "noopener"); return; }
-            pinned = false; showTip(ev, spanTip(r, s)); pinned = true; tip.classList.add("pinned");
-          });
-        }
+        });
         y += ROW_H;
       });
     }
+    svg.addEventListener("click", ev => {
+      const t = ev.target.closest("[data-row]");
+      if (!t || moved) return;
+      const r = ROW_BY_ID[t.getAttribute("data-row")];
+      if (!r) return;
+      const si = +t.getAttribute("data-span");
+      const s = si >= 0 ? r.spans[si] : null;
+      const link = (r.dn || [])[0];
+      if (link && !ev.shiftKey && t.tagName.toLowerCase() === "rect") { window.open(link.url, "_blank", "noopener"); return; }
+      pinned = false; showTip(ev, spanTip(r, s)); pinned = true; tip.classList.add("pinned");
+    });
     enableDrag(svg);
   }
 
@@ -489,13 +516,13 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
   });
   window.addEventListener("mouseup", () => { if (start) { start = null; document.body.style.cursor = ""; setTimeout(() => moved = false, 0); } });
   function enableDrag(svg) {
-    svg.addEventListener("mousedown", e => { if (e.button !== 0) return; const r = svg.getBoundingClientRect(); if (e.clientX - r.left < LBL) return; e.preventDefault(); start = { x: e.clientX, v0: state.v0, v1: state.v1 }; moved = false; });
+    svg.addEventListener("mousedown", e => { if (e.button !== 0) return; const r = svg.getBoundingClientRect(); if (e.clientX - r.left < PX0) return; e.preventDefault(); start = { x: e.clientX, v0: state.v0, v1: state.v1 }; moved = false; });
     svg.addEventListener("wheel", e => {
-      const r = svg.getBoundingClientRect(); const px = e.clientX - r.left; if (px < LBL) return;
+      const r = svg.getBoundingClientRect(); const px = e.clientX - r.left; if (px < PX0) return;
       if (e.ctrlKey || e.metaKey) { e.preventDefault(); zoomBy(e.deltaY > 0 ? 1.25 : 0.8, inv(px)); }
       else if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { e.preventDefault(); const dv = e.deltaX / plotW() * (state.v1 - state.v0); state.v0 += dv; state.v1 += dv; clampView(); schedule(); }
     }, { passive: false });
-    svg.addEventListener("dblclick", e => { const r = svg.getBoundingClientRect(); const px = e.clientX - r.left; if (px < LBL) return; zoomBy(e.shiftKey ? 2 : 0.5, inv(px)); });
+    svg.addEventListener("dblclick", e => { const r = svg.getBoundingClientRect(); const px = e.clientX - r.left; if (px < PX0) return; zoomBy(e.shiftKey ? 2 : 0.5, inv(px)); });
     // touch: one-finger pan
     let tstart = null;
     svg.addEventListener("touchstart", e => { if (e.touches.length === 1) tstart = { x: e.touches[0].clientX, v0: state.v0, v1: state.v1 }; }, { passive: true });
@@ -514,7 +541,7 @@ footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
 
   function measure() {
     W = Math.max(320, document.getElementById("viz").clientWidth - 2);
-    LBL = W < 700 ? Math.round(W * 0.38) : 330;
+    LBL = W < 700 ? Math.round(W * 0.34) : 330; NL = W < 700 ? 44 : 76; PX0 = LBL + NL;
   }
   function render() { measure(); renderHead(); renderBody(); }
   window.addEventListener("resize", schedule);
