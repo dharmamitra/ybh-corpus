@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yogācārabhūmi Corpus Map</title>
+<meta name="description" content="Interactive map of the Yogācārabhūmi corpus on the axis of Xuanzang's Chinese translation (T1579): Sanskrit manuscripts and editions, Tibetan and Chinese versions, related texts, modern translations and DharmaNexus e-texts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='3' width='9' height='3' rx='1' fill='%23972e3a'/%3E%3Crect x='5' y='8' width='10' height='3' rx='1' fill='%232a78d6'/%3E%3Crect x='3' y='13' width='7' height='2' rx='1' fill='%231baf7a'/%3E%3C/svg%3E">
+<style>
+/* Design tokens follow the Dharmamitra frontend (Noto Sans, black text,
+   crimson secondary hsl(352 53% 39%), light hsl(11 67% 95%), panel #f7f7f7). */
+:root {
+  --bg: #ffffff;
+  --panel: hsl(0, 0%, 97%);
+  --soft: hsl(11, 67%, 97.5%);
+  --light: hsl(11, 67%, 95%);
+  --selected: hsl(4, 53%, 94%);
+  --text: hsl(0, 0%, 0%);
+  --text-2: hsl(0, 0%, 30%);
+  --text-3: hsl(0, 0%, 45%);
+  --line: hsl(0, 0%, 88%);
+  --grid: hsl(0, 0%, 93%);
+  --crimson: hsl(352, 53%, 39%);
+  --crimson-dark: hsl(353, 54%, 30%);
+  --c-sa: #972e3a;
+  --c-bo: #2a78d6;
+  --c-zh: #1baf7a;
+  --c-mod: #eda100;
+  --c-rel: #8a6fb0;
+  --band-1: hsl(11, 67%, 95%);
+  --band-2: hsl(0, 0%, 97%);
+  --band-alt: hsl(0, 0%, 93.5%);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1a19; --panel: #232322; --soft: #2a2223; --light: #33262a; --selected: #3a2a2d;
+    --text: #f0efec; --text-2: #c3c2b7; --text-3: #9a998f; --line: #3a3a38; --grid: #2c2c2a;
+    --crimson: hsl(352, 60%, 62%); --crimson-dark: hsl(352, 60%, 70%);
+    --c-sa: #d05a68; --c-bo: #3987e5; --c-zh: #199e70; --c-mod: #c98500; --c-rel: #a07fd6;
+    --band-1: #33262a; --band-2: #262625; --band-alt: #2e2e2c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1a19; --panel: #232322; --soft: #2a2223; --light: #33262a; --selected: #3a2a2d;
+  --text: #f0efec; --text-2: #c3c2b7; --text-3: #9a998f; --line: #3a3a38; --grid: #2c2c2a;
+  --crimson: hsl(352, 60%, 62%); --crimson-dark: hsl(352, 60%, 70%);
+  --c-sa: #d05a68; --c-bo: #3987e5; --c-zh: #199e70; --c-mod: #c98500; --c-rel: #a07fd6;
+  --band-1: #33262a; --band-2: #262625; --band-alt: #2e2e2c;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font-family: "Noto Sans", Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.45; }
+a { color: var(--crimson); }
+header.app {
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px; background: var(--bg); border-bottom: 1px solid var(--line);
+}
+header.app .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+header.app .brand img { height: 36px; width: auto; display: block; }
+header.app .brand .fallback { font-weight: 500; font-size: 1.15rem; }
+header.app nav a { margin-left: 16px; text-decoration: none; font-size: 0.95rem; }
+.wrap { max-width: 1600px; margin: 0 auto; padding: 0 16px; }
+.intro { padding: 20px 0 8px; }
+.intro h1 { font-size: 1.75rem; font-weight: 500; margin: 0 0 6px; }
+.intro p { margin: 4px 0; color: var(--text-2); max-width: 980px; }
+.controls {
+  display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center;
+  padding: 10px 12px; margin: 10px 0; background: var(--panel); border-radius: 12px;
+}
+.controls fieldset { border: 0; padding: 0; margin: 0; display: flex; gap: 4px 10px; flex-wrap: wrap; align-items: center; }
+.controls legend { float: left; font-size: 0.8rem; color: var(--text-3); margin-right: 6px; text-transform: uppercase; letter-spacing: .04em; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; cursor: pointer; user-select: none; }
+.chip input { accent-color: var(--crimson); margin: 0; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.controls input[type=search] {
+  border: 1px solid var(--line); border-radius: 24px; padding: 5px 12px; font: inherit; font-size: 0.9rem;
+  background: var(--bg); color: var(--text); min-width: 200px;
+}
+.controls select { max-width: 100%; }
+.controls select, .controls button {
+  font: inherit; font-size: 0.88rem; border: 1px solid var(--line); background: var(--bg); color: var(--text);
+  border-radius: 24px; padding: 4px 12px; cursor: pointer;
+}
+.controls button:hover, .controls select:hover { border-color: var(--crimson); }
+.controls .zoom button { min-width: 34px; }
+#viz { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+#head { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); border-radius: 12px 12px 0 0; }
+svg { display: block; }
+svg text { font-family: "Noto Sans", Helvetica, Arial, sans-serif; fill: var(--text); }
+.plot { cursor: grab; }
+.plot.dragging { cursor: grabbing; }
+.lab { font-size: 12.5px; }
+.lab.sub { fill: var(--text-3); font-size: 11px; }
+.grp { font-size: 12px; font-weight: 600; letter-spacing: .02em; cursor: pointer; }
+.axis text { font-size: 11px; fill: var(--text-2); }
+.band text { font-size: 11px; pointer-events: none; }
+.band rect { cursor: zoom-in; }
+.span { cursor: pointer; }
+.span:hover, .span.hl { stroke: var(--text); stroke-width: 1.5px; }
+#tip {
+  position: fixed; z-index: 20; pointer-events: none; max-width: 420px; background: var(--bg); color: var(--text);
+  border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: 10px 12px; font-size: 0.85rem; display: none;
+}
+#tip.pinned { pointer-events: auto; }
+#tip h4 { margin: 0 0 2px; font-size: 0.95rem; font-weight: 600; }
+#tip .sub { color: var(--text-3); margin-bottom: 6px; }
+#tip dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 0; }
+#tip dt { color: var(--text-3); }
+#tip dd { margin: 0; }
+#tip .basis { margin-top: 6px; font-size: 0.8rem; color: var(--text-2); border-top: 1px solid var(--line); padding-top: 6px; }
+#tip .close { position: absolute; right: 8px; top: 4px; border: 0; background: none; color: var(--text-3); font-size: 18px; cursor: pointer; display: none; }
+#tip.pinned .close { display: block; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.85rem; color: var(--text-2); padding: 10px 2px; align-items: center; }
+.legend svg { display: inline-block; vertical-align: middle; margin-right: 6px; }
+.hint { font-size: 0.8rem; color: var(--text-3); }
+details.about { margin: 18px 0; }
+details.about summary { cursor: pointer; font-weight: 500; }
+.about-body { color: var(--text-2); max-width: 980px; }
+table.tv { border-collapse: collapse; width: 100%; font-size: 0.82rem; margin: 10px 0 30px; }
+table.tv th, table.tv td { border-bottom: 1px solid var(--line); padding: 4px 6px; text-align: left; vertical-align: top; }
+table.tv th { background: var(--panel); position: sticky; top: 0; }
+footer { color: var(--text-3); font-size: 0.8rem; padding: 20px 0 40px; }
+@media (max-width: 700px) {
+  header.app nav { display: none; }
+  .intro h1 { font-size: 1.35rem; }
+  .controls input[type=search] { min-width: 0; width: 100%; }
+}
+</style>
+</head>
+<body>
+<header class="app">
+  <a class="brand" href="https://dharmamitra.org" title="Dharmamitra">
+    <img src="https://dharmamitra.org/assets/dm-logo-flat.png" alt="Dharmamitra" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fallback',textContent:'Dharmamitra'}))">
+  </a>
+  <nav>
+    <a href="https://dharmamitra.org/nexus">DharmaNexus</a>
+    <a href="#about">About this map</a>
+    <a href="https://github.com/dharmamitra/ybh-corpus">Source</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>Yogācārabhūmi corpus map <span style="font-weight:400;color:var(--text-3)">瑜伽師地論</span></h1>
+    <p>Where is each part of the Yogācārabhūmi attested, and in which witness? Every bar is placed on the running text of Xuánzàng's complete Chinese translation (T1579, Taishō vol. 30, 279a–882a). Bibliographic spans follow Martin Delhey's survey (HOS 75, 2013), with his page cited for each claim. Hatched bars are the data-derived layer: the stretches of T1579 to which DharmaNexus e-texts are sentence-aligned.</p>
+  </section>
+
+  <div class="controls" role="toolbar" aria-label="Filters">
+    <fieldset id="f-lang"><legend>Language</legend></fieldset>
+    <fieldset id="f-layer"><legend>Layer</legend>
+      <label class="chip"><input type="checkbox" data-layer="delhey" checked> Delhey 2013</label>
+      <label class="chip"><input type="checkbox" data-layer="aligned" checked> Aligned in DharmaNexus</label>
+    </fieldset>
+    <fieldset><legend>Find</legend>
+      <input type="search" id="q" placeholder="Filter rows (e.g. Shukla, D4038, 1602)" aria-label="Filter rows by text">
+    </fieldset>
+    <fieldset class="zoom"><legend>View</legend>
+      <select id="jump" aria-label="Zoom to section"><option value="">Zoom to section…</option></select>
+      <button id="zin" title="Zoom in">+</button><button id="zout" title="Zoom out">−</button><button id="zreset" title="Show the whole T1579">Whole text</button>
+    </fieldset>
+  </div>
+
+  <div class="legend" id="legend"></div>
+  <div class="hint">Drag to pan · Ctrl/⌘ + wheel or double-click to zoom · click a section band to zoom to it · hover a bar for details, click it to open the e-text in DharmaNexus (or pin the details).</div>
+
+  <div id="viz">
+    <div id="head"></div>
+    <div id="body"></div>
+  </div>
+
+  <details class="about" id="about" open>
+    <summary>What is shown, sources and limits</summary>
+    <div class="about-body">
+      <p><b>Axis.</b> Taishō page, register and line of T1579 (e.g. <i>328c7</i>), as numbered in CBETA / DharmaNexus <code>ZH_T30_1579</code>. The three bands above the rows are the five parts, the seventeen bhūmis (and the chapters of the Viniścayasaṃgrahaṇī and Vastusaṃgrahaṇī), and, when zoomed in, sub-sections (the vidyāsthānas of the Śrutamayī Bhūmi, the verse sets of the Cintāmayī Bhūmi, the yogasthānas of the Śrāvakabhūmi, the paṭalas of the Bodhisattvabhūmi). Boundaries are the section headings of T1579.</p>
+      <p><b>Bibliographic layer (solid bars).</b> Every span reproduces a statement in Delhey 2013 (pp. 498–561); the tooltip gives the page. Delhey usually locates passages in the coordinates of the edition he cites. They were placed on the T1579 axis as follows (tooltip “placement”): <i>T1579 given by Delhey</i> – used as is; <i>section</i> – Delhey names a bhūmi, paṭala or section, mapped to its T1579 heading; <i>concordance</i> – pages of Bhattacharya 1957 (Bh.), Shukla 1973 (Sh.) or Dutt 1966 (BoBhD) converted with a page concordance computed from the sentence alignments of the DharmaNexus e-texts of these editions (accuracy roughly ±10 lines); <i>Q interpolated</i> – only Peking folios given, interpolated between Delhey's own Q = T equations. Bars with a dashed outline have an uncertain start or end, or are only located by Delhey at section level although they cover just part of it.</p>
+      <p><b>Data-derived layer (hatched bars).</b> Contiguous stretches of T1579 to which a DharmaNexus e-text is sentence-aligned (Dharmamitra multilingual alignments). Gaps can mean missing text, or simply passages the aligner did not match (commentaries align only sporadically). The Chinese BoBh translations T1581/T1582/T1500/T1501 are placed through their alignments with the Sanskrit BoBh; the two Wogihara e-texts, which are not aligned, through text matching with the Dutt e-text. Regenerate with <code>scripts/build_data.py</code>.</p>
+      <p><b>Limits.</b> Delhey covers publications up to c. 2010; later editions (e.g. further Śrāvakabhūmi Study Group volumes) are not included. Spans of the data-derived layer are automatic and not checked by hand. The bibliographic layer lists only what Delhey locates; passages he mentions without location (e.g. most of the Xiǎnyáng lùn parallels, Tibetan Dūnhuáng fragments) are not drawn.</p>
+    </div>
+  </details>
+
+  <details class="about">
+    <summary>Table view of all spans</summary>
+    <div id="table"></div>
+  </details>
+
+  <footer>Data: Delhey 2013; T1579 (CBETA); DharmaNexus / Dharmamitra alignments. Map built with plain HTML, SVG and JavaScript; works offline. <a href="https://github.com/dharmamitra/ybh-corpus">github.com/dharmamitra/ybh-corpus</a></footer>
+</main>
+
+<div id="tip" role="tooltip"><button class="close" aria-label="Close">×</button><div class="c"></div></div>
+
+<script src="data/corpus.js"></script>
+<script>
+(function () {
+  "use strict";
+  const D = window.YBH_CORPUS;
+  const NS = "http://www.w3.org/2000/svg";
+  const LANGS = [
+    { id: "sa", label: "Sanskrit", color: "var(--c-sa)" },
+    { id: "bo", label: "Tibetan", color: "var(--c-bo)" },
+    { id: "zh", label: "Chinese", color: "var(--c-zh)" },
+    { id: "rel", label: "Other / multilingual", color: "var(--c-rel)" },
+    { id: "modern", label: "Modern translations", color: "var(--c-mod)" },
+  ];
+  const langKey = r => r.group === "mod" ? "modern" : (r.lang === "sa" || r.lang === "bo" || r.lang === "zh") ? r.lang : "rel";
+  const colorOf = r => LANGS.find(l => l.id === langKey(r)).color;
+  const BASIS = {
+    "delhey-T": "T1579 location given by Delhey",
+    "section": "Delhey names the section; placed at its T1579 heading boundaries",
+    "concordance": "Delhey gives edition pages; converted to T1579 by the alignment-derived page concordance (approx.)",
+    "q-interpolated": "Delhey gives Peking folios only; interpolated between his Q = T equations (approx.)",
+    "aligned": "Data-derived: contiguous stretch of sentence alignments in DharmaNexus",
+  };
+  const EXTENT = {
+    "approx-start": "start uncertain", "approx-end": "end uncertain", "section-only": "only part of this section (exact place not given)",
+    "selections": "selected passages within this range", "point": "point location",
+  };
+  const LANGNAME = { en: "English", de: "German", fr: "French", ja: "Japanese", hi: "Hindi", multi: "several languages", kho: "Khotanese" };
+
+  const xMax = D.axis.x_max;
+  const state = { v0: 0, v1: xMax, langs: new Set(LANGS.map(l => l.id)), layers: new Set(["delhey", "aligned"]),
+                  q: "", collapsed: new Set(D.groups.filter(g => g.collapsed).map(g => g.id)) };
+  function t2x(t, end) {
+    const m = /^0?(\d{3})([abc])(\d{1,2})?$/.exec(t.trim()); if (!m) return null;
+    const page = +m[1], reg = "abc".indexOf(m[2]);
+    const frac = m[3] == null ? (end ? 1 : 0) : (Math.min(+m[3], 29) - (end ? 0 : 1)) / 29;
+    return (page - 279) * 3 + reg + frac;
+  }
+  // initial view: URL hash (#view=478b12-576b29) > remembered view > whole text
+  (function initView() {
+    const m = /view=([0-9abc]+)-([0-9abc]+)/.exec(location.hash);
+    if (m) { const a = t2x(m[1]), b = t2x(m[2], true); if (a != null && b != null && b > a) { state.v0 = a; state.v1 = b; return; } }
+    try { const s = JSON.parse(localStorage.getItem("ybh-view") || "null"); if (s && s.v1 > s.v0) { state.v0 = s.v0; state.v1 = s.v1; } } catch (e) {}
+  })();
+
+  const headEl = document.getElementById("head"), bodyEl = document.getElementById("body");
+  const tip = document.getElementById("tip"), tipC = tip.querySelector(".c");
+  const ROW_H = 20, GRP_H = 26;
+  let W = 1000, LBL = 330;
+
+  // ---------------------------------------------------------------- helpers
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  function x2t(x) {
+    x = Math.max(0, x); const page = Math.floor(x / 3) + 279, reg = Math.floor(x % 3);
+    let line = Math.round((x - (page - 279) * 3 - reg) * 29) + 1; if (line > 29) line = 29;
+    return page + "abc"[reg] + line;
+  }
+  function fasc(x) { let f = 1; for (const [n, , fx] of D.axis.fascicles) { if (fx <= x + 1e-6) f = n; } return f; }
+  const plotW = () => W - LBL - 12;
+  const sx = x => LBL + (x - state.v0) / (state.v1 - state.v0) * plotW();
+  const inv = px => state.v0 + (px - LBL) / plotW() * (state.v1 - state.v0);
+  function clampView() {
+    let span = Math.max(0.6, Math.min(xMax, state.v1 - state.v0));
+    let v0 = Math.max(0, Math.min(state.v0, xMax - span));
+    state.v0 = v0; state.v1 = v0 + span;
+    try { localStorage.setItem("ybh-view", JSON.stringify({ v0: state.v0, v1: state.v1 })); } catch (e) {}
+    try { history.replaceState(null, "", "#view=" + x2t(state.v0) + "-" + x2t(state.v1)); } catch (e) {}
+  }
+  function zoomTo(a, b, pad) { pad = pad == null ? 0.03 : pad; const w = b - a; state.v0 = a - w * pad; state.v1 = b + w * pad; clampView(); render(); }
+  function zoomBy(f, cx) { const c = cx == null ? (state.v0 + state.v1) / 2 : cx; state.v0 = c - (c - state.v0) * f; state.v1 = c + (state.v1 - c) * f; clampView(); render(); }
+
+  // ------------------------------------------------------------ controls
+  const fl = document.getElementById("f-lang");
+  LANGS.forEach(l => {
+    const lab = document.createElement("label"); lab.className = "chip";
+    lab.innerHTML = `<input type="checkbox" checked data-lang="${l.id}"><span class="sw" style="background:${l.color}"></span>${l.label}`;
+    fl.appendChild(lab);
+  });
+  fl.addEventListener("change", e => { const k = e.target.dataset.lang; e.target.checked ? state.langs.add(k) : state.langs.delete(k); render(); });
+  document.getElementById("f-layer").addEventListener("change", e => { const k = e.target.dataset.layer; e.target.checked ? state.layers.add(k) : state.layers.delete(k); render(); });
+  document.getElementById("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+  document.getElementById("zin").onclick = () => zoomBy(0.5);
+  document.getElementById("zout").onclick = () => zoomBy(2);
+  document.getElementById("zreset").onclick = () => zoomTo(0, xMax, 0);
+  const jump = document.getElementById("jump");
+  D.sections.filter(s => s.level <= 2).forEach(s => {
+    const o = document.createElement("option"); o.value = s.id;
+    o.textContent = (s.level === 2 ? "  " : "") + s.name + " " + s.zh; jump.appendChild(o);
+  });
+  jump.onchange = () => { const s = D.sections.find(z => z.id === jump.value); if (s) zoomTo(s.x0, s.x1); };
+
+  // legend
+  (function legend() {
+    const lg = document.getElementById("legend");
+    const sw = (fill, extra) => `<svg width="34" height="14" aria-hidden="true">${extra || ""}<rect x="1" y="2" width="32" height="10" rx="3" ${fill}/></svg>`;
+    lg.innerHTML = LANGS.map(l => `<span>${sw(`fill="${l.color}"`)}${l.label}</span>`).join("") +
+      `<span>${sw(`fill="var(--text-3)"`)}Delhey 2013 (located)</span>` +
+      `<span>${sw(`fill="var(--text-3)" fill-opacity="0.35" stroke="var(--text-3)" stroke-dasharray="3 2"`)}uncertain extent / section-level</span>` +
+      `<span>${sw(`fill="url(#lg-hatch)"`, `<defs><pattern id="lg-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="var(--text-3)" fill-opacity="0.25"/><line x1="0" y1="0" x2="0" y2="5" stroke="var(--text-3)" stroke-width="2.2"/></pattern></defs>`)}aligned in DharmaNexus (data-derived)</span>` +
+      `<span>↗ = e-text in DharmaNexus</span>`;
+  })();
+
+  // ------------------------------------------------------------ rows
+  function visibleRows() {
+    const out = [];
+    for (const g of D.groups) {
+      const rows = D.rows.filter(r => r.group === g.id).filter(r => {
+        if (!state.langs.has(langKey(r))) return false;
+        if (r.group === "dn" ? !state.layers.has("aligned") : !state.layers.has("delhey")) return false;
+        if (state.q) {
+          const hay = (r.label + " " + (r.sub || "") + " " + (r.note || "") + " " + (r.dn || []).map(d => d.id).join(" ") + " " +
+                       r.spans.map(s => (s.own || "") + " " + (s.note || "")).join(" ")).toLowerCase();
+          if (!hay.includes(state.q)) return false;
+        }
+        return true;
+      });
+      if (!rows.length) continue;
+      out.push({ group: g, rows });
+    }
+    return out;
+  }
+
+  function patterns(svg) {
+    const defs = el("defs", {}, svg);
+    LANGS.forEach(l => {
+      const p = el("pattern", { id: "h-" + l.id, width: 5, height: 5, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" }, defs);
+      el("rect", { width: 5, height: 5, fill: l.color, "fill-opacity": 0.28 }, p);
+      el("line", { x1: 0, y1: 0, x2: 0, y2: 5, stroke: l.color, "stroke-width": 2.4 }, p);
+    });
+    const cp = el("clipPath", { id: "plotclip" }, defs);
+    el("rect", { x: LBL, y: 0, width: plotW(), height: 100000 }, cp);
+    return defs;
+  }
+
+  function tickStep() {
+    const pxPerPage = plotW() / ((state.v1 - state.v0) / 3);
+    const steps = [1 / 3, 1, 2, 5, 10, 20, 50, 100];
+    for (const s of steps) if (s * pxPerPage >= 70) return s;
+    return 100;
+  }
+
+  function renderHead() {
+    headEl.innerHTML = "";
+    const H = 30 + 3 * 24 + 4;
+    const svg = el("svg", { width: W, height: H, role: "img", "aria-label": "T1579 axis with sections" }, headEl);
+    patterns(svg);
+    const g = el("g", { "clip-path": "url(#plotclip)" }, svg);
+    // axis
+    const ax = el("g", { class: "axis" }, svg);
+    const st = tickStep();
+    if (st < 1) {
+      const r0 = Math.floor(state.v0), r1 = Math.ceil(state.v1);
+      for (let r = r0; r <= r1; r++) {
+        const px = sx(r); if (px < LBL - 1 || px > W) continue;
+        el("line", { x1: px, x2: px, y1: 18, y2: 26, stroke: "var(--text-3)" }, ax);
+        el("text", { x: px + 3, y: 14 }, ax).textContent = x2t(r).replace(/1$/, "");
+      }
+    } else {
+      const p0 = Math.ceil((state.v0 / 3 + 279) / st) * st, p1 = state.v1 / 3 + 279;
+      for (let p = p0; p <= p1; p += st) {
+        const px = sx((p - 279) * 3); if (px < LBL - 1) continue;
+        el("line", { x1: px, x2: px, y1: 18, y2: 26, stroke: "var(--text-3)" }, ax);
+        el("text", { x: px + 3, y: 14 }, ax).textContent = p + "a";
+      }
+    }
+    el("rect", { x: 0, y: 0, width: LBL - 2, height: 30, fill: "var(--bg)" }, svg);
+    el("text", { x: 8, y: 14, class: "lab" }, svg).textContent = LBL < 260 ? "T1579 p./register" : "Taishō vol. 30, T1579 — p./register";
+    el("text", { x: 8, y: 26, class: "lab sub" }, svg).textContent = `view ${x2t(state.v0)} – ${x2t(state.v1)} (fasc. ${fasc(state.v0)}–${fasc(state.v1)})`;
+    // bands
+    const lvls = [{ l: 1, y: 30, name: "Parts" }, { l: 2, y: 54, name: "Bhūmis / chapters" }, { l: 3, y: 78, name: "Sections" }];
+    for (const L of lvls) {
+      el("text", { x: 8, y: L.y + 15, class: "lab sub" }, svg).textContent = L.name;
+      let k = 0;
+      for (const s of D.sections.filter(z => z.level === L.l)) {
+        const a = sx(s.x0), b = sx(s.x1);
+        if (b < LBL || a > W) { k++; continue; }
+        const bg = el("g", { class: "band" }, g);
+        const r = el("rect", { x: a, y: L.y, width: Math.max(0.5, b - a - 1), height: 22, rx: 3,
+                               fill: L.l === 1 ? "var(--band-1)" : (k % 2 ? "var(--band-alt)" : "var(--band-2)") }, bg);
+        r.addEventListener("click", () => zoomTo(s.x0, s.x1));
+        r.addEventListener("mousemove", ev => showTip(ev, sectionTip(s)));
+        r.addEventListener("mouseleave", hideTip);
+        const vis = Math.min(b, W) - Math.max(a, LBL);
+        const full = s.name + "  " + s.zh;
+        const short = s.name.split(" ")[0];
+        const txt = vis > full.length * 6.2 ? full : vis > s.name.length * 6.2 ? s.name : vis > s.zh.length * 11 + 6 ? s.zh :
+                    (vis > short.length * 6.5 + 8 && /^[0-9IV]/.test(short)) ? short : "";
+        if (txt) el("text", { x: Math.max(a, LBL) + 5, y: L.y + 15 }, bg).textContent = txt;
+        k++;
+      }
+    }
+    // fascicle ticks
+    for (const [n, , fx] of D.axis.fascicles) {
+      const px = sx(fx); if (px < LBL || px > W) continue;
+      el("line", { x1: px, x2: px, y1: 26, y2: 30, stroke: "var(--crimson)" }, g);
+    }
+    enableDrag(svg);
+  }
+
+  function sectionTip(s) {
+    return `<h4>${esc(s.name)} <span style="font-weight:400">${esc(s.zh)}</span></h4>
+      <dl><dt>T1579</dt><dd>${esc(s.from)} – ${esc(s.to)}</dd>${s.fasc ? `<dt>Fascicles</dt><dd>${esc(s.fasc)}</dd>` : ""}</dl>
+      <div class="basis">Boundary = section heading in T1579. Click to zoom.</div>`;
+  }
+
+  function spanTip(r, s) {
+    const dn = (r.dn || []).map(d => `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.id)}</a>`).join(", ");
+    const lang = r.group === "mod" ? (LANGNAME[r.lang] || r.lang) : ({ sa: "Sanskrit", bo: "Tibetan", zh: "Chinese" }[r.lang] || LANGNAME[r.lang] || r.lang);
+    return `<h4>${esc(r.label)}</h4>${r.sub ? `<div class="sub">${esc(r.sub)}</div>` : ""}
+      <dl>
+        <dt>T1579</dt><dd>${esc(s.from)} – ${esc(s.to)} <span style="color:var(--text-3)">(fasc. ${fasc(s.x0)}${fasc(s.x1) !== fasc(s.x0) ? "–" + fasc(s.x1) : ""})</span></dd>
+        ${s.own ? `<dt>Own ref.</dt><dd>${esc(s.own)}</dd>` : ""}
+        <dt>Type</dt><dd>${esc(r.type.replace("-", " "))} · ${esc(lang)}</dd>
+        ${s.page ? `<dt>Source</dt><dd>Delhey 2013: ${esc(s.page)}</dd>` : ""}
+        ${s.n ? `<dt>Alignments</dt><dd>${s.n} aligned segment pairs${r.release ? " · " + esc(r.release) : ""}</dd>` : ""}
+        ${s.note ? `<dt>Note</dt><dd>${esc(s.note)}</dd>` : ""}
+        ${r.note ? `<dt>Row note</dt><dd>${esc(r.note)}</dd>` : ""}
+        ${dn ? `<dt>DharmaNexus</dt><dd>${dn}</dd>` : ""}
+      </dl>
+      <div class="basis">Placement: ${esc(BASIS[s.basis] || s.basis)}${s.extent ? " · " + esc(EXTENT[s.extent] || s.extent) : ""}</div>`;
+  }
+
+  let pinned = false;
+  function showTip(ev, html) {
+    if (pinned) return;
+    tipC.innerHTML = html; tip.style.display = "block";
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = ev.clientX + 14, y = ev.clientY + 14;
+    if (x + w > innerWidth - 8) x = ev.clientX - w - 14;
+    if (y + h > innerHeight - 8) y = Math.max(8, ev.clientY - h - 14);
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  }
+  function hideTip() { if (!pinned) tip.style.display = "none"; }
+  tip.querySelector(".close").onclick = () => { pinned = false; tip.classList.remove("pinned"); tip.style.display = "none"; };
+
+  function renderBody() {
+    bodyEl.innerHTML = "";
+    const groups = visibleRows();
+    let H = 8;
+    groups.forEach(g => { H += GRP_H + (state.collapsed.has(g.group.id) ? 0 : g.rows.length * ROW_H); });
+    const svg = el("svg", { width: W, height: H + 8, class: "plot" }, bodyEl);
+    patterns(svg);
+    // grid
+    const grid = el("g", {}, svg);
+    const st = tickStep();
+    if (st >= 1) {
+      const p0 = Math.ceil((state.v0 / 3 + 279) / st) * st, p1 = state.v1 / 3 + 279;
+      for (let p = p0; p <= p1; p += st) { const px = sx((p - 279) * 3); if (px >= LBL) el("line", { x1: px, x2: px, y1: 0, y2: H, stroke: "var(--grid)" }, grid); }
+    }
+    // section boundaries (level 2) as faint lines
+    for (const s of D.sections.filter(z => z.level <= 2)) { const px = sx(s.x0); if (px >= LBL && px <= W) el("line", { x1: px, x2: px, y1: 0, y2: H, stroke: "var(--line)", "stroke-dasharray": s.level === 1 ? "" : "2 3" }, grid); }
+    let y = 8;
+    const plot = el("g", { "clip-path": "url(#plotclip)" }, svg);
+    for (const g of groups) {
+      const collapsed = state.collapsed.has(g.group.id);
+      const gh = el("g", {}, svg);
+      el("rect", { x: 0, y: y + 2, width: W, height: GRP_H - 4, fill: "var(--panel)" }, gh);
+      const t = el("text", { x: 8, y: y + 17, class: "grp", tabindex: 0, role: "button", "aria-expanded": String(!collapsed) }, gh);
+      t.textContent = (collapsed ? "▸ " : "▾ ") + g.group.label + "  (" + g.rows.length + ")";
+      const toggle = () => { collapsed ? state.collapsed.delete(g.group.id) : state.collapsed.add(g.group.id); render(); };
+      t.addEventListener("click", toggle);
+      t.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+      y += GRP_H;
+      if (collapsed) continue;
+      g.rows.forEach((r, i) => {
+        if (i % 2) el("rect", { x: 0, y: y, width: W, height: ROW_H, fill: "var(--soft)" }, svg.insertBefore(el("g", {}), plot));
+        const col = colorOf(r);
+        el("rect", { x: 8, y: y + 6, width: 4, height: ROW_H - 12, rx: 1, fill: col }, svg);
+        const lab = el("text", { x: 18, y: y + 14, class: "lab" }, svg);
+        const maxChars = Math.floor((LBL - 44) / 6.6);
+        const L = r.label.length > maxChars ? r.label.slice(0, maxChars - 1) + "…" : r.label;
+        lab.textContent = L;
+        const title = el("title", {}, lab); title.textContent = r.label + (r.sub ? " — " + r.sub : "");
+        if (r.dn && r.dn.length) {
+          const a = el("a", { href: r.dn[0].url, target: "_blank", rel: "noopener" }, svg);
+          const tt = el("text", { x: LBL - 16, y: y + 14, class: "lab", fill: "var(--crimson)" }, a);
+          tt.textContent = "↗"; tt.setAttribute("style", "fill:var(--crimson)");
+          el("title", {}, tt).textContent = "Open " + r.dn[0].id + " in DharmaNexus";
+        }
+        for (const s of r.spans) {
+          let a = sx(s.x0), b = sx(s.x1);
+          if (b < LBL || a > W) continue;
+          if (b - a < 3) { const m = (a + b) / 2; a = m - 1.5; b = m + 1.5; }
+          const aligned = s.basis === "aligned";
+          const approx = !!s.extent && s.extent !== "point";
+          const attrs = { class: "span", x: a, y: y + 4, width: b - a, height: ROW_H - 8, rx: Math.min(3, (b - a) / 2) };
+          if (aligned) { attrs.fill = `url(#h-${langKey(r)})`; attrs.stroke = col; attrs["stroke-width"] = 0.6; }
+          else if (approx) { attrs.fill = col; attrs["fill-opacity"] = 0.35; attrs.stroke = col; attrs["stroke-dasharray"] = "3 2"; }
+          else { attrs.fill = col; }
+          const rect = el("rect", attrs, plot);
+          rect.addEventListener("mousemove", ev => showTip(ev, spanTip(r, s)));
+          rect.addEventListener("mouseleave", hideTip);
+          rect.addEventListener("click", ev => {
+            if (moved) return;
+            if (r.dn && r.dn.length && !ev.shiftKey) { window.open(r.dn[0].url, "_blank", "noopener"); return; }
+            pinned = false; showTip(ev, spanTip(r, s)); pinned = true; tip.classList.add("pinned");
+          });
+        }
+        y += ROW_H;
+      });
+    }
+    enableDrag(svg);
+  }
+
+  // ------------------------------------------------------------ pan & zoom
+  let moved = false, start = null;
+  window.addEventListener("mousemove", e => {
+    if (!start) return;
+    const dx = e.clientX - start.x; if (Math.abs(dx) > 3) { moved = true; document.body.style.cursor = "grabbing"; }
+    if (!moved) return;
+    const dv = dx / plotW() * (start.v1 - start.v0);
+    state.v0 = start.v0 - dv; state.v1 = start.v1 - dv; clampView(); schedule();
+  });
+  window.addEventListener("mouseup", () => { if (start) { start = null; document.body.style.cursor = ""; setTimeout(() => moved = false, 0); } });
+  function enableDrag(svg) {
+    svg.addEventListener("mousedown", e => { if (e.button !== 0) return; const r = svg.getBoundingClientRect(); if (e.clientX - r.left < LBL) return; e.preventDefault(); start = { x: e.clientX, v0: state.v0, v1: state.v1 }; moved = false; });
+    svg.addEventListener("wheel", e => {
+      const r = svg.getBoundingClientRect(); const px = e.clientX - r.left; if (px < LBL) return;
+      if (e.ctrlKey || e.metaKey) { e.preventDefault(); zoomBy(e.deltaY > 0 ? 1.25 : 0.8, inv(px)); }
+      else if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { e.preventDefault(); const dv = e.deltaX / plotW() * (state.v1 - state.v0); state.v0 += dv; state.v1 += dv; clampView(); schedule(); }
+    }, { passive: false });
+    svg.addEventListener("dblclick", e => { const r = svg.getBoundingClientRect(); const px = e.clientX - r.left; if (px < LBL) return; zoomBy(e.shiftKey ? 2 : 0.5, inv(px)); });
+    // touch: one-finger pan
+    let tstart = null;
+    svg.addEventListener("touchstart", e => { if (e.touches.length === 1) tstart = { x: e.touches[0].clientX, v0: state.v0, v1: state.v1 }; }, { passive: true });
+    svg.addEventListener("touchmove", e => { if (!tstart || e.touches.length !== 1) return; const dx = e.touches[0].clientX - tstart.x; if (Math.abs(dx) < 4) return; const dv = dx / plotW() * (tstart.v1 - tstart.v0); state.v0 = tstart.v0 - dv; state.v1 = tstart.v1 - dv; clampView(); schedule(); }, { passive: true });
+    svg.addEventListener("touchend", () => { tstart = null; }, { passive: true });
+  }
+  let raf = 0;
+  function schedule() { if (!raf) raf = requestAnimationFrame(() => { raf = 0; render(); }); }
+
+  // ------------------------------------------------------------ table view
+  function renderTable() {
+    const rows = [];
+    for (const r of D.rows) for (const s of r.spans) rows.push(`<tr><td>${esc((D.groups.find(g => g.id === r.group) || {}).label)}</td><td>${esc(r.label)}</td><td>${esc(s.from)}–${esc(s.to)}</td><td>${esc(s.own || "")}</td><td>${esc(s.page || "")}</td><td>${esc(s.basis)}${s.extent ? " (" + esc(s.extent) + ")" : ""}</td><td>${(r.dn || []).map(d => `<a href="${esc(d.url)}">${esc(d.id)}</a>`).join(" ")}</td></tr>`);
+    document.getElementById("table").innerHTML = `<table class="tv"><thead><tr><th>Group</th><th>Witness / publication</th><th>T1579</th><th>Own reference</th><th>Delhey p.</th><th>Placement</th><th>DharmaNexus</th></tr></thead><tbody>${rows.join("")}</tbody></table>`;
+  }
+
+  function measure() {
+    W = Math.max(320, document.getElementById("viz").clientWidth - 2);
+    LBL = W < 700 ? Math.round(W * 0.38) : 330;
+  }
+  function render() { measure(); renderHead(); renderBody(); }
+  window.addEventListener("resize", schedule);
+  renderTable();
+  clampView();
+  render();
+})();
+</script>
+</body>
+</html>
