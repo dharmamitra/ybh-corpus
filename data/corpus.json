@@ -1497,16 +1497,16 @@
     },
     {
      "t": [
-      "354a23",
+      "354b17",
       "361b18"
      ],
      "page": 518,
-     "note": "Śrutamayī Bhūmiḥ: the adhyātmavidyā section is missing except for its end; start placed by the aligned Study Group text",
+     "note": "Śrutamayī Bhūmiḥ: the adhyātmavidyā section is missing except for its end; start after the T1579 references of the Study Group edition (2007, App. II: the Sanskrit resumes in §A.I-7 = T 354b11–19, Ms. 15b6 at 354b19)",
      "extent": "approx-start",
-     "x0": 225.7586,
+     "x0": 226.5517,
      "x1": 247.6207,
      "basis": "delhey-T",
-     "from": "354a23",
+     "from": "354b17",
      "to": "361b18"
     },
     {
@@ -1566,15 +1566,15 @@
     },
     {
      "t": [
-      "354a23",
+      "354b17",
       "388b10"
      ],
      "page": 508,
      "extent": "approx-start",
-     "x0": 225.7586,
+     "x0": 226.5517,
      "x1": 328.3448,
      "basis": "delhey-T",
-     "from": "354a23",
+     "from": "354b17",
      "to": "388b10"
     },
     {
@@ -2866,17 +2866,16 @@
     },
     {
      "t": [
-      "354a23",
+      "354a06",
       "356a08"
      ],
      "page": 518,
-     "own": "pp. 281–305",
-     "note": "end of the adhyātmavidyā",
-     "extent": "approx-start",
-     "x0": 225.7586,
+     "own": "pp. 284–305",
+     "note": "end of the adhyātmavidyā; 354a6–b17 supplied from the Tibetan by the editors, the Sanskrit MS resumes in §A.I-7",
+     "x0": 225.1724,
      "x1": 231.2759,
      "basis": "delhey-T",
-     "from": "354a23",
+     "from": "354a6",
      "to": "356a8"
     },
     {
@@ -3070,7 +3069,15 @@
      "to": "478b11"
     }
    ],
-   "sub": "ŚrBh MS (superseded)"
+   "sub": "ŚrBh MS (superseded)",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-sacittika",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-sacittika/text"
+    }
+   ],
+   "note": "the DharmaNexus e-text SA_T06_ybh-sacittika contains only the Sacittikā/Acittikā part"
   },
   {
    "id": "ed-wayman1984",
@@ -3247,7 +3254,14 @@
      "to": "360c21"
     }
    ],
-   "sub": "revised hetuvidyā edition"
+   "sub": "revised hetuvidyā edition",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-hetuvidya",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-hetuvidya/text"
+    }
+   ]
   },
   {
    "id": "ed-yaita-takano1995",
@@ -3971,7 +3985,14 @@
      "to": "478b11"
     }
    ],
-   "sub": "Pratyekabuddhabhūmi, ŚrBh MS; English transl. pp. 19–25"
+   "sub": "Pratyekabuddhabhūmi, ŚrBh MS; English transl. pp. 19–25",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-pratyekabuddha",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-pratyekabuddha/text"
+    }
+   ]
   },
   {
    "id": "ed-pandey1987",
@@ -4465,7 +4486,14 @@
      "to": "577c16"
     }
    ],
-   "sub": "Sopadhikā and Nirupadhikā Bhūmiḥ (YoBh MS)"
+   "sub": "Sopadhikā and Nirupadhikā Bhūmiḥ (YoBh MS)",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-sopadhika",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-sopadhika/text"
+    }
+   ]
   },
   {
    "id": "ed-schmit1969b-ms",
@@ -4514,7 +4542,14 @@
      "to": "769c9"
     }
    ],
-   "sub": "Paryāya folio: diplomatic and critical edition"
+   "sub": "Paryāya folio: diplomatic and critical edition",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-paryaya",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-paryaya/text"
+    }
+   ]
   },
   {
    "id": "ed-matsuda1995",
@@ -7640,15 +7675,15 @@
     },
     {
      "t": [
-      "354a23",
+      "354b17",
       "388b10"
      ],
      "page": 508,
      "extent": "approx-start",
-     "x0": 225.7586,
+     "x0": 226.5517,
      "x1": 328.3448,
      "basis": "delhey-T",
-     "from": "354a23",
+     "from": "354b17",
      "to": "388b10"
     },
     {
@@ -8030,15 +8065,14 @@
     },
     {
      "t": [
-      "354a23",
+      "354a06",
       "356a12"
      ],
      "page": 518,
-     "extent": "approx-start",
-     "x0": 225.7586,
+     "x0": 225.1724,
      "x1": 231.4138,
      "basis": "delhey-T",
-     "from": "354a23",
+     "from": "354a6",
      "to": "356a12"
     },
     {
@@ -9844,6 +9878,24 @@
    ],
    "spans": [
     {
+     "own": "App. I Asamāhitā Bhūmiḥ, Śbh II 276–281",
+     "note": "Ch. 344b19–c15 (segments 6764–6787)",
+     "x0": 196.6207,
+     "x1": 197.5172,
+     "basis": "contained",
+     "from": "344b19",
+     "to": "344c15"
+    },
+    {
+     "own": "App. II §A.I-1–7, Śbh II 284–290",
+     "note": "end of the adhyātmavidyā; lost in the Sanskrit MS, supplied from the Tibetan by the editors (Ch. 354a6–b19)",
+     "x0": 225.1724,
+     "x1": 225.7586,
+     "basis": "contained",
+     "from": "354a6",
+     "to": "354a22"
+    },
+    {
      "from": "354a23",
      "to": "354b19",
      "x0": 225.7586,
@@ -9853,6 +9905,24 @@
      "basis": "aligned"
     },
     {
+     "own": "App. II §A.I-8–IV-2, Śbh II 290–305",
+     "note": "end of the adhyātmavidyā, Sanskrit (Ch. 354b19–356a8)",
+     "x0": 226.6207,
+     "x1": 231.2414,
+     "basis": "contained",
+     "from": "354b19",
+     "to": "356a7"
+    },
+    {
+     "own": "App. II §B, Śbh II 305",
+     "note": "cikitsāvidyā (Ch. 356a8; T1579 356a8–a11); the hetuvidyā (§C) is not edited here, see SA_T06_ybh-hetuvidya",
+     "x0": 231.2414,
+     "x1": 231.3793,
+     "basis": "contained",
+     "from": "356a8",
+     "to": "356a11"
+    },
+    {
      "from": "360c22",
      "to": "363a11",
      "x0": 245.7241,
@@ -9860,6 +9930,15 @@
      "n": 541,
      "own": "Śbh II 306–Śbh II 332",
      "basis": "aligned"
+    },
+    {
+     "own": "App. IV Ābhiprāyikārthagāthānirdeśa, Śbh II 340–370",
+     "note": "Ch. 367a6–369c22ff., to the end of the section (370a8)",
+     "x0": 264.1724,
+     "x1": 273.2759,
+     "basis": "contained",
+     "from": "367a6",
+     "to": "370a8"
     },
     {
      "from": "396b9",
@@ -10034,7 +10113,7 @@
      "to": "481a9",
      "x0": 598.4483,
      "x1": 606.2586,
-     "n": 159,
+     "n": 160,
      "basis": "aligned"
     },
     {
@@ -10062,11 +10141,11 @@
      "basis": "aligned"
     },
     {
-     "from": "510a26",
+     "from": "510c9",
      "to": "511a15",
-     "x0": 693.84485,
+     "x0": 695.2759,
      "x1": 696.4828,
-     "n": 8,
+     "n": 7,
      "basis": "aligned"
     },
     {
@@ -10078,11 +10157,11 @@
      "basis": "aligned"
     },
     {
-     "from": "525c3",
+     "from": "525c18",
      "to": "525c22",
-     "x0": 740.069,
+     "x0": 740.5862,
      "x1": 740.7242,
-     "n": 5,
+     "n": 4,
      "basis": "aligned"
     },
     {
@@ -10165,6 +10244,149 @@
    ],
    "release": "mitra-parallel-v3",
    "n_alignments": 119
+  },
+  {
+   "id": "dn-SA_T06_ybh-sacittika",
+   "etext": "SA_T06_ybh-sacittika",
+   "group": "dn",
+   "lang": "sa",
+   "type": "etext",
+   "label": "SA_T06_ybh-sacittika – Wayman 1960",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-sacittika",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-sacittika/text"
+    }
+   ],
+   "sub": "Sacittikā/Acittikā Bhūmiḥ only; not aligned to the Chinese itself: placed via its alignment to the Tibetan (BO_T06_D4035)",
+   "spans": [
+    {
+     "from": "344c17",
+     "to": "345a19",
+     "x0": 197.5517,
+     "x1": 198.6207,
+     "n": 105,
+     "own": "p. 378–377",
+     "basis": "aligned"
+    }
+   ],
+   "release": "mitra-parallel-ybhgap2611",
+   "n_alignments": 7
+  },
+  {
+   "id": "dn-SA_T06_ybh-hetuvidya",
+   "etext": "SA_T06_ybh-hetuvidya",
+   "group": "dn",
+   "lang": "sa",
+   "type": "etext",
+   "label": "SA_T06_ybh-hetuvidya – Yaita 2005",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-hetuvidya",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-hetuvidya/text"
+    }
+   ],
+   "sub": "hetuvidyā of the Śrutamayī Bhūmiḥ",
+   "spans": [
+    {
+     "from": "356a12",
+     "to": "360c21",
+     "x0": 231.3793,
+     "x1": 245.6897,
+     "n": 1051,
+     "own": "p. 1*–27*",
+     "basis": "aligned"
+    }
+   ],
+   "release": "mitra-parallel-ybhgap2611",
+   "n_alignments": 556
+  },
+  {
+   "id": "dn-SA_T06_ybh-pratyekabuddha",
+   "etext": "SA_T06_ybh-pratyekabuddha",
+   "group": "dn",
+   "lang": "sa",
+   "type": "etext",
+   "label": "SA_T06_ybh-pratyekabuddha – Yonezawa 1998",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-pratyekabuddha",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-pratyekabuddha/text"
+    }
+   ],
+   "spans": [
+    {
+     "from": "477c3",
+     "to": "478a29",
+     "x0": 596.069,
+     "x1": 597.9655,
+     "n": 91,
+     "own": "p. 15–19",
+     "basis": "aligned"
+    }
+   ],
+   "release": "mitra-parallel-ybhgap2611",
+   "n_alignments": 20
+  },
+  {
+   "id": "dn-SA_T06_ybh-sopadhika",
+   "etext": "SA_T06_ybh-sopadhika",
+   "group": "dn",
+   "lang": "sa",
+   "type": "etext",
+   "label": "SA_T06_ybh-sopadhika – Schmithausen 1991",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-sopadhika",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-sopadhika/text"
+    }
+   ],
+   "spans": [
+    {
+     "from": "576b29",
+     "to": "577c17",
+     "x0": 892.9655,
+     "x1": 896.5517,
+     "n": 212,
+     "own": "p. 692–710",
+     "basis": "aligned"
+    }
+   ],
+   "release": "mitra-parallel-ybhgap2611",
+   "n_alignments": 58
+  },
+  {
+   "id": "dn-SA_T06_ybh-paryaya",
+   "etext": "SA_T06_ybh-paryaya",
+   "group": "dn",
+   "lang": "sa",
+   "type": "etext",
+   "label": "SA_T06_ybh-paryaya – Matsuda 1994",
+   "dn": [
+    {
+     "id": "SA_T06_ybh-paryaya",
+     "lang": "sa",
+     "url": "https://dharmamitra.org/nexus/db/sa/SA_T06_ybh-paryaya/text"
+    }
+   ],
+   "sub": "Paryāyasaṃgrahaṇī folio, critical text",
+   "spans": [
+    {
+     "from": "768c20",
+     "to": "769c4",
+     "x0": 1469.6552,
+     "x1": 1472.1035,
+     "n": 190,
+     "own": "p. 96–99",
+     "basis": "aligned"
+    }
+   ],
+   "release": "mitra-parallel-ybhgap2611",
+   "n_alignments": 48
   },
   {
    "id": "dn-BO_T06_D4035",
@@ -10856,6 +11078,15 @@
      "basis": "aligned"
     },
     {
+     "from": "356a13",
+     "to": "360c21",
+     "x0": 231.4138,
+     "x1": 245.6897,
+     "n": 1044,
+     "own": "T31.1602 0531a17–0535b23",
+     "basis": "aligned"
+    },
+    {
      "from": "402a21",
      "to": "403b13",
      "x0": 369.6897,
@@ -10892,8 +11123,8 @@
      "basis": "aligned"
     }
    ],
-   "release": "mitra-parallel-v3, mitra-parallel-ybh2611b",
-   "n_alignments": 3602
+   "release": "mitra-parallel-v3, mitra-parallel-ybh2611b, mitra-parallel-ybhgap2611",
+   "n_alignments": 4646
   }
  ],
  "sources": {
@@ -10907,7 +11138,8 @@
    "mitra-parallel-sa2611",
    "mitra-parallel-akbh2611",
    "mitra-parallel-ybh2611",
-   "mitra-parallel-ybh2611b"
+   "mitra-parallel-ybh2611b",
+   "mitra-parallel-ybhgap2611"
   ],
   "concordances": {
    "BoBhD": 276,

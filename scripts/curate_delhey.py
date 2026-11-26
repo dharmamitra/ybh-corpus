@@ -140,13 +140,13 @@ I("ms-srbh", "1.2 no. 1", "508, 510, 517–523", "sa-ms", "sa", "manuscript", "�
   sub="palm-leaf, Lhasa (Cat. Beijing 20–22); c. 11th c.?", spans=[
    S(517, sec="b7", note="Asamāhitā Bhūmiḥ, extant in both MSS"),
    S(518, sec="b8", note="Sacittikā/Acittikā (Wayman 1960 edited them from this MS)"),
-   S(518, t=["354a23", "361b18"], note="Śrutamayī Bhūmiḥ: the adhyātmavidyā section is missing except for its end; start placed by the aligned Study Group text", extent="approx-start"),
+   S(518, t=["354b17", "361b18"], note="Śrutamayī Bhūmiḥ: the adhyātmavidyā section is missing except for its end; start after the T1579 references of the Study Group edition (2007, App. II: the Sanskrit resumes in §A.I-7 = T 354b11–19, Ms. 15b6 at 354b19)", extent="approx-start"),
    S(520, sec="b11", note="Cintāmayī Bhūmiḥ: 'only the last 10–20% seem to be missing'", extent="approx-end"),
    S(510, sec="b13", note="nearly the complete Śrāvakabhūmi; three small parts (c. 7–8 Peking folios) missing (n. 49)"),
    S(523, sec="b14", note="Pratyekabuddhabhūmi")])
 I("ms-srbh-facs", "1.2 no. 1a–d", "508", "sa-ms", "sa", "reproduction", "ŚrBh MS: facsimile 1994; Beijing microfilm; photos by Sāṅkṛtyāyana (nos. 350–351) and Tucci",
   sub="China Library of Nationalities & Taishō Univ. 1994; Göttingen prints Xc 14/27; Rome (Sferra 2009: 46, 51)",
-  spans=[S(508, sec=["b7", "b8"]), S(508, t=["354a23", "388b10"], extent="approx-start"), S(508, sec=["b13", "b14"])])
+  spans=[S(508, sec=["b7", "b8"]), S(508, t=["354b17", "388b10"], extent="approx-start"), S(508, sec=["b13", "b14"])])
 I("ms-ybh", "1.2 no. 2", "508, 510, 515–523, 532", "sa-ms", "sa", "manuscript", "Yogācārabhūmi MS (YoBh MS)",
   sub="palm-leaf, Sa skya?; c. 1000 CE; all of the Basic Section except ŚrBh and BoBh", spans=[
    S(515, sec="b1", own="YoBh MS 1b–3b2"), S(516, sec="b2", own="YoBh MS 3b2–21a3"),
@@ -247,7 +247,7 @@ I("ed-sg1993", "2.1.4.1 nn. 92–93; 2.1.4.3; 2.1.5", "518, 520", "sa-ed", "sa",
   sub="earlier versions of the Śrutamayī and Cintāmayī editions", spans=[S(518, t=["354a23", "356a12"], extent="approx-start"), S(520, sec=["b10-sabda", "b10-silpa"]), S(520, sec="b11-12")])
 I("ed-sg2007-app", "2.1.2–2.1.5", "517–520", "sa-ed", "sa", "edition", "Śrāvakabhūmi Study Group 2007 (appendices)", sub="Asamāhitā, Śrutamayī, Cintāmayī; ŚrBh MS only; Japanese transl.",
   dn=[DNSA("SA_T06_srabhu_u")], spans=[
-   S(517, sec="b7", own="pp. 275–280"), S(518, t=["354a23", "356a08"], own="pp. 281–305", extent="approx-start", note="end of the adhyātmavidyā"),
+   S(517, sec="b7", own="pp. 275–280"), S(518, t=["354a06", "356a08"], own="pp. 284–305", note="end of the adhyātmavidyā; 354a6–b17 supplied from the Tibetan by the editors, the Sanskrit MS resumes in §A.I-7"),
    S(518, sec="b10-cik", own="pp. 304–305"), S(520, sec=["b10-sabda", "b10-silpa"], own="pp. 306–313"),
    S(520, sec="b11-12", own="pp. 315–336"), S(520, sec="b11-ag", own="pp. 337–370 (rev. of Maeda 1991)")])
 I("ed-sg-srbh", "2.1.7", "521", "sa-ed", "sa", "edition", "Śrāvakabhūmi Study Group 1998, 2007", sub="yogasthānas 1–2, ŚrBh MS; Japanese transl.",
@@ -259,6 +259,7 @@ I("ed-sg-ys3", "2.1.7", "522", "sa-ed", "sa", "partial-edition", "Śrāvakabhūm
 I("ed-amichay", "2.1.7 n. 116", "522", "sa-ed", "sa", "partial-edition", "Amichay (in preparation, 2007)", sub="critical edition of yogasthāna 3 planned for a Ph.D. thesis",
   spans=[SEC(522, "b13-ys3")])
 I("ed-wayman1960", "2.1.3; 2.1.8", "518, 523", "sa-ed", "sa", "edition", "Wayman 1960", sub="ŚrBh MS (superseded)",
+  dn=[DNSA("SA_T06_ybh-sacittika")], note="the DharmaNexus e-text SA_T06_ybh-sacittika contains only the Sacittikā/Acittikā part",
   spans=[S(518, sec="b8", own="pp. 378–376"), S(523, sec="b14", own="pp. 376–375")])
 I("ed-wayman1984", "2.1.3; 2.1.5", "518, 520", "sa-ed", "sa", "edition", "Wayman 1984", sub="reprints and new editions; English translations",
   spans=[S(518, sec="b8", own="pp. 327–330"), S(520, sec="b11-pg", own="pp. 333–352"), S(520, sec="b11-ag", own="pp. 354–366")])
@@ -275,7 +276,8 @@ for rid, lab, sub, p in [
     ("ed-wayman1999", "Wayman 1999: 3–41", "hetuvidyā, ŚrBh MS; English translation", "518–520"),
     ("ed-oberhammer", "Oberhammer 1991–2006", "long hetuvidyā citations with text-critical notes by Schmithausen", "519–520"),
 ]:
-    I(rid, "2.1.4.2", p, "sa-ed", "sa", "partial-edition", lab, sub=sub, spans=[S(518, sec="b10-hetu")])
+    I(rid, "2.1.4.2", p, "sa-ed", "sa", "partial-edition", lab, sub=sub, spans=[S(518, sec="b10-hetu")],
+      dn=[DNSA("SA_T06_ybh-hetuvidya")] if rid == "ed-yaita2005" else None)
 I("ed-shukla1991", "2.1.4.2; 2.1.5", "518, 520–521", "sa-ed", "sa", "partial-edition", "Shukla 1991 (appendices)", sub="hetuvidyā; Cintāmayī verses",
   spans=[S(518, sec="b10-hetu", own="App. III, pp. 14–25"), S(520, sec="b11-pg", own="pp. 26–29 (verses only)"),
          SEC(520, "b11-ag", own="pp. 29–31 (partial)"), SEC(521, "b11-sg", own="p. 31 (one verse)")])
@@ -311,7 +313,7 @@ I("ed-deleanu2006", "2.1.7", "522", "sa-ed", "sa", "edition", "Deleanu 2006", su
 I("ed-schmit1982a", "2.1.7", "522", "sa-ed", "sa", "partial-edition", "Schmithausen 1982a", sub="last pages of the ŚrBh", spans=[S(522, sh=["506,10", "511,6"], own="Sh. 506,10–511,6")])
 I("ed-vonrospatt1995", "2.1.7 n. 119; 2.2.1.2 n. 177", "522, 533", "sa-ed", "sa", "partial-edition", "von Rospatt 1995: 219–248", sub="cites and emends ŚrBh passages; cites the Viniścaya fragment",
   spans=[S(522, sh=["475,1", "489,24"], own="Sh. 475–489"), SEC(533, "v1", note="passages of the St Petersburg fragment (see his index)")])
-I("ed-yonezawa1998", "2.1.8", "523", "sa-ed", "sa", "edition", "Yonezawa 1998", sub="Pratyekabuddhabhūmi, ŚrBh MS; English transl. pp. 19–25", spans=[S(523, sec="b14")])
+I("ed-yonezawa1998", "2.1.8", "523", "sa-ed", "sa", "edition", "Yonezawa 1998", sub="Pratyekabuddhabhūmi, ŚrBh MS; English transl. pp. 19–25", dn=[DNSA("SA_T06_ybh-pratyekabuddha")], spans=[S(523, sec="b14")])
 I("ed-pandey1987", "2.1.8", "523", "sa-ed", "sa", "edition", "Pandey 1987", sub="Pratyekabuddhabhūmi, YoBh MS (or transcript?)", spans=[S(523, sec="b14")])
 I("ed-pandey2009", "2.1.8 n. 124", "523", "sa-ed", "sa", "partial-edition", "Pandey 2009 (not seen by Delhey)", sub="possibly a new edition/translation of the Pratyekabuddhabhūmi",
   spans=[SEC(523, "b14")])
@@ -344,10 +346,10 @@ I("ed-lvp1928", "2.1.9.1 n. 137", "525", "sa-ed", "sa", "partial-edition", "de L
   spans=[SEC(525, "bb-I.4", own="BoBhW 45,22–48,13; 48,23–50,7")])
 I("ed-dutt1931", "2.1.9.3", "528–529", "sa-ed", "sa", "parallel", "Dutt 1931 (Bodhisattvaprātimokṣasūtra)", sub="first part agrees almost literally with the Śīlapaṭala",
   dn=[DNSA("SA_K01_bsu011_u")], spans=[S(529, bobhd=["105,1", "106,30"], own="BoBhW 152–155 = BoBhD 105–106; Dutt 1931: 269–277")])
-I("ed-schmit1991", "2.1.10", "532", "sa-ed", "sa", "edition", "Schmithausen 1991", sub="Sopadhikā and Nirupadhikā Bhūmiḥ (YoBh MS)", spans=[S(532, sec=["b16", "b17"])])
+I("ed-schmit1991", "2.1.10", "532", "sa-ed", "sa", "edition", "Schmithausen 1991", sub="Sopadhikā and Nirupadhikā Bhūmiḥ (YoBh MS)", dn=[DNSA("SA_T06_ybh-sopadhika")], spans=[S(532, sec=["b16", "b17"])])
 I("ed-schmit1969b-ms", "2.1.10 n. 172", "532", "sa-ed", "sa", "study", "Schmithausen 1969b (MS citations)", sub="passages of the Sopadhikā/Nirupadhikā cited from the MS",
   spans=[SEC(532, ["b16", "b17"])])
-I("ed-matsuda1994", "2.4", "539", "sa-ed", "sa", "edition", "Matsuda 1994", sub="Paryāya folio: diplomatic and critical edition", spans=[S(539, t=["768c20", "769c9"])])
+I("ed-matsuda1994", "2.4", "539", "sa-ed", "sa", "edition", "Matsuda 1994", sub="Paryāya folio: diplomatic and critical edition", dn=[DNSA("SA_T06_ybh-paryaya")], spans=[S(539, t=["768c20", "769c9"])])
 I("ed-matsuda1995", "2.2.5.3", "535", "sa-ed", "sa", "edition", "Matsuda 1995", sub="Viniścaya folio: facsimile; Saṃdh IX part edited, Japanese transl.",
   spans=[S(535, t=["728c16", "730b21"], note="only the part belonging to Saṃdh IX is edited (sub-range not given)")])
 I("ed-matsuda1988", "1.2 n. 44; 2.2.1.2", "510, 533", "sa-ed", "sa", "study", "Matsuda 1988", sub="report on the St Petersburg Viniścaya fragment; passages cited",
@@ -556,7 +558,7 @@ I("ref-ms-catalogues", "1.2", "508–510", RF, "multi", "catalogue", "MS catalog
   sub="where the manuscripts and photographs are", spans=[S(508, sec=["b1", "b2", "b3", "b6", "b7", "b8", "b10", "b11", "b12", "b13", "b14", "b15", "b16", "b17"]),
   S(510, t=["589b19", "600c10"]), S(510, t=["728c16", "730b21"]), S(510, t=["768c20", "769c9"])])
 I("ref-suzuki1995", "1.2 n. 34", "508", RF, "multi", "reference", "Suzuki 1995; ŚrBh Study Group 1994: 7–22", sub="script table and collation table (Skt–Tib.–Chin.) of the ŚrBh MS",
-  spans=[S(508, sec=["b7", "b8"]), S(508, t=["354a23", "388b10"], extent="approx-start"), S(508, sec=["b13", "b14"])])
+  spans=[S(508, sec=["b7", "b8"]), S(508, t=["354b17", "388b10"], extent="approx-start"), S(508, sec=["b13", "b14"])])
 I("ref-bdk", "2.0", "513", RF, "en", "reference", "BDK English translation of T1579 (announced)", sub="not yet published (2010)", spans=[WHOLE(513)])
 
 # ---------------------------------------------------------------- modern translations and reviews
@@ -576,7 +578,7 @@ T("tr-ahn2003", "2.1.1; 2.2.1–2", "517, 533", "Ahn 2003 (German transl.)", "de
 T("tr-delhey2009", "2.1.1", "517", "Delhey 2009 (German transl.)", "de", [S(517, sec="b6", extent="selections")])
 T("tr-delhey2006", "2.1.2; 2.2.3", "518, 534", "Delhey 2006: 140–150", "de", [S(518, sec="b7"), S(534, sec="v7")])
 T("tr-sg", "2.1.2–2.1.7", "518–521", "Śrāvakabhūmi Study Group 1998, 2007 (Japanese)", "ja",
-  [S(518, sec="b7"), S(518, t=["354a23", "356a12"], extent="approx-start"), S(520, sec=["b10-sabda", "b10-silpa"]), S(520, sec="b11-12"),
+  [S(518, sec="b7"), S(518, t=["354a06", "356a12"]), S(520, sec=["b10-sabda", "b10-silpa"]), S(520, sec="b11-12"),
    S(520, sec="b11-ag"), S(521, sec=["b13-ys1", "b13-ys2"])])
 T("tr-wayman1984", "2.1.3; 2.1.5", "518, 520", "Wayman 1984 (English)", "en", [S(518, sec="b8"), S(520, sec="b11-pg"), S(520, sec="b11-ag")])
 T("tr-pandey1986", "2.1.4.2", "520", "Pandey 1986 (Hindi)", "hi", [S(520, sec="b10-hetu")])
@@ -700,24 +702,46 @@ for s in SAMDH_SECTIONS:
     sections.append({"id": s[0], "level": s[1], "name": s[2], "zh": s[3], "from": s[4], "to": s[5], "fasc": s[6]})
 
 DERIVED = []
-def DR(etext, lang, label, sub=None):
+def DR(etext, lang, label, sub=None, contained=None):
     url = {"sa": "https://dharmamitra.org/nexus/db/sa/%s/text", "bo": "https://dharmamitra.org/nexus/db/bo/%s/text",
            "zh": "https://dharmamitra.org/nexus/db/zh/%s/text"}[lang] % etext
     d = {"id": "dn-" + etext, "etext": etext, "group": "dn", "lang": lang, "type": "etext", "label": label,
          "dn": [{"id": etext, "lang": lang, "url": url}]}
     if sub: d["sub"] = sub
+    if contained: d["contained"] = contained
     DERIVED.append(d)
+
+# Parts of an e-text that are too short or too fragmentary to be aligned: drawn
+# in the e-text's row (basis "contained") where no aligned span covers them.
+# T1579 locations from the "Ch." references printed in the edition.
+def C(a, b, own, note=None):
+    d = {"t": [a, b], "own": own}
+    if note: d["note"] = note
+    return d
 
 DR("SA_T06_n1394u", "sa", "SA_T06_n1394u – Bhattacharya 1957 (emended)")
 DR("SA_T06_-ybh-klesa", "sa", "SA_T06_-ybh-klesa – Ahn 2003")
 DR("SA_T06_sambhu", "sa", "SA_T06_sambhu – Delhey 2009")
-DR("SA_T06_srabhu_u", "sa", "SA_T06_srabhu_u – Śrāvakabhūmi Study Group")
+DR("SA_T06_srabhu_u", "sa", "SA_T06_srabhu_u – Śrāvakabhūmi Study Group", contained=[
+   C("344b19", "344c15", "App. I Asamāhitā Bhūmiḥ, Śbh II 276–281", "Ch. 344b19–c15 (segments 6764–6787)"),
+   C("354a06", "354b16", "App. II §A.I-1–7, Śbh II 284–290", "end of the adhyātmavidyā; lost in the Sanskrit MS, supplied from the Tibetan by the editors (Ch. 354a6–b19)"),
+   C("354b17", "356a07", "App. II §A.I-8–IV-2, Śbh II 290–305", "end of the adhyātmavidyā, Sanskrit (Ch. 354b19–356a8)"),
+   C("356a08", "356a11", "App. II §B, Śbh II 305", "cikitsāvidyā (Ch. 356a8; T1579 356a8–a11); the hetuvidyā (§C) is not edited here, see SA_T06_ybh-hetuvidya"),
+   C("360c21", "361b17", "App. II §D–E, Śbh II 306–315", "śabdavidyā and śilpakarmasthānavidyā (Ch. 360c21–361b4ff.)"),
+   C("361b18", "363a11", "App. III Cintāmayī Bhūmiḥ 1–2, Śbh II 318–337", "Ch. 361b18–363a8ff."),
+   C("367a06", "370a08", "App. IV Ābhiprāyikārthagāthānirdeśa, Śbh II 340–370", "Ch. 367a6–369c22ff., to the end of the section (370a8)"),
+  ])
 DR("SA_T06_srabhusu", "sa", "SA_T06_srabhusu – Shukla 1973")
 DR("SA_T06_ybh-laukikamarga", "sa", "SA_T06_ybh-laukikamarga – Deleanu 2006")
 DR("SA_T06_bsa034", "sa", "SA_T06_bsa034 – Dutt 1966")
 DR("SA_T06_Asaṅga_Bodhisattvabhūmi", "sa", "SA_T06_Asaṅga_Bodhisattvabhūmi – BoBh (Wogihara pagination)", sub="not aligned itself: placed by text matching to SA_T06_bsa034")
 DR("SA_T06_Asaṅga_Bodhisattvabhūmi-wogiwara", "sa", "SA_T06_Asaṅga_Bodhisattvabhūmi-wogiwara – Wogihara (partial e-text)", sub="not aligned itself: placed by text matching to SA_T06_bsa034")
 DR("SA_T06_abhsubhu", "sa", "SA_T06_abhsubhu – Abhidharmasamuccayabhāṣya")
+DR("SA_T06_ybh-sacittika", "sa", "SA_T06_ybh-sacittika – Wayman 1960", sub="Sacittikā/Acittikā Bhūmiḥ only; not aligned to the Chinese itself: placed via its alignment to the Tibetan (BO_T06_D4035)")
+DR("SA_T06_ybh-hetuvidya", "sa", "SA_T06_ybh-hetuvidya – Yaita 2005", sub="hetuvidyā of the Śrutamayī Bhūmiḥ")
+DR("SA_T06_ybh-pratyekabuddha", "sa", "SA_T06_ybh-pratyekabuddha – Yonezawa 1998")
+DR("SA_T06_ybh-sopadhika", "sa", "SA_T06_ybh-sopadhika – Schmithausen 1991")
+DR("SA_T06_ybh-paryaya", "sa", "SA_T06_ybh-paryaya – Matsuda 1994", sub="Paryāyasaṃgrahaṇī folio, critical text")
 for d in ["D4035", "D4036", "D4037", "D4038", "D4038-2", "D4039", "D4039-2", "D4040", "D4041", "D4042", "D4043", "D4044", "D4046", "D4047"]:
     DR("BO_T06_" + d, "bo", "BO_T06_" + d, sub={"D4038-2": "second part of D4038 (vol. 'i)",
         "D4039-2": "file labelled D4039 but aligned to the ranges of D4041 (Paryāya) and D4040 (Vinaya) – numbering to be checked",

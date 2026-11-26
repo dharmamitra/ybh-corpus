@@ -37,6 +37,7 @@ Delhey mostly locates passages in the pagination of the edition he discusses. Th
 | `concordance` | Delhey gives pages of Bhattacharya 1957 (Bh.), Shukla 1973 (Sh.) or Dutt 1966 (BoBhD); converted with a page→Taishō concordance computed from the alignments of the DharmaNexus e-texts of these editions. Accuracy is roughly ±10 Taishō lines. |
 | `q-interpolated` | Only Peking folios are given (two passages in Wangchuk 2007); interpolated linearly between Delhey's own Q = T equations. |
 | `aligned` | Data-derived layer (hatched): contiguous runs of sentence alignments between a DharmaNexus e-text and T1579. |
+| `contained` | In a DharmaNexus e-text row (light, dotted outline): a passage contained in the e-text but too short to be aligned (the appendices of `SA_T06_srabhu_u`), located by the T1579 references (“Ch.”) printed in the edition; drawn only where no aligned span covers it. Defined with `contained=[C(...)]` in `curate_delhey.py`. |
 
 Every checklist entry is drawn. Entries for which Delhey names only a bhūmi, chapter or section are drawn over that section with a dashed outline (`section-only`); entries concerning the whole work (reference works, kundoku, the Tibetan witnesses …) as a thin line over the whole axis (`whole-work`); entries with no location at all (6: the lost transcript of the YoBh MS, Paramārtha's lost *Saptadaśabhūmiśāstra, the Uighur translation, the Tibetan Dūnhuáng fragments, lost Indian commentaries, a Xiǎnyáng lùn quotation in the *Vyākhyā) appear as a pill in the "not localised" strip between the labels and the plot, with tooltip and Delhey page.
 
@@ -56,16 +57,15 @@ A dashed outline (`extent` in the data) marks spans whose start or end is uncert
 # full rebuild (needs local copies of the DharmaNexus data and alignment releases)
 python3 scripts/build_data.py \
     --sanskrit PATH/dharmanexus-sanskrit/segments \
-    --sanskrit-old-n1394u PATH/SA_T06_n1394u.old.json \
     --matches PATH/mitra-parallel-v3 --matches PATH/newer-release ...
 
 # re-merge only, after editing data/delhey.json
 python3 scripts/curate_delhey.py && python3 scripts/build_data.py --merge-only
 ```
 
-The committed data use the releases `mitra-parallel-v3`, `-sa2611`, `-akbh2611`, `-ybh2611`, `-ybh2611b` (later ones override earlier ones per pair of texts). Chinese texts other than T1579 (T1581, T1582, T1500, T1501, T1602) are placed on the axis through Sanskrit e-texts aligned to both.
+The committed data use the releases `mitra-parallel-v3`, `-sa2611`, `-akbh2611`, `-ybh2611`, `-ybh2611b`, `-ybhgap2611` (later ones override earlier ones per pair of texts). Chinese texts other than T1579 (T1581, T1582, T1500, T1501, T1602) are placed on the axis through Sanskrit e-texts aligned to both. A Sanskrit e-text aligned only to the Tibetan (`SA_T06_ybh-sacittika`) is placed through the Tibetan–Chinese alignments of the Tibetan text.
 
-`--sanskrit-old-n1394u` is the earlier (DSBC) segmentation of `SA_T06_n1394u` to which the current alignments refer; the script maps it onto the new e-text, whose `folio` is the page of Bhattacharya 1957. Later `--matches` directories override earlier ones file by file.
+`--sanskrit-old-n1394u` (the earlier DSBC segmentation of `SA_T06_n1394u`) is only needed with releases that still align the old segmentation for every target; since `-ybh2611`/`-ybh2611b` (re-segmented `SA_T06_n1394u`, `folio` = page of Bhattacharya 1957) it is not used.
 
 The site is published by GitHub Pages from `main` via `.github/workflows/pages.yml`.
 

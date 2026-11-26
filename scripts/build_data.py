@@ -23,7 +23,6 @@ Full rebuild (needs the DharmaNexus data and the alignment releases)::
 
     python3 scripts/build_data.py \
         --sanskrit PATH/dharmanexus-sanskrit/segments \
-        --sanskrit-old-n1394u PATH/old_SA_T06_n1394u.json \
         --matches  PATH/mitra-parallel-v3 [--matches PATH/other-release ...]
 
 Merge only (re-resolve ``delhey.json`` with the committed ``derived.json``)::
@@ -90,6 +89,9 @@ YBH_SA = {
     "SA_T06_srabhu_u", "SA_T06_ybh-laukikamarga", "SA_T06_bsa034",
     "SA_T06_abhsubhu", "SA_T06_asycsaru", "SA_T06_Asaṅga_Bodhisattvabhūmi",
     "SA_T06_Asaṅga_Bodhisattvabhūmi-wogiwara", "SA_K01_bsu011_u",
+    # gap e-texts (release mitra-parallel-ybhgap2611)
+    "SA_T06_ybh-hetuvidya", "SA_T06_ybh-sacittika", "SA_T06_ybh-pratyekabuddha",
+    "SA_T06_ybh-sopadhika", "SA_T06_ybh-paryaya",
 }
 YBH_BO = re.compile(r"^BO_T06_D40(3[5-9]|4[0-7])")
 
@@ -144,6 +146,37 @@ def load_alignments(dirs):
         e["releases"][tgt] = os.path.basename(os.path.normpath(dirs[i]))
     for e in res.values():
         e["release"] = e["releases"].get("ZH_T30_1579") or sorted(e["releases"].values())[-1]
+    return res
+
+
+def load_sa_bo(dirs, fids):
+    """Sanskrit->Tibetan records of the given files: {fid: [(root_segnrs, bo_segnrs)]}.
+    Per (file, Tibetan text) the newest release containing the pair is used."""
+    out, newest = defaultdict(list), {}
+    for i, d in enumerate(dirs):
+        p = os.path.join(d, "sa-bo_matches.ndjson.gz")
+        if not os.path.exists(p):
+            continue
+        with gzip.open(p, "rt", encoding="utf-8") as fh:
+            for line in fh:
+                if not any(('"%s:' % f) in line for f in fids):
+                    continue
+                r = json.loads(line)
+                src = text_of(r["root_segnr"][0])
+                if src not in fids:
+                    continue
+                bo = [b for b in r["par_segnr"] if YBH_BO.match(text_of(b))]
+                if not bo:
+                    continue
+                tgt = text_of(bo[0])
+                newest[(src, tgt)] = max(newest.get((src, tgt), -1), i)
+                out[(src, tgt, i)].append((r["root_segnr"], bo))
+    res = {}
+    for (src, tgt, i), recs in out.items():
+        if newest[(src, tgt)] == i:
+            e = res.setdefault(src, {"records": [], "releases": {}})
+            e["records"].extend(recs)
+            e["releases"][tgt] = os.path.basename(os.path.normpath(dirs[i]))
     return res
 
 
@@ -235,6 +268,8 @@ def concordance(pairs):
 
 
 
+FOLIO_PAGES = {"SA_T06_ybh-hetuvidya", "SA_T06_ybh-sacittika", "SA_T06_ybh-pratyekabuddha",
+               "SA_T06_ybh-sopadhika", "SA_T06_ybh-paryaya"}
 OLD_SEG_RELEASES = {"mitra-parallel-v3", "mitra-parallel-v3-fix106-only", "mitra-parallel-v3-pre-fix106"}
 
 
@@ -250,6 +285,8 @@ def page_label_fn(fid, segs, args, release=None):
             old = load_json(args.sanskrit_old_n1394u)
         mp = old_to_new(old, segs) if old is not None else {i: i for i in range(len(segs))}
         return lambda i: ("Bh.", segs[min(mp.get(i, i), len(segs) - 1)]["folio"])
+    if fid in FOLIO_PAGES:            # `folio` = page of the printed edition
+        return lambda i: ("p.", segs[min(i, len(segs) - 1)]["folio"])
     rx = {"SA_T06_srabhusu": (r"\(Śbh_Sh:? (\d+)\)", "Sh."),
           "SA_T06_bsa034": (r"\(Dutt (\d+)\)", "BoBhD"),
           "SA_T06_ybh-laukikamarga": (r"\(Sh (\d+), \d+\)", "Sh."),
@@ -382,6 +419,34 @@ def build_derived(args):
                     pts.append((seg_t(z), k))
             derived["etexts"][fid] = make_entry(
                 al[fid]["release"], len(recs), pts, lambda k, fol=fol: ("D fol.", fol[k]), order="x")
+
+    # Sanskrit e-texts aligned only to the Tibetan (e.g. SA_T06_ybh-sacittika):
+    # placed on the T1579 axis through the Tibetan<->Chinese alignments
+    no_zh = sorted(f for f in YBH_SA if f not in derived["etexts"])
+    if no_zh:
+        bo2t = defaultdict(list)
+        for fid, e in al.items():
+            if fid.startswith("BO_"):
+                for root, zh in e["records"]:
+                    xs = [seg_t(z) for z in zh if text_of(z) == "ZH_T30_1579"]
+                    for r_ in root:
+                        bo2t[r_].extend(xs)
+        for fid, e in load_sa_bo(dirs, set(no_zh)).items():
+            segs = sa_segments(args.sanskrit, fid)
+            label = page_label_fn(fid, segs, args)
+            pts = []
+            for root, bo in e["records"]:
+                xs = [x for b in bo for x in bo2t.get(b, [])]
+                for r_ in root:
+                    i = int(r_.split(":")[1])
+                    pts.extend((x, i) for x in xs)
+            if not pts:
+                continue
+            rel = sorted(set(e["releases"].values()))[-1]
+            ent = make_entry(rel, len(e["records"]), pts, label)
+            ent["via"] = ", ".join(sorted(e["releases"]))
+            derived["etexts"][fid] = ent
+            sys.stderr.write("%s: placed via Tibetan (%d records, %d points)\n" % (fid, len(e["records"]), len(pts)))
 
     # Wogihara e-texts (not aligned): match their lines to the aligned Dutt e-text
     if "SA_T06_bsa034" in sa2t:
@@ -546,6 +611,19 @@ def merge(curated, derived):
             continue
         r = dict(spec)
         r["spans"] = [dict(s, basis="aligned") for s in e["spans"]]
+        # parts contained in the e-text but not aligned: keep what no aligned span covers
+        for c in r.pop("contained", []):
+            pieces = [(t2x(c["t"][0]), t2x(c["t"][1], end=True))]
+            for s in e["spans"]:
+                pieces = [q for a, b in pieces for q in ((a, min(b, s["x0"])), (max(a, s["x1"]), b)) if q[1] - q[0] > 0]
+            for a, b in pieces:
+                if b - a < 2.5 / LINES:          # slivers next to an aligned span
+                    continue
+                sp = dict(c, x0=round(a, 4), x1=round(b, 4), basis="contained")
+                sp.pop("t")
+                sp["from"], sp["to"] = x2t(a), x2t(max(a, b - 1 / LINES))
+                r["spans"].append(sp)
+        r["spans"].sort(key=lambda s: s["x0"])
         r["release"] = e.get("release")
         r["n_alignments"] = e.get("n_alignments")
         drows.append(r)
